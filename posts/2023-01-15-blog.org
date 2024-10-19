@@ -1,0 +1,112 @@
+#+title: 2022 in Sound
+#+filetags: sound field-recording phonography
+#+description: Assorted audio projects
+#+date: 2023-01-15
+
+* Introduction
+This post contains assorted audio projects (in no particular order) that I worked on during 2022. The purpose of this post is mainly archival. All pieces are licensed Public Domain (Creative Commons 0) and can be downloaded. On most browsers this involves right clicking on the link and saving the file. Feel free to use them in any way you want!
+
+* Stereo Hydrophone Recordings
+This section contains stereo hydrophone (underwater microphone) recordings resulting from an interdisciplinary collaboration investigating human-water relations in Taipei, Taiwan (Jul -- Aug 2022).
+** Jingmei River 景美溪, Daonan Riverside Park 道南河濱公園
+#+begin_quote
+🎧 Listen (with visualisation): [[https://ilmarikoria.xyz/static/jingmei.webm][ilmarikoria.xyz/jingmei]]
+#+end_quote
+
+** Songluo Creek 松羅溪, Datong Township 大同鄉
+#+begin_quote
+🎧 Listen (with visualisation): [[https://ilmarikoria.xyz/static/songluo.webm][ilmarikoria.xyz/songluo]]
+#+end_quote
+
+** Tamsui River 淡水河, Guandu Pier 關渡碼頭
+#+begin_quote
+🎧 Listen (with visualisation): [[https://ilmarikoria.xyz/static/tamsui-guandu.webm][ilmarikoria.xyz/tamsui-guandu]]
+#+end_quote
+
+
+** Tamsui 淡水, Shizitou Fishing Platform 獅子頭釣魚台
+#+begin_quote
+This recording was shared at the 2022 CREATORS program, Taiwan Contemporary Culture Lab, as part of the /[[https://clab.org.tw/en/creators/2022_creators_03/][Ocean Encountering River: Aquatic Aesthetics of An Island]]/ project curated by Dr Hsieh I-Yi 謝一誼 (Taiwan NYCU).
+#+end_quote
+
+#+begin_quote
+🎧 Listen (with visualisation): [[https://ilmarikoria.xyz/static/tamsui-shizitou.webm][ilmarikoria.xyz/tamsui-shizitou]] [[[https://ilmarikoria.xyz/static/shizitou-audio-only.wav][Download audio only]]]
+#+end_quote
+
+** Tamsui 淡水, Shizitou 獅子頭
+#+begin_quote
+🎧 Listen (with visualisation): [[https://ilmarikoria.xyz/static/tamsui-shizitou-two.webm][ilmarikoria.xyz/tamsui-shizitou-two]]
+#+end_quote
+
+** Xindian River 新店溪, Bitan 碧潭
+#+begin_quote
+🎧 Listen (with visualisation): [[https://ilmarikoria.xyz/static/xindian.webm][ilmarikoria.xyz/xindian]]
+#+end_quote
+
+** 52 Jia Wetland 52 甲溼地（五股排水）, Yilan 宜蘭
+#+begin_quote
+🎧 Listen (with visualisation): [[https://ilmarikoria.xyz/static/yilan.webm][ilmarikoria.xyz/yilan]]
+#+end_quote
+
+* Sound Portraits
+** Boat Rowing
+This post presents a minimally edited field recording, this time of me rowing a small row boat on Lake Saimaa in Eastern Finland. This post is partly motivated by a desire to reflect on my experiences over the past year recording with binaural microphones. I have done most such recordings with the same setup, namely using a handheld recorder and in-ear omnidirectional microphones[fn:3]. What has attracted me to this kind of setup is the way that I can, in a sense, directly share what I have heard. Unlike conventional microphones, my physiology (head size, ear shape) will uniquely affect any captured audio, thus making for a more "intimate" listening experience when shared. Another factor is the unobstructed nature of recording this way, being portable and inconspicuous (and perhaps also less intrusive). Lastly, there is no monitoring involved, with my body effectively being both a microphone and a stand. In this sense, my own presence is always apparent, if not only due to recording imperfections, such as handling noise, etc. Through this, I have certainly gained an appreciation for attentive mindful listening, keeping my body as still as possible for the duration of a recording.
+
+#+begin_quote
+🎧 Listen (with visualisation): [[https://ilmarikoria.xyz/static/boat-rowing.webm][ilmarikoria.xyz/boat-rowing]]
+#+end_quote
+
+** Sound Portrait of a Buddhist Shrine
+This is a minimally edited field-recording[fn:1] of a small makeshift shrine dedicated to Guanyin 觀音, on the way up to Hushan 虎山 in Taipei. This post is partly inspired from re-watching a documentary on acoustic ecologist Gordon Hempton [[cite:hemptonSoundtrackerPortraitGordon2010][cite:hemptonSoundtrackerPortraitGordon2010]]. The film highlights his method for capturing sound portraits, the aural equivalent of unedited landscape photography, with the "lens" being our microphone [[cite:hemptonEarthSolarPowered2016][cite:hemptonEarthSolarPowered2016]]. He argues against ‘sonically Photoshopping’ such works, drawing on the analogy of a fabricated landscape photograph that haphazardly employs elements from different parts of the world. Hempton suggests that mixing different sounds together in a studio to make the perfect portrait would not effectively communicate our surroundings, and our relationships therein. For today's post, I tried to keep this kind of attitude in mind, experimenting with microphone positioning and timing. The recording presents a soundscape of a hiking trail, wherein sounds of nature, people and "electroacoustic" religion permeate and help index one's sense of place. In the snapshot we hear, for example, the continuous /nianfo/ 念佛 emerging from a small Buddha-name recitation device (/nianfoji/ 念佛). This then becomes layered with other electroacoustic sounds, such as those from the nearby Zhenguang Zen Temple 真光禪寺. In terms of edits, I reduced the original recording from seven minutes to five, together with adding slight compression and filtering.
+
+#+begin_quote
+🎧 Listen (with visualisation): [[https://ilmarikoria.xyz/static/portrait-buddhist-shrine.webm][ilmarikoria.xyz/portait-buddhist-shrine]]
+#+end_quote
+
+** Bamboo 竹
+/No commentary./
+#+begin_quote
+🎧 Listen (with visualisation): [[https://ilmarikoria.xyz/static/bamboo.webm][ilmarikoria.xyz/bamboo]]
+#+end_quote
+
+* Compositions from Field Recordings
+** Cottage Pier Composition
+For this post I have compiled a short "drone" (or noise) inspired hydrophone composition made during the previous summer. All sounds are from Lake Saimaa (Finland), recorded from a cottage pier with a single [[https://jezrileyfrench.co.uk/hydrophones.php][Jez Riley French hydrophone]]. As with my previous sound blogs, I used a limited palette of effects, however, this time with the addition of a delay. Today's post arises from considering potential research questions within sound studies, and the ecoacoustics of water bodies and underwater soundscapes. Not having a background in ecology, I have been focusing on the contributions that humanities scholars and artists have made in this area [[cite:barclayAcousticEcologyEcological2019][cite:barclayAcousticEcologyEcological2019]] [[cite:krauseEcoacousticsItsExpression2017][cite:krauseEcoacousticsItsExpression2017]] [[cite:helmreichUnderwaterMusicTuning2012][cite:helmreichUnderwaterMusicTuning2012]]. I am especially curious about the potential of what Kim De Wolff and Rina C. Faletti et al. have termed as /hydrohumanities/ [[cite:dewolffHydrohumanitiesWaterDiscourse2021][cite:dewolffHydrohumanitiesWaterDiscourse2021]]. For future posts, I plan to experiment more in this area, utilising cultural approaches to the study of underwater ecologies. This includes questions of environmental change, and especially the rising levels of underwater noise pollution worldwide [[cite:duarteSoundscapeAnthropoceneOcean2021][cite:duarteSoundscapeAnthropoceneOcean2021]]. I am keen to read these issues through the lens of sound epistemology ("acoustemology"), involving efforts to understand the didactic role of sound and listening [[cite:feldAcoustemology2015][cite:feldAcoustemology2015]].
+
+#+begin_quote
+🎧 Listen (with visualisation): [[https://ilmarikoria.xyz/static/pier-composition.webm][ilmarikoria.xyz/pier-composition]]
+#+end_quote
+
+** Laptop Composition
+This post stems from further explorations of the "lowercase" [[cite:batchelorLowercaseStrategiesPublic2013][cite:batchelorLowercaseStrategiesPublic2013]] genre of sound art, taking inspiration from the seminal work by Steve Roden, /Forms of Paper/ [[cite:rodenFormsPaperRemastered2011][cite:rodenFormsPaperRemastered2011]]. For this blog, I attached a [[https://jezrileyfrench.co.uk/contact-microphones.php][Jez Riley French contact microphone]] to my laptop and recorded any sounds picked up during a period of university studies. The resulting taps and hums were then liberally experimented with, however, keeping in mind a limited set of effects as per my previous sound blogs. The result is a somewhat hectic compilation of sound, distantly reminding me of free Jazz improvisation, and one of my favourite experimental albums by DJ Sniff [[cite:djsniffEpPsi112011][cite:djsniffEpPsi112011]]. Looking back at my interest in electronic music production, a reoccurring theme has been a fascination with the "gaps" between electroacoustic recordings. This involves minute details that, when amplified, reveal unexpected textures and further sonic "threads" to follow. All this, combined with my seemingly unending interest with banal sounds (refrigerator hums, air conditioners), gives way to the following piece. While still a little rough, I look forward to honing this kind of approach more in the future.
+
+#+begin_quote
+🎧 Listen (with visualisation): [[https://ilmarikoria.xyz/static/laptop-composition.webm][ilmarikoria.xyz/laptop-composition]]
+#+end_quote
+
+** Quarantine Composition
+In this post I have collected and pieced together different sounds heard during my recent travel to Taiwan and quarantine just north of Taipei. The motivation for this (and future sound blogs), is to improve my understanding of phonography informed soundscape composition, involving minimal editing of field recordings [[cite:truaxSoundscapeCompositionGlobal2008][cite:truaxSoundscapeCompositionGlobal2008]]. This is in addition to improving my skills in composition, field recording and digital audio workstations in general. To facilitate this, I established some arbitrary ground rules to guide this process, involving namely tools and techniques used. Firstly, I only use sounds recorded by me, and secondly, I limited palette of digital effects to an equaliser, compressor, pitch shifter and reverb. Lastly, as this is a blog post, I decided to set a hard limit of five minutes for the final composition. While looped, samples were not "played" via plugins (or MIDI sequencers), rather I sought to maintain any original flow in the recordings. I used layering liberally to enhance this, all the while trying to keep in mind the original context and recognisability of the sounds. Although still reminiscent of a consolidation of "soundscape holiday slides" [[cite:dreverSoundscapeCompositionConvergence2002][cite:dreverSoundscapeCompositionConvergence2002]], this is an area that I nevertheless hope to develop further.
+
+#+begin_quote
+🎧 Listen (with visualisation): [[https://ilmarikoria.xyz/static/quarantine-composition.webm][ilmarikoria.xyz/quarantine-composition]]
+#+end_quote
+
+** Taipei Metro Composition
+This post arises from consolidating and experimenting with different field recordings of the Taipei Mass Rapid Transit (MRT) system. During my time living in Taipei, riding on the metro has been one of my favourite occasions for urban listening. This is especially due to the fruits of the 2015 "Taipei Soundscape Project," an urban sound design initiative for developing the acoustic environment of the MRT [[cite:tengOpenYourEars2018][cite:tengOpenYourEars2018]] [[cite:hsiehPianoTransductionsMusic2019][cite:hsiehPianoTransductionsMusic2019]]. Based on the protogenic musings on soundscape design by R. Murray Schafer (1933 – 2021) [[cite:schaferSoundscapeOurSonic1994][cite:schaferSoundscapeOurSonic1994]], a direct goal of the project was to encourage awareness between space and sound. These design choices have certainly made an impact on me, and I always look forward to exploring more of the soundscapes of transit in Taiwan. In this sense, the following sound composition is also a humble nod to Barry Truax's 1996 piece /Pendlerdrøm/ ("Commuter dream") [[cite:truaxIslands2001][cite:truaxIslands2001]]. Commissioned for a Danish audience, this "soundscape composition" involves exploring themes of commuting and transit, with recordings from the Danish Railway system. In terms of this post, I kept the same limitations in terms of effects as before, however, with the addition of [[https://xenakios.wordpress.com/paulstretch/][Xenakio's PaulStretch]] plugin, and also a delay effect. I recorded all sound assets with a pair of [[https://soundman.de/][Soundman OKM II binaural in-ear microphones]] and my trusty Zoom H5. 
+
+#+begin_quote
+🎧 Listen (with visualisation): [[https://ilmarikoria.xyz/static/metro-composition.webm][ilmarikoria.xyz/metro-composition]]
+#+end_quote
+
+** Zazen Composition
+In this post, I have explored some of the subtleties of sounds arising and heard during [[https://en.wikipedia.org/wiki/Zazen][Zazen]]. Taking note of the "[[https://en.wikipedia.org/wiki/Lowercase_(music)][lowercase]]" pieces of Steve Roden [fn:2], this post amplified subtle noises recorded during different 25-minute meditation periods. The scarcity of (musically) interesting sounds meant that various electronic hums (fridges, air conditioners), played an important role via creating layered drones. As with my previous [[https://ilmarikoria.com/2021-12-19-blog.html][sound blog]], I kept the same restrictions in terms of technology and effects, however, with the addition of the [[https://www.lkctools.com/variator][LKC Variator]]. This is a fantastic REAPER script that randomises a sound file in terms of different parameters (such as pitch, length, position). This created the chaotic bleeps found through the composition, which could potentially serve as an apt metaphor for the [[https://en.wikipedia.org/wiki/Monkey_mind][monkey mind]]! I recorded all sounds with a Zoom H5, and a pair of Soundman OKM II binaural microphones.
+
+#+begin_quote
+🎧 Listen (with visualisation): [[https://ilmarikoria.xyz/static/zazen-composition.webm][ilmarikoria.xyz/zazen-composition]]
+#+end_quote
+
+[fn:1] Equipment used: Zoom H5 + [[https://micbooster.com/clippy-and-pluggy-microphones/99-xlr-stereo-clippy-em272-microphone.html][2x Clippy XLR EM272]] (mics ~25cm apart).
+
+[fn:2] [[http://www.inbetweennoise.com/][http://www.inbetweennoise.com/]]
+
+[fn:3] Zoom H5 and [[https://soundman.de/][Soundman OKM II binaural microphones.]]
