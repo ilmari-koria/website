@@ -84,7 +84,8 @@ td {
 
 @media (max-width: 768px) {
     body {
-        font-size: 120%;
+       font-size: 120%;
+       margin: 1rem;
     }
 
     #container {
