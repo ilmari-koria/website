@@ -37,11 +37,12 @@ bibtex2html --style "ieeetr" --footer "" --header "" --no-header --nodoc --nobib
 tidy -q --numeric-entities yes -asxhtml -o $DIR_XML/bibliography/bibliography.xml $DIR_XML/bibliography/bibliography.html
 
 # call stylesheet transformations
-call_transformations() {
-    local input="$1"
-    local stylesheet="$2"
-    local output="$3"
-    java -cp "$SAXON" net.sf.saxon.Transform -t -s:"$input" -xsl:"$stylesheet" -o:"$output"
+transform() {
+  local input="$1"
+  local stylesheet="$2"
+  local output="$3"
+  
+  java -cp "$SAXON" net.sf.saxon.Transform -t -s:"$input" -xsl:"$stylesheet" -o:"$output"
 }
 
 transform "$DIR_XML/posts/2021-06-07-blog.xml" "$XSL_CONCAT_POSTS" "$XML_CONCAT"
