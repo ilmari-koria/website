@@ -53,7 +53,7 @@
   <education>
     <education-entry>
       <institute>National Chengchi University</institute>
-      <result>Three semesters of Mandarin language training</result>
+      <result>Three semesters of Mandarin language training via scholarship</result>
       <address>Taipei</address>
     </education-entry>
     <education-entry>
@@ -108,9 +108,10 @@
     <skill-entry>TEI</skill-entry>
     <skill-entry>HTML</skill-entry>
     <skill-entry>CSS</skill-entry>
+    <skill-entry>JSON</skill-entry>
     <skill-entry>\LaTeX</skill-entry>
     <skill-entry>Bash</skill-entry>
-    <skill-entry>Batch/cmd.exe</skill-entry>
+    <skill-entry>Batch (cmd.exe)</skill-entry>
     <skill-entry>BaseX</skill-entry>
     <skill-entry>PostgreSQL (psql)</skill-entry>
     <skill-entry>GNU/Linux (Debian)</skill-entry>
@@ -131,5 +132,10 @@
       <language>Mandarin</language>
       <level>high-intermediate</level>
     </language-entry>
+    <language-entry>
+      <language>Cantonese</language>
+      <level>basic</level>
+    </language-entry>
   </language-list>
 </resume>
+
