@@ -2,8 +2,8 @@
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:org="https://nwalsh.com/ns/org-to-xml"
-                exclude-result-prefixes="org"
-                version="3.0">
+                version="2.0"
+                exclude-result-prefixes="org">
 
   <xsl:template name="footer">
     <div id="postamble">
