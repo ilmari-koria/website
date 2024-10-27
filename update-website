@@ -27,42 +27,46 @@ FILE_BIB="./bib/bibliography.bib"
 
 SAXON="$BIN/saxon/saxon-he-12.5.jar"
 
-# # TODO is cd needed?
-# cd "$LIB/el"
-# emacs --batch -l convert-blog-posts-to-xml.el -f convert-blog-posts-to-xml
-# cd ../..
-# mv $DIR_POSTS/*.xml $DIR_XML/posts
+cd "$LIB/el"
+emacs --batch -l convert-blog-posts-to-xml.el -f convert-blog-posts-to-xml
+cd ../..
+mv $DIR_POSTS/*.xml $DIR_XML/posts
 
-# # Generate bib
-# bibtex2html --style "ieeetr" --footer "" --header "" --no-header --nodoc --nobibsource --ignore-errors --sort-as-bibtex --output $DIR_XML/bibliography/bibliography $FILE_BIB
-# tidy -q --numeric-entities yes -asxhtml -o $DIR_XML/bibliography/bibliography.xml $DIR_XML/bibliography/bibliography.html
+# Generate bib
+bibtex2html --style "ieeetr" --footer "" --header "" --no-header --nodoc --nobibsource --ignore-errors --sort-as-bibtex --output $DIR_XML/bibliography/bibliography $FILE_BIB
+tidy -q --numeric-entities yes -asxhtml -o $DIR_XML/bibliography/bibliography.xml $DIR_XML/bibliography/bibliography.html
 
-# # TODO consolidate these
-# java -cp $SAXON net.sf.saxon.Transform -t -s:"$DIR_XML/posts/2021-06-07-blog.xml" -xsl:"$XSL_CONCAT_POSTS" -o:"$XML_CONCAT"
-# java -cp $SAXON net.sf.saxon.Transform -t -s:"$XML_CONCAT" -xsl:"$XSL_ATOM" -o:"$DIR_HTML/atom.xml"
-# java -cp $SAXON net.sf.saxon.Transform -t -s:"$XML_CONCAT" -xsl:"$XSL_INDEX" -o:"$DIR_HTML/index.html"
-# java -cp $SAXON net.sf.saxon.Transform -t -s:"$XML_CONCAT" -xsl:"$XSL_ABOUT" -o:"$DIR_HTML/about.html"
-# java -cp $SAXON net.sf.saxon.Transform -t -s:"$XML_CONCAT" -xsl:"$XSL_ARCHIVE" -o:"$DIR_HTML/posts.html"
-# java -cp $SAXON net.sf.saxon.Transform -t -s:"$XML_CONCAT" -xsl:"$XSL_CSS" -o:"$DIR_HTML/style.css"
+# call stylesheet transformations
+call_transformations() {
+    local input="$1"
+    local stylesheet="$2"
+    local output="$3"
+    java -cp "$SAXON" net.sf.saxon.Transform -t -s:"$input" -xsl:"$stylesheet" -o:"$output"
+}
 
-# # posts
-# for XML_FILE in $DIR_XML/posts/*.xml; do
-#   HTML_FILE="$DIR_HTML/$(basename "$XML_FILE" .xml).html"
-#   java -cp $SAXON net.sf.saxon.Transform  -t -s:"$XML_FILE" -xsl:"$XSL_POSTS" -o:"$HTML_FILE"
-# done
+transform "$DIR_XML/posts/2021-06-07-blog.xml" "$XSL_CONCAT_POSTS" "$XML_CONCAT"
+transform "$XML_CONCAT" "$XSL_ATOM" "$DIR_HTML/atom.xml"
+transform "$XML_CONCAT" "$XSL_INDEX" "$DIR_HTML/index.html"
+transform "$XML_CONCAT" "$XSL_ABOUT" "$DIR_HTML/about.html"
+transform "$XML_CONCAT" "$XSL_ARCHIVE" "$DIR_HTML/posts.html"
+transform "$XML_CONCAT" "$XSL_CSS" "$DIR_HTML/style.css"
 
-# # resume
-# java -cp $SAXON net.sf.saxon.Transform  -t -s:"$XML_RESUME" -xsl:"$XSL_RESUME" -o:"$DIR_HTML/ilmari-koria-resume.tex"
-# pdflatex -output-directory $DIR_HTML "$DIR_HTML/ilmari-koria-resume.tex"
-# rm $DIR_HTML/*.log $DIR_HTML/*.tex $DIR_HTML/*.aux $DIR_HTML/*.out   
+# posts
+for XML_FILE in $DIR_XML/posts/*.xml; do
+  HTML_FILE="$DIR_HTML/$(basename "$XML_FILE" .xml).html"
+  java -cp $SAXON net.sf.saxon.Transform  -t -s:"$XML_FILE" -xsl:"$XSL_POSTS" -o:"$HTML_FILE"
+done
 
-# letter
-java -cp $SAXON net.sf.saxon.Transform  -t -s:"$XML_LETTER" -xsl:"$XSL_LETTER" -o:"$DIR_HTML/ilmari-koria-letter.tex"
-pdflatex -output-directory $DIR_HTML "$DIR_HTML/ilmari-koria-letter.tex"
+# resume
+java -cp $SAXON net.sf.saxon.Transform  -t -s:"$XML_RESUME" -xsl:"$XSL_RESUME" -o:"$DIR_HTML/ilmari-koria-resume.tex"
+pdflatex -output-directory $DIR_HTML "$DIR_HTML/ilmari-koria-resume.tex"
 rm $DIR_HTML/*.log $DIR_HTML/*.tex $DIR_HTML/*.aux $DIR_HTML/*.out   
 
-# rsync -avz --delete $DIR_HTML/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
-# sitemap-generator -l https://ilmarikoria.xyz
-# rsync -avz --delete sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
+# letter (this is here for archival purposes)
+# java -cp $SAXON net.sf.saxon.Transform  -t -s:"$XML_LETTER" -xsl:"$XSL_LETTER" -o:"$DIR_HTML/ilmari-koria-letter.tex"
+# pdflatex -output-directory $DIR_HTML "$DIR_HTML/ilmari-koria-letter.tex"
+# rm $DIR_HTML/*.log $DIR_HTML/*.tex $DIR_HTML/*.aux $DIR_HTML/*.out   
 
-
+rsync -avz --delete $DIR_HTML/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
+sitemap-generator -l https://ilmarikoria.xyz
+rsync -avz --delete sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
