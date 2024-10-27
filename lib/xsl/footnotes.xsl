@@ -9,6 +9,8 @@
               encoding="UTF-8"
               indent="yes"/>
 
+  <xsl:variable name="bibliography-footnotes"
+                select="document('../../tmp/xml/bibliography/bibliography.xml')" />
   <xsl:variable name="footnote-number"
                 select="org:footnote-reference/@label" />
 
@@ -40,6 +42,26 @@
       </div>
     </xsl:if>
   </xsl:template>
+
+  <!-- TODO avoid priority hacks   -->
+  <xsl:template match="org:footnote-definition//org:link" priority="2">
+    <xsl:choose>
+      <xsl:when test="contains(@raw-link, 'cite:')">
+        <xsl:variable name="key" select="substring-after(@raw-link, 'cite:')" />
+        <xsl:variable name="bib-entry" select="$bibliography-footnotes//*:a[@name = $key]/ancestor::*:tr" />
+        <xsl:variable name="number" select="$bib-entry//*:a[@name = $key]/text()" />
+        <span class="footnote-link">[<a href="#{$key}">
+        <xsl:value-of select="$number" />
+        </a>]</span>
+      </xsl:when>
+      <xsl:otherwise>
+        <a href="{@raw-link}">
+          <xsl:apply-templates/>
+        </a>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
 
 </xsl:stylesheet>
 
