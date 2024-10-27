@@ -103,7 +103,7 @@
 
   <xsl:template match="org:footnote-reference">
     <sup>
-      <a href="#fn-{@label}">
+      <a href="#footnote{@label}">
         <xsl:value-of select="@label" />
       </a>
     </sup>
