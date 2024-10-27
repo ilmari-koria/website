@@ -49,7 +49,7 @@ The point of this post was to explore some of the ideas that struck me during my
 * Disclosure
 This post was written to conform with project disclosure agreement. Any conceptual musings or findings reflect my own judgement, and not those of Harvard CAMLab.
 
-[fn:1] https://camlab.fas.harvard.edu/Digital-Luoyang
+[fn:1] [[https://camlab.fas.harvard.edu/Digital-Luoyang][www.camlab.fas.harvard.edu/Digital-Luoyang]]
 
 [fn:2] Another important source includes, for example, /The Book of the Northern Wei/ (/Weishu/ 魏書) by Wei Shou 魏收 (507–572), that includes contemporaneous discussions of Buddhism in Luoyang [[cite:hurvitzWeiShouTreatise1956][cite:hurvitzWeiShouTreatise1956]].
 
