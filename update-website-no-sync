@@ -1,0 +1,68 @@
+#!/bin/bash
+
+DIR_POSTS="./posts"
+DIR_BIB="./tmp/bib"
+DIR_HTML="./tmp/html"
+DIR_XML="./tmp/xml"
+DIR_STATIC="./static"
+
+LIB="./lib"
+BIN="./bin"
+
+XSL_ABOUT="$LIB/xsl/about.xsl"
+XSL_ARCHIVE="$LIB/xsl/archive.xsl"
+XSL_ATOM="$LIB/xsl/atom.xsl"
+XSL_CSS="$LIB/xsl/css.xsl"
+XSL_INDEX="$LIB/xsl/index.xsl"
+XSL_POSTS="$LIB/xsl/posts.xsl"
+XSL_RESUME="$LIB/xsl/resume.xsl"
+XSL_LETTER="$LIB/xsl/letter.xsl"
+XSL_CONCAT_POSTS="$LIB/xsl/concat-posts.xsl"
+
+XML_CONCAT="$DIR_XML/concat/posts-concat.xml"
+XML_RESUME="./xml/resume.xml"
+XML_LETTER="./xml/letter.xml"
+
+FILE_BIB="./bib/bibliography.bib"
+
+SAXON="$BIN/saxon/saxon-he-12.5.jar"
+
+cd "$LIB/el"
+emacs --batch -l convert-blog-posts-to-xml.el -f convert-blog-posts-to-xml
+cd ../..
+mv $DIR_POSTS/*.xml $DIR_XML/posts
+
+# Generate bib
+bibtex2html --style "ieeetr" --footer "" --header "" --no-header --nodoc --nobibsource --ignore-errors --sort-as-bibtex --output $DIR_XML/bibliography/bibliography $FILE_BIB
+tidy -q --numeric-entities yes -asxhtml -o $DIR_XML/bibliography/bibliography.xml $DIR_XML/bibliography/bibliography.html
+
+# call stylesheet transformations
+call_transformations() {
+    local input="$1"
+    local stylesheet="$2"
+    local output="$3"
+    java -cp "$SAXON" net.sf.saxon.Transform -t -s:"$input" -xsl:"$stylesheet" -o:"$output"
+}
+
+transform "$DIR_XML/posts/2021-06-07-blog.xml" "$XSL_CONCAT_POSTS" "$XML_CONCAT"
+transform "$XML_CONCAT" "$XSL_ATOM" "$DIR_HTML/atom.xml"
+transform "$XML_CONCAT" "$XSL_INDEX" "$DIR_HTML/index.html"
+transform "$XML_CONCAT" "$XSL_ABOUT" "$DIR_HTML/about.html"
+transform "$XML_CONCAT" "$XSL_ARCHIVE" "$DIR_HTML/posts.html"
+transform "$XML_CONCAT" "$XSL_CSS" "$DIR_HTML/style.css"
+
+# posts
+for XML_FILE in $DIR_XML/posts/*.xml; do
+  HTML_FILE="$DIR_HTML/$(basename "$XML_FILE" .xml).html"
+  java -cp $SAXON net.sf.saxon.Transform  -t -s:"$XML_FILE" -xsl:"$XSL_POSTS" -o:"$HTML_FILE"
+done
+
+# resume
+java -cp $SAXON net.sf.saxon.Transform  -t -s:"$XML_RESUME" -xsl:"$XSL_RESUME" -o:"$DIR_HTML/ilmari-koria-resume.tex"
+pdflatex -output-directory $DIR_HTML "$DIR_HTML/ilmari-koria-resume.tex"
+rm $DIR_HTML/*.log $DIR_HTML/*.tex $DIR_HTML/*.aux $DIR_HTML/*.out   
+
+# letter (this is here for archival purposes)
+# java -cp $SAXON net.sf.saxon.Transform  -t -s:"$XML_LETTER" -xsl:"$XSL_LETTER" -o:"$DIR_HTML/ilmari-koria-letter.tex"
+# pdflatex -output-directory $DIR_HTML "$DIR_HTML/ilmari-koria-letter.tex"
+# rm $DIR_HTML/*.log $DIR_HTML/*.tex $DIR_HTML/*.aux $DIR_HTML/*.out   
