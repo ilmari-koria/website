@@ -2,6 +2,7 @@
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:org="https://nwalsh.com/ns/org-to-xml"
+                xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 version="2.0"
                 exclude-result-prefixes="org">
 
@@ -35,7 +36,7 @@
                     <xsl:variable name="date" select="../*:keyword[@key='DATE']/@value" />
                     <tr>
                       <td>
-                        <xsl:value-of select="$date" />
+                        <xsl:value-of select="format-date(xs:date($date), '[Y] [MNn,3-3] [D]')" />
                       </td>
                       <td>
                         <a href="https://ilmarikoria.xyz/{$date}-blog.html">
