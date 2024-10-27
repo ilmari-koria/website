@@ -166,7 +166,7 @@
   </xsl:template>
 
   <!-- TODO avoid // if possible -->
-  <xsl:template match="//org:footnote-definition"/>
+  <xsl:template match="//org:footnote-definition" />
 
  <xsl:template match="org:verse-block">
     <blockquote class="verse-block">
