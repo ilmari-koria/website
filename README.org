@@ -6,3 +6,4 @@
 ** TODO publish blog as xproc pipeline
 ** TODO generate bib data from xml
 - E.g. ~bibtex~ -> ~json~ -> ~xml~
+** TODO sort bib entries by num
