@@ -71,3 +71,4 @@ rm $DIR_HTML/*.log $DIR_HTML/*.tex $DIR_HTML/*.aux $DIR_HTML/*.out
 rsync -avz --delete $DIR_HTML/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
 sitemap-generator -l https://ilmarikoria.xyz
 rsync -avz --delete sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
+rm ./sitemap.xml
