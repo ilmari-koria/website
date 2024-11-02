@@ -94,6 +94,7 @@
     <xsl:text>
       \subsection*{Technical Training}
     </xsl:text>
+    <xsl:text>\bulletlist</xsl:text>
     <xsl:text>\begin{itemize}</xsl:text>
         <xsl:for-each select="resume/training/training-entry">
               <xsl:text>\item </xsl:text>
@@ -103,7 +104,14 @@
                   <xsl:value-of select="institute"/>
                   <xsl:text>, </xsl:text>
                   <xsl:value-of select="training-hours"/>
-                  <xsl:text> hrs., </xsl:text>
+                      <xsl:choose>
+                          <xsl:when test="number(training-hours) != number(training-hours)">
+                              <xsl:text>, </xsl:text>
+                          </xsl:when>
+                          <xsl:otherwise>
+                              <xsl:text> hrs., </xsl:text>
+                          </xsl:otherwise>
+                      </xsl:choose>
                   <xsl:value-of select="date"/>
         </xsl:for-each>
     <xsl:text>\end{itemize}</xsl:text>
