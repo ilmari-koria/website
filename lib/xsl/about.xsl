@@ -11,6 +11,8 @@
 
   <xsl:variable name="posts"
                 select="document('../../tmp/xml/concat/posts-concat.xml')" />
+  <xsl:variable name="reading-list"
+                select="document('../../tmp/xml/reading-list/reading-list.xml')" />
 
   <xsl:include href="header.xsl" />
   <xsl:include href="footer.xsl" />
@@ -56,7 +58,7 @@
             </p>
             <h3>Other stuff</h3>
             <ul>
-              <li>I am currently reading: <a>https://search.worldcat.org/search?q=9780334028758&amp;offset=1</a></li>
+              <li>I am currently reading: <span class="reading-title"><xsl:value-of select="$reading-list/books/book[Finished_Reading = 'current']/Title" /></span></li>
               <li><a href="https://ilmarikoria.xyz/static/ilmari-koria-name.mp3">How to Pronounce My Name</a>.</li>
               <li>This site is generated using: 
               <ol>
