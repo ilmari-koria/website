@@ -19,18 +19,26 @@ XSL_RESUME="$LIB/xsl/resume.xsl"
 XSL_LETTER="$LIB/xsl/letter.xsl"
 XSL_CONCAT_POSTS="$LIB/xsl/concat-posts.xsl"
 
+XQ_READING_LIST="$LIB/xq/reading-list.xq"
+
 XML_CONCAT="$DIR_XML/concat/posts-concat.xml"
 XML_RESUME="./xml/resume.xml"
 XML_LETTER="./xml/letter.xml"
 
+FILE_READING_LIST="$DIR_XML/reading-list/reading-list.csv"
 FILE_BIB="./bib/bibliography.bib"
 
 SAXON="$BIN/saxon/saxon-he-12.5.jar"
+BASEX="$BIN/basex/bin/basex"
 
 cd "$LIB/el"
 emacs --batch -l convert-blog-posts-to-xml.el -f convert-blog-posts-to-xml
 cd ../..
 mv $DIR_POSTS/*.xml $DIR_XML/posts
+
+# reading list
+# mv $HOME/my-files/todo/reading-list/*.csv $HOME/my-files/blog/tmp/xml/reading-list/reading-list.csv
+$BASEX $XQ_READING_LIST
 
 # Generate bib
 bibtex2html --style "ieeetr" --footer "" --header "" --no-header --nodoc --nobibsource --ignore-errors --sort-as-bibtex --output $DIR_XML/bibliography/bibliography $FILE_BIB
@@ -58,7 +66,7 @@ for XML_FILE in $DIR_XML/posts/*.xml; do
   java -cp $SAXON net.sf.saxon.Transform  -t -s:"$XML_FILE" -xsl:"$XSL_POSTS" -o:"$HTML_FILE"
 done
 
-# resume
+# # resume
 java -cp $SAXON net.sf.saxon.Transform  -t -s:"$XML_RESUME" -xsl:"$XSL_RESUME" -o:"$DIR_HTML/ilmari-koria-resume.tex"
 pdflatex -output-directory $DIR_HTML "$DIR_HTML/ilmari-koria-resume.tex"
 rm $DIR_HTML/*.log $DIR_HTML/*.tex $DIR_HTML/*.aux $DIR_HTML/*.out   
