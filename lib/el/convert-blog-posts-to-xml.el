@@ -17,7 +17,7 @@
 (require 'om-to-xml)
 
 (defun convert-blog-posts-to-xml ()
-  (let ((directory "../../posts/"))
+  (let ((directory "../../org/"))
     (when (file-directory-p directory)
       (dolist (file (directory-files directory t "\\.org$"))
         (when (file-regular-p file)
