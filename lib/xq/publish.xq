@@ -16,13 +16,40 @@ declare function local:el-generate-xml-from-org() {
     "-f", "convert-blog-posts-to-xml"
   )
   return
-    proc:system($emacs, $args, options := { 'dir' : $dir-lib || '/el'}),
+    proc:system($emacs, $args, options := {'dir' : $dir-lib || '/el'}),
     file:list($dir-org, false(), '*.xml') !
     file:move($dir-org || ., $dir-tmp || "/xml/posts"),
     file:move($dir-tmp || "/xml/posts/reading-list.xml", $dir-tmp || "/xml/reading/reading-list.xml")
 };
 
-local:el-generate-xml-from-org()
+(: TODO this really should be done with bibutils :)
+declare function local:generate-bib-xml() {
+  let $output := $dir-tmp || "/xml/bibliography/bibliography"
+  let $input := "./bib/bibliography.bib"
+  let $program := "bibtex2html"
+  let $args := (
+   "--style", 'ieeetr',
+   "--footer", '',
+   "--header", '',
+   "--no-header",
+   "--nodoc",
+   "--nobibsource",
+   "--ignore-errors",
+   "--sort-as-bibtex",
+   "--output", $output,
+   $input
+  )
+  return
+    proc:system($program, $args)
+};
+
+local:generate-bib-xml()
+
+(:
+ : local:el-generate-xml-from-org()
+ :)
+
+
 
 
 (:
