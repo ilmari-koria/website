@@ -23,26 +23,43 @@ declare function local:el-generate-xml-from-org() {
 };
 
 (: TODO this really should be done with bibutils :)
-declare function local:generate-bib-xml() {
+declare function local:generate-bib-html() {
   let $output := $dir-tmp || "/xml/bibliography/bibliography"
   let $input := "./bib/bibliography.bib"
   let $program := "bibtex2html"
   let $args := (
-   "--style", 'ieeetr',
-   "--footer", '',
-   "--header", '',
-   "--no-header",
-   "--nodoc",
-   "--nobibsource",
-   "--ignore-errors",
-   "--sort-as-bibtex",
-   "--output", $output,
-   $input
+     "--style", 'ieeetr',
+     "--footer", '',
+     "--header", '',
+     "--no-header",
+     "--nodoc",
+     "--nobibsource",
+     "--ignore-errors",
+     "--sort-as-bibtex",
+     "--output", $output,
+     $input
   )
   return
     proc:system($program, $args)
 };
 
+declare function local:generate-bib-xml() {
+  let $output := $dir-tmp || "/xml/bibliography/bibliography.xml"
+  let $input := $dir-tmp || "/xml/bibliography/bibliography.html"
+  let $program := "tidy"
+  let $args := (
+    "-q",
+    "--numeric-entities", "yes",
+    "-asxhtml",
+    "-o", $output,
+    $input
+  )
+  return
+    proc:system($program, $args)
+};
+
+
+local:generate-bib-html(),
 local:generate-bib-xml()
 
 (:
