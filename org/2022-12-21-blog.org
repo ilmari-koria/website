@@ -10,13 +10,13 @@ Apart from the purely doctrinal, expedient or aesthetic justifications for repro
 
 * On Acoustemology
 #+begin_export html
-<audio controls>
-  	<source src="static/guanyinsi-ambience.mp3" type="audio/mpeg">
+<audio controls="true">
+  	<source src="static/guanyinsi-ambience.mp3" type="audio/mpeg"/>
 	Your browser does not support the audio element.
 </audio>
 
 <div class="audio-description">
-	<b>Field-recording 1:</b> <em>Soundscape of Shiguanyin xiangguang si </em> 石觀音祥光寺 <em> (Taipei), recorded on a quiet rainy day</em>.<br>
+	<b>Field-recording 1:</b> <em>Soundscape of Shiguanyin xiangguang si </em> 石觀音祥光寺 <em> (Taipei), recorded on a quiet rainy day</em>.<br/>
 	<b>Note:</b> Headphones recommended 🎧.
 </div>
 #+end_export
@@ -25,13 +25,13 @@ Acoustemology emphasises the role of audible sound in the experience of place, t
 
 * Listening to the Pure Land
 #+begin_export html
-<audio controls>
-  	<source src="static/longshansi-ambience.mp3" type="audio/mpeg">
+<audio controls="true">
+  	<source src="static/longshansi-ambience.mp3" type="audio/mpeg"/>
 	Your browser does not support the audio element.
 </audio>
 
 <div class="audio-description">
-	<b>Field-recording 2:</b> <em>Soundscape of Lungshan Temple</em> 龍山寺<em> (Taipei), recorded during a normal Friday afternoon</em>.<br>
+	<b>Field-recording 2:</b> <em>Soundscape of Lungshan Temple</em> 龍山寺<em> (Taipei), recorded during a normal Friday afternoon</em>.<br/>
 	<b>Note:</b> Headphones recommended 🎧.
 </div>
 #+end_export
@@ -45,13 +45,13 @@ In Taiwan, these devices seem ubiquitous, being sometimes carried on-person by d
 
 * A Buddhist Techoustemology?
 #+begin_export html
-<audio controls>
-  	<source src="static/zhangshansi-ambience.mp3" type="audio/mpeg">
+<audio controls="true">
+  	<source src="static/zhangshansi-ambience.mp3" type="audio/mpeg"/>
 	Your browser does not support the audio element.
 </audio>
 
 <div class="audio-description">
-	<b>Field-recording 3:</b> <em>Zhangshansi</em> 樟山寺 <em>(Taipei) ambience, recorded during a busy Sunday.</em><br>
+	<b>Field-recording 3:</b> <em>Zhangshansi</em> 樟山寺 <em>(Taipei) ambience, recorded during a busy Sunday.</em><br/>
 	<b>Note:</b> Headphones recommended 🎧.
 </div>
 #+end_export
@@ -73,8 +73,8 @@ This post shared a few notes related to how electroacoustic sound shapes religio
 
 * Appendix 1: Hydrophone Recording of Private Temple in Tamsui 淡水, Taipei
  #+begin_export html
-<video width="420" controls muted>
-<source src="static/tamsui-nianfo.webm" type="video/webm">
+<video width="420" controls="muted">
+<source src="static/tamsui-nianfo.webm" type="video/webm"/>
 </video>
  #+end_export
 
