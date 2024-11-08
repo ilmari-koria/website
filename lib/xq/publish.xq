@@ -1,11 +1,11 @@
 xquery version "3.1";
 declare option output:method 'html';
+declare option output:indent 'yes';
 
-(: paths are resolved from the basex "bin" dir :)
 declare variable $dir-publish := file:resolve-path("./publish");
-declare variable $dir-org     := file:resolve-path("./org");
-declare variable $dir-lib     := file:resolve-path("./lib");
-declare variable $dir-tmp     := file:resolve-path("./tmp");
+declare variable $dir-org := file:resolve-path("./org");
+declare variable $dir-lib := file:resolve-path("./lib");
+declare variable $dir-tmp := file:resolve-path("./tmp");
 
 declare function local:el-generate-xml-from-org() {
   let $om-to-xml := $dir-lib || "/el/convert-blog-posts-to-xml.el"
@@ -16,7 +16,7 @@ declare function local:el-generate-xml-from-org() {
     "-f", "convert-blog-posts-to-xml"
   )
   return
-    proc:system($emacs, $args, options := {'dir' : $dir-lib || '/el'}),
+    proc:system($emacs, $args, options := { 'dir' : $dir-lib || '/el' }),
     file:list($dir-org, false(), '*.xml') !
     file:move($dir-org || ., $dir-tmp || "/xml/posts"),
     file:move($dir-tmp || "/xml/posts/reading-list.xml", $dir-tmp || "/xml/reading/reading-list.xml")
@@ -58,25 +58,42 @@ declare function local:generate-bib-xml() {
     proc:system($program, $args)
 };
 
+declare function local:concat-xml-files() {
+  let $directory-path := $dir-tmp || "xml/posts/"
+  let $output := $dir-tmp || "xml/concat/posts-concat.xml"
+  let $concatenated :=
+    <root>
+      {
+        for $file in file:list($directory-path, false(), "*.xml")
+        let $doc := fn:doc(concat($directory-path, "/", $file))
+        return $doc/*
+      }
+    </root>
+  return
+    file:write($output, $concatenated)
+};
 
-local:generate-bib-html(),
-local:generate-bib-xml()
+local:concat-xml-files()
+
+(:
+ : local:xsl-create-concat()
+ :)
+
+    (:
+     : file:write($dir-tmp || "/xml/concat/posts-concat.xml", .)
+     :)
+
+(:
+ : local:generate-bib-html(),
+ : local:generate-bib-xml(),
+ : local:el-generate-xml-from-org(),
+ :)
+(:
+ : local:xsl-create-concat()
+ :)
 
 (:
  : local:el-generate-xml-from-org()
- :)
-
-
-
-
-(:
- : declare function local:xsl-create-concat() {
- :   let $xsl-concat  := $dir-lib || "/xsl/concat-posts.xsl"
- :   let $source-file := (file:list($dir-tmp || "/xml/posts", false(), "*.xml"))[1]
- :   return
- :     xslt:transform($dir-tmp || "/xml/posts/" || $source-file, $xsl-concat) !
- :     file:write($dir-tmp || "/xml/concat/posts-concat.xml", .)
- : };
  :)
 
 (:
