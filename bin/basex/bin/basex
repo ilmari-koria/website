@@ -10,7 +10,7 @@ done
 MAIN="$( cd -P "$(dirname "$FILE")/.." && pwd )"
 
 # path to saxon
-SAXON="../../saxon"
+SAXON="./bin/saxon"
 
 # Core and library classes
 CP=$SAXON/*:$MAIN/BaseX.jar:$MAIN/lib/custom/*:$MAIN/lib/*:$CLASSPATH
