@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:org="https://nwalsh.com/ns/org-to-xml"
@@ -58,7 +58,6 @@
             </p>
             <h3>Other stuff</h3>
             <ul>
-              <li>I am currently reading: <span class="reading-title"><xsl:value-of select="$reading-list/books/book[Finished_Reading = 'current']/Title" /></span></li>
               <li><a href="https://ilmarikoria.xyz/static/ilmari-koria-name.mp3">How to Pronounce My Name</a>.</li>
               <li>This site is generated using: 
               <ol>

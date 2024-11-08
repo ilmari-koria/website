@@ -13,12 +13,10 @@
                 select="document('../../tmp/xml/concat/posts-concat.xml')" />
 
   <xsl:template match="/">
-
     <feed xmlns="http://www.w3.org/2005/Atom">
       <title>Ilmarikoria.xyz Feed</title>
       <link href="https://ilmarikoria.xyz/atom.xml" rel="self"/>
       <id>https://ilmarikoria.xyz/atom.xml</id>
-
       <!-- i.e., latest post -->
       <updated>
         <xsl:for-each select="$posts-concat//org:keyword[@key = 'DATE']/@value">
@@ -28,12 +26,10 @@
           </xsl:if>
         </xsl:for-each>
       </updated>
-
       <author>
         <name>Ilmari Koria</name>
         <email>ilmarikoria@posteo.net</email>
       </author>
-      
       <!-- posts -->
       <xsl:for-each select="$posts-concat/*/org:document">
         <xsl:variable name="date" select="org:keyword[@key='DATE']/@value" />
@@ -46,7 +42,6 @@
           <updated>
             <xsl:value-of select="concat($date, 'T00:00:00Z')"/>
           </updated>
-          
           <summary>
             <xsl:variable name="text" select="(org:headline/org:section/org:paragraph)[1]" />
             <xsl:variable name="words" select="tokenize($text, '\s+')" />
@@ -58,7 +53,6 @@
             </xsl:for-each>
             <xsl:text> […]</xsl:text>
           </summary>
-          
         </entry>
       </xsl:for-each>
     </feed>
