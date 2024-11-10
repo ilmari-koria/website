@@ -37,7 +37,7 @@
               <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/><xsl:text> </xsl:text>
               (<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>)<xsl:text>, </xsl:text>
               <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Publisher']/@value"/><xsl:text>, </xsl:text>
-              <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/><xsl:text>, </xsl:text>
+              <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/>
             </p>
             <p><a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">Search Title on WorldCat</a></p>
           </td>
@@ -62,7 +62,7 @@
                   <xsl:value-of select="../*:node-property[@key='Author']/@value"/><xsl:text> </xsl:text>
                   (<xsl:value-of select="../*:node-property[@key='Pub_year']/@value"/>)<xsl:text>, </xsl:text>
                   <xsl:value-of select="../*:node-property[@key='Publisher']/@value"/><xsl:text>, </xsl:text>
-                  <xsl:value-of select="../*:node-property[@key='Address']/@value"/><xsl:text> </xsl:text>
+                  <xsl:value-of select="../*:node-property[@key='Address']/@value"/>
                 </p>
                 <p><a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">Search Title on WorldCat</a></p>
               </td>
