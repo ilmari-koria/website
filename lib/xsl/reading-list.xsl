@@ -34,19 +34,19 @@
           <td>
             <p class="book-title"><xsl:value-of select="*:title"/></p>
             <p>
-              <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/><xsl:text>, </xsl:text>
-              <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/><xsl:text>, </xsl:text>
-              <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='ISBN']/@value"/><xsl:text>, </xsl:text>
+              <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/><xsl:text> </xsl:text>
+              (<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>)<xsl:text>, </xsl:text>
               <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Publisher']/@value"/><xsl:text>, </xsl:text>
-              <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/>
+              <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/><xsl:text>, </xsl:text>
             </p>
+            <p><a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">Search Title on WorldCat</a></p>
           </td>
         </tr>
       </tbody>
     </table>
   </xsl:template>
   <xsl:template match="*:headline[@todo-keyword='DONE']">
-      <xsl:for-each-group select="*:section/*:property-drawer/*:node-property[@key='Date']" group-by="@value">
+    <xsl:for-each-group select="*:section/*:property-drawer/*:node-property[@key='Date']" group-by="@value">
       <xsl:variable name="year" select="@value" />
       <h2>Books Read in <xsl:value-of select="$year"/></h2>
       <table class="reading-list">
@@ -59,12 +59,12 @@
               <td>
                 <p class="book-title"><xsl:value-of select="../../../*:title"/></p>
                 <p>
-                  <xsl:value-of select="../*:node-property[@key='Author']/@value"/><xsl:text>, </xsl:text>
-                  <xsl:value-of select="../*:node-property[@key='Pub_year']/@value"/><xsl:text>, </xsl:text>
-                  <xsl:value-of select="../*:node-property[@key='ISBN']/@value"/><xsl:text>, </xsl:text>
+                  <xsl:value-of select="../*:node-property[@key='Author']/@value"/><xsl:text> </xsl:text>
+                  (<xsl:value-of select="../*:node-property[@key='Pub_year']/@value"/>)<xsl:text>, </xsl:text>
                   <xsl:value-of select="../*:node-property[@key='Publisher']/@value"/><xsl:text>, </xsl:text>
-                  <xsl:value-of select="../*:node-property[@key='Address']/@value"/>
+                  <xsl:value-of select="../*:node-property[@key='Address']/@value"/><xsl:text> </xsl:text>
                 </p>
+                <p><a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">Search Title on WorldCat</a></p>
               </td>
             </tr>
           </xsl:for-each>
