@@ -2,10 +2,9 @@
 :PROPERTIES:
 :Author: Kōdō Sawaki
 :Translator: Reihō Jesse Hassach, Muhō Nöelke 
-:Pub_year:     2021
-:ISBN:     9781942493709
+:Pub_year: 2021
+:ISBN: 9781942493709
 :Publisher: Hohm Press
-:Address:  Chino Valley
+:Address: Chino Valley
 :Date: 2024
 :END:
-
