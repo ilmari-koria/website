@@ -5,6 +5,7 @@ declare variable $dir-publish := file:resolve-path("./publish");
 declare variable $dir-org := file:resolve-path("./org");
 declare variable $dir-lib := file:resolve-path("./lib");
 declare variable $dir-tmp := file:resolve-path("./tmp");
+declare variable $dir-xml := file:resolve-path("./xml");
 declare variable $source-concat := $dir-tmp || "/xml/concat/posts-concat.xml";
 
 declare function local:el-generate-xml-from-org() {
@@ -91,4 +92,8 @@ declare function local:xsl-transform-posts() {
 };
 
 local:el-generate-xml-from-org(),
+local:generate-bib-html(),
+local:generate-bib-xml(),
+local:concat-xml-files(),
+local:xsl-transform-misc(),
 local:xsl-transform-posts()
