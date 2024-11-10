@@ -80,6 +80,9 @@ td {
 .reading-list p {
     margin: 0;
     width: 80%;
+    text-align: initial;
+    text-justify: initial;
+    line-height: initial;
 }
 
 .image-column img {
@@ -133,4 +136,3 @@ td {
         text-align: left;
     }
 }
-  
