@@ -1,10 +1,67 @@
-* TODO To You: Zen Sayings of Kodo Sawaki
+* 2024
+** TODO To You: Zen Sayings of Kodo Sawaki
 :PROPERTIES:
-:Author: Kōdō Sawaki
-:Translator: Reihō Jesse Hassach, Muhō Nöelke 
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+7502446986_140.jpg
+:Author: Kōdō Sawaki, Muhō Nöelke (Translator), Reihō Jesse Hassach (Translator)
 :Pub_year: 2021
 :ISBN: 9781942493709
 :Publisher: Hohm Press
 :Address: Chino Valley
 :Date: 2024
 :END:
+
+** DONE The Art of Just Sitting: Essential Writings on the Zen Practice of Shikantaza
+:PROPERTIES:
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+008887911_140.jpg
+:Author: Loori, John Daido
+:Pub_year: 2002
+:ISBN: 9780861713943
+:Publisher: Simon and Schuster
+:Address: London
+:Date: 2024
+:END:
+
+** DONE Memoirs of a Birdman
+:PROPERTIES:
+:Img_url: https://ilmarikoria.xyz/static/koch-cover.jpg
+:Author: Koch, Ludwig
+:Pub_year: 1955
+:ISBN: 
+:Publisher: Phoenix House Ltd
+:Address:
+:Date: 2024
+:END:
+
+** DONE The Dharma Bums
+:PROPERTIES:
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+73321040_140.jpg
+:Author: Kerouac, Jack
+:Pub_year: 2000
+:ISBN: 9780141184883
+:Publisher: Penguin Books
+:Address: London
+:Date: 2024
+:END:
+
+** DONE The Zen Teaching of Homeless Kodo
+:PROPERTIES:
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+331607943_140.jpg
+:Author: Uchiyama, Kosho; Okumura, Shohaku
+:Pub_year: 2014
+:ISBN: 9781614290483
+:Publisher: Wisdom Publications
+:Address: Somerville
+:Date: 2024
+:END:
+
+** DONE Discovering the True Self: Kodo Sawaki's Art of Zen Meditation
+:PROPERTIES:
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+6201267166_140.jpg
+:Author: Sawaki, Kodo
+:Pub_year: 2020
+:ISBN: 9781640093775
+:Publisher: Catapult
+:Address: New York
+:Date: 2024
+:END:
+
