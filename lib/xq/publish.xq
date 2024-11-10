@@ -6,7 +6,8 @@ declare variable $dir-org := file:resolve-path("./org");
 declare variable $dir-lib := file:resolve-path("./lib");
 declare variable $dir-tmp := file:resolve-path("./tmp");
 declare variable $dir-xml := file:resolve-path("./xml");
-declare variable $source-concat := $dir-tmp || "/xml/concat/posts-concat.xml";
+declare variable $source-concat := $dir-tmp || "xml/concat/posts-concat.xml";
+declare variable $reading-list := $dir-tmp || "xml/reading/reading-list.xml";
 
 declare function local:el-generate-xml-from-org() {
   let $om-to-xml := $dir-lib || "/el/convert-blog-posts-to-xml.el"
@@ -21,42 +22,6 @@ declare function local:el-generate-xml-from-org() {
     file:list($dir-org, false(), '*.xml') !
     file:move($dir-org || ., $dir-tmp || "/xml/posts"),
     file:move($dir-tmp || "/xml/posts/reading-list.xml", $dir-tmp || "/xml/reading/reading-list.xml")
-};
-
-(: TODO this really should be done with bibutils :)
-declare function local:generate-bib-html() {
-  let $output := $dir-tmp || "/xml/bibliography/bibliography"
-  let $input := "./bib/bibliography.bib"
-  let $program := "bibtex2html"
-  let $args := (
-     "--style", 'ieeetr',
-     "--footer", '',
-     "--header", '',
-     "--no-header",
-     "--nodoc",
-     "--nobibsource",
-     "--ignore-errors",
-     "--sort-as-bibtex",
-     "--output", $output,
-     $input
-  )
-  return
-    proc:system($program, $args)
-};
-
-declare function local:generate-bib-xml() {
-  let $output := $dir-tmp || "/xml/bibliography/bibliography.xml"
-  let $input := $dir-tmp || "/xml/bibliography/bibliography.html"
-  let $program := "tidy"
-  let $args := (
-    "-q",
-    "--numeric-entities", "yes",
-    "-asxhtml",
-    "-o", $output,
-    $input
-  )
-  return
-    proc:system($program, $args)
 };
 
 declare function local:concat-xml-files() {
@@ -78,7 +43,8 @@ declare function local:xsl-transform-misc() {
   file:write($dir-tmp || "html/archive.html", xslt:transform($source-concat, $dir-lib || "xsl/archive.xsl")),
   file:write($dir-tmp || "html/index.html", xslt:transform($source-concat, $dir-lib || "xsl/index.xsl")),
   file:write($dir-tmp || "html/about.html", xslt:transform($source-concat, $dir-lib || "xsl/about.xsl")),
-  file:write($dir-tmp || "html/atom.xml", xslt:transform($source-concat, $dir-lib || "xsl/atom.xsl"))
+  file:write($dir-tmp || "html/atom.xml", xslt:transform($source-concat, $dir-lib || "xsl/atom.xsl")),
+  file:write($dir-tmp || "html/reading-list.html", xslt:transform($reading-list, $dir-lib || "xsl/reading-list.xsl"))
 };  
   
 declare function local:xsl-transform-posts() {
@@ -92,8 +58,6 @@ declare function local:xsl-transform-posts() {
 };
 
 local:el-generate-xml-from-org(),
-local:generate-bib-html(),
-local:generate-bib-xml(),
 local:concat-xml-files(),
 local:xsl-transform-misc(),
 local:xsl-transform-posts()
