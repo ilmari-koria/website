@@ -2,18 +2,27 @@
 SAXON="./bin/saxon/saxon-he-12.5.jar"
 BASEX="./bin/basex/bin/basex"
 PUBLISH="./lib/xq/publish.xq"
-$BASEX $PUBLISH
-
-# resume
-# TODO mv this to main publish query
 XSL_RESUME="./lib/xsl/resume.xsl"
 XML_RESUME="./xml/resume.xml"
 DIR_HTML="./tmp/html"
+DIR_XML="./tmp/xml"
+FILE_BIB="./bib/bibliography.bib"
+
+# Generate bib
+# TODO generate bib xml with xquery
+bibtex2html --style "ieeetr" --footer "" --header "" --no-header --nodoc --nobibsource --ignore-errors --sort-as-bibtex --output $DIR_XML/bibliography/bibliography $FILE_BIB
+tidy -q --numeric-entities yes -asxhtml -o $DIR_XML/bibliography/bibliography.xml $DIR_XML/bibliography/bibliography.html
+
+# call stylesheet transformations
+$BASEX $PUBLISH
+
+#resume
+# TODO mv this to main publish query
 java -cp $SAXON net.sf.saxon.Transform  -t -s:"$XML_RESUME" -xsl:"$XSL_RESUME" -o:"$DIR_HTML/ilmari-koria-resume.tex"
 pdflatex -output-directory $DIR_HTML "$DIR_HTML/ilmari-koria-resume.tex"
 rm $DIR_HTML/*.log $DIR_HTML/*.tex $DIR_HTML/*.aux $DIR_HTML/*.out   
 
-# rsync -avz --delete $DIR_HTML/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
-# # TODO generate sitemap with xslt
-# sitemap-generator -l https://ilmarikoria.xyz
-# rsync -avz --delete sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
+rsync -avz --delete $DIR_HTML/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
+# TODO generate sitemap with xslt
+sitemap-generator -l https://ilmarikoria.xyz
+rsync -avz --delete sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
