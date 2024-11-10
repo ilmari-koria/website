@@ -40,7 +40,7 @@ declare function local:concat-xml-files() {
 };
 
 declare function local:xsl-transform-misc() {
-  file:write($dir-tmp || "html/archive.html", xslt:transform($source-concat, $dir-lib || "xsl/archive.xsl")),
+  file:write($dir-tmp || "html/posts.html", xslt:transform($source-concat, $dir-lib || "xsl/archive.xsl")),
   file:write($dir-tmp || "html/index.html", xslt:transform($source-concat, $dir-lib || "xsl/index.xsl")),
   file:write($dir-tmp || "html/about.html", xslt:transform($source-concat, $dir-lib || "xsl/about.xsl")),
   file:write($dir-tmp || "html/atom.xml", xslt:transform($source-concat, $dir-lib || "xsl/atom.xsl")),
