@@ -26,9 +26,8 @@
 :Img_url: https://ilmarikoria.xyz/static/koch-cover.jpg
 :Author: Koch, Ludwig
 :Pub_year: 1955
-:ISBN: 
 :Publisher: Phoenix House Ltd
-:Address:
+:Address: London
 :Date: 2024
 :END:
 
@@ -46,7 +45,7 @@
 ** DONE The Zen Teaching of Homeless Kodo
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+331607943_140.jpg
-:Author: Uchiyama, Kosho; Okumura, Shohaku
+:Author: Kosho Uchiyama, Shohaku Okumura
 :Pub_year: 2014
 :ISBN: 9781614290483
 :Publisher: Wisdom Publications
@@ -57,7 +56,7 @@
 ** DONE Discovering the True Self: Kodo Sawaki's Art of Zen Meditation
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+6201267166_140.jpg
-:Author: Sawaki, Kodo
+:Author: Kodo Sawaki
 :Pub_year: 2020
 :ISBN: 9781640093775
 :Publisher: Catapult
