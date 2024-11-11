@@ -43,6 +43,8 @@
             <p>
               <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/><xsl:text> </xsl:text>
               (<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>)<xsl:text>, </xsl:text>
+            </p>
+            <p>
               <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Publisher']/@value"/><xsl:text>, </xsl:text>
               <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/>
             </p>
@@ -53,25 +55,27 @@
     </table>
   </xsl:template>
   <xsl:template match="*:headline[@todo-keyword='DONE']">
-      <table class="reading-list">
-        <tbody>
-            <tr>
-              <td class="image-column">
-                <img src="{*:section/*:property-drawer/*:node-property[@key='Img_url']/@value}" alt="Book Cover"/>
-              </td>
-              <td>
-                <p class="book-title"><xsl:value-of select="*:title"/></p>
-                <p>
-                  <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/><xsl:text> </xsl:text>
-                  (<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>)<xsl:text>, </xsl:text>
-                  <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Publisher']/@value"/><xsl:text>, </xsl:text>
-                  <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/>
-                </p>
-                <p><a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">Search Title on WorldCat</a></p>
-              </td>
-            </tr>
-        </tbody>
-      </table>
+    <table class="reading-list">
+      <tbody>
+        <tr>
+          <td class="image-column">
+            <img src="{*:section/*:property-drawer/*:node-property[@key='Img_url']/@value}" alt="Book Cover"/>
+          </td>
+          <td>
+            <p class="book-title"><xsl:value-of select="*:title"/></p>
+            <p>
+              <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/><xsl:text> </xsl:text>
+              (<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>)<xsl:text>, </xsl:text>
+            </p>
+            <p>
+              <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Publisher']/@value"/><xsl:text>, </xsl:text>
+              <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/>
+            </p>
+            <p><a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">Search Title on WorldCat</a></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </xsl:template>
 
 </xsl:stylesheet>
