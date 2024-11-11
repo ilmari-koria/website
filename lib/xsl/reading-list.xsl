@@ -23,7 +23,11 @@
           </div>
           <div id="list-done">
             <h3 id="reading-heading-done">Books I Read in <xsl:value-of select="*:headline[@todo-keyword='DONE']/parent::*:headline[@level='1']/@raw-value"/>:</h3>
-            <xsl:apply-templates select="*:headline[@todo-keyword='DONE']"/>
+            <table class="reading-list">
+              <tbody>
+                <xsl:apply-templates select="*:headline[@todo-keyword='DONE']"/>
+              </tbody>
+            </table>
           </div>
         </div>
         <xsl:call-template name="footer" />
@@ -42,8 +46,9 @@
             <p class="book-title"><xsl:value-of select="*:title"/></p>
             <p>
               <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/><xsl:text> </xsl:text>
-              (<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>)<xsl:text>, </xsl:text>
+              (<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>)
             </p>
+            <br/>
             <p>
               <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Publisher']/@value"/><xsl:text>, </xsl:text>
               <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/>
@@ -55,27 +60,25 @@
     </table>
   </xsl:template>
   <xsl:template match="*:headline[@todo-keyword='DONE']">
-    <table class="reading-list">
-      <tbody>
-        <tr>
-          <td class="image-column">
-            <img src="{*:section/*:property-drawer/*:node-property[@key='Img_url']/@value}" alt="Book Cover"/>
-          </td>
-          <td>
-            <p class="book-title"><xsl:value-of select="*:title"/></p>
-            <p>
-              <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/><xsl:text> </xsl:text>
-              (<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>)<xsl:text>, </xsl:text>
-            </p>
-            <p>
-              <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Publisher']/@value"/><xsl:text>, </xsl:text>
-              <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/>
-            </p>
-            <p><a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">Search Title on WorldCat</a></p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <tr>
+      <td class="image-column">
+        <img src="{*:section/*:property-drawer/*:node-property[@key='Img_url']/@value}" alt="Book Cover"/>
+      </td>
+      <td>
+        <p class="book-title"><xsl:value-of select="*:title"/></p>
+        <p>
+          <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/><xsl:text> </xsl:text>
+          (<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>)
+        </p>
+        <br/>
+        <p>
+          <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Publisher']/@value"/><xsl:text>, </xsl:text>
+          <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/>
+        </p>
+        <p><a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">Search Title on WorldCat</a></p>
+      </td>
+    </tr>
+
   </xsl:template>
 
 </xsl:stylesheet>
