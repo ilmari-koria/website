@@ -2,7 +2,7 @@
 ** TODO To You: Zen Sayings of Kodo Sawaki
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+7502446986_140.jpg
-:Author: Kōdō Sawaki, Muhō Nöelke (Translator), Reihō Jesse Hassach (Translator)
+:Author: Kōdō Sawaki, Muhō Nöelke, Reihō Jesse Hassach
 :Pub_year: 2021
 :ISBN: 9781942493709
 :Publisher: Hohm Press
@@ -13,7 +13,7 @@
 ** DONE The Art of Just Sitting: Essential Writings on the Zen Practice of Shikantaza
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+008887911_140.jpg
-:Author: Loori, John Daido
+:Author: John Daido Loori
 :Pub_year: 2002
 :ISBN: 9780861713943
 :Publisher: Simon and Schuster
@@ -24,7 +24,7 @@
 ** DONE Memoirs of a Birdman
 :PROPERTIES:
 :Img_url: https://ilmarikoria.xyz/static/koch-cover.jpg
-:Author: Koch, Ludwig
+:Author: Ludwig Koch
 :Pub_year: 1955
 :Publisher: Phoenix House Ltd
 :Address: London
@@ -34,7 +34,7 @@
 ** DONE The Dharma Bums
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+73321040_140.jpg
-:Author: Kerouac, Jack
+:Author: Jack Kerouac
 :Pub_year: 2000
 :ISBN: 9780141184883
 :Publisher: Penguin Books
