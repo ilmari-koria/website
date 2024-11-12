@@ -1,5 +1,15 @@
 * 2024
-** TODO To You: Zen Sayings of Kodo Sawaki
+** TODO Listening After Nature: Field Recording, Ecology, Critical Practice
+:PROPERTIES:
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+2055710476_140.jpg
+:Author: Mark Peter Wright
+:Pub_year: 2022
+:ISBN: 9781501354519
+:Publisher: Bloomsbury Publishing
+:Address: London
+:Date: 2024
+:END:
+** DONE To You: Zen Sayings of Kodo Sawaki
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+7502446986_140.jpg
 :Author: Kōdō Sawaki, Muhō Nöelke, Reihō Jesse Hassach
