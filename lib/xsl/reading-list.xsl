@@ -22,7 +22,7 @@
             <xsl:apply-templates select="*:headline[@todo-keyword='TODO']"/>
           </div>
           <div id="list-done">
-            <h3 id="reading-heading-done">Books I Read in <xsl:value-of select="*:headline[@todo-keyword='DONE']/parent::*:headline[@level='1']/@raw-value"/>:</h3>
+            <h3 id="reading-heading-done">Books I read in <xsl:value-of select="*:headline[@todo-keyword='DONE']/parent::*:headline[@level='1']/@raw-value"/>:</h3>
             <table class="reading-list">
               <tbody>
                 <xsl:apply-templates select="*:headline[@todo-keyword='DONE']"/>
