@@ -16,6 +16,9 @@ tidy -q --numeric-entities yes -asxhtml -o $DIR_XML/bibliography/bibliography.xm
 # call stylesheet transformations
 $BASEX $PUBLISH
 
+# css
+cp ./css/style.css ./tmp/html/style.css
+
 #resume
 # TODO mv this to main publish query
 java -cp $SAXON net.sf.saxon.Transform  -t -s:"$XML_RESUME" -xsl:"$XSL_RESUME" -o:"$DIR_HTML/ilmari-koria-resume.tex"
