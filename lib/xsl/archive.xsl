@@ -37,6 +37,7 @@
                   <xsl:variable name="date"
                                 select="../*:keyword[@key='DATE']/@value" />
                   <tr>
+                    <td>📌</td>
                     <td>
                       <p><xsl:value-of select="format-date(xs:date($date), '[Y] [MNn,3-3] [D01]')" /></p>
                     </td>
