@@ -19,7 +19,7 @@
       <meta name="description"
             content="{$meta-description}" />
       <meta name="author"
-            content="ilmarikoria@posteo.net" />
+            content="Ilmari Koria" />
       <meta name="viewport"
             content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
       <link rel="alternate"
