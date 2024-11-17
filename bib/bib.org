@@ -1,4 +1,5 @@
-@incollection{barclayAcousticEcologyEcological2019,
+* barclayAcousticEcologyEcological2019
+incollection{,
   title = {Acoustic {{Ecology}} and {{Ecological Sound Art}}: {{Listening}} to {{Changing Ecosystems}}},
   booktitle = {Sound, {{Media}}, {{Ecology}}},
   author = {Barclay, Leah},
@@ -9,7 +10,8 @@
   doi = {10.1007/978-3-030-16569-7_8}
 }
 
-@article{batchelorLowercaseStrategiesPublic2013,
+* batchelorLowercaseStrategiesPublic2013
+article{,
   title = {Lowercase {{Strategies}} in {{Public Sound Art}}: {{Celebrating}} the Transient Audience},
   author = {Batchelor, Peter},
   year = {2013},
@@ -19,7 +21,8 @@
   pages = {14--21}
 }
 
-@article{bielefeldtTreasuryEyeTrue2009,
+* bielefeldtTreasuryEyeTrue2009
+article{,
   title = {Treasury of the {{Eye}} of the {{True Dharma}}, {{Book}} 46: {{The Insentient Preach}} the {{Dharma}} ({{Mujō}} Seppō)},
   author = {Bielefeldt, Carl},
   year = {2009},
@@ -29,7 +32,8 @@
   url = {https://www.sotozen.com/eng/dharma/pdf/27EC.pdf}
 }
 
-@article{bielefeldtTreasuryTrueDharma2013,
+* bielefeldtTreasuryTrueDharma2013
+article{,
   title = {Treasury of the {{True Dharma Eye}}, {{Book}} 25: {{Sound}} of the {{Stream}}, {{Form}} of the {{Mountain}} ({{Keisei}} Sanshoku)},
   author = {Bielefeldt, Carl},
   year = {2013},
@@ -39,7 +43,8 @@
   url = {https://www.sotozen.com/eng/dharma/pdf/31e.pdf}
 }
 
-@book{burgerOneMind2015,
+* burgerOneMind2015
+book{,
   title = {One {{Mind}}},
   author = {Burger, Edward A.},
   year = {2015},
@@ -47,7 +52,8 @@
   address = {Yangon}
 }
 
-@book{chandlerEstablishingPureLand2004,
+* chandlerEstablishingPureLand2004
+book{,
   title = {Establishing a {{Pure Land}} on Earth: {{The Foguang Buddhist}} Perspective on Modernization and Globalization},
   author = {Chandler, Stuart},
   year = {2004},
@@ -55,7 +61,8 @@
   address = {Honolulu}
 }
 
-@article{chenSoundEmptinessMusic2001,
+* chenSoundEmptinessMusic2001
+article{,
   title = {Sound and {{Emptiness}}: {{Music}}, {{Philosophy}}, and the {{Monastic Practice}} of {{Buddhist Doctrine}}},
   author = {Chen, Pi-yen},
   year = {2001},
@@ -65,7 +72,8 @@
   pages = {24--48}
 }
 
-@book{dewolffHydrohumanitiesWaterDiscourse2021,
+* dewolffHydrohumanitiesWaterDiscourse2021
+book{,
   title = {Hydrohumanities: {{Water Discourse}} and {{Environmental Futures}}},
   editor = {De Wolff, Kim and Faletti, Rina C. and {López-Calvo}, Ignacio},
   year = {2021},
@@ -73,13 +81,15 @@
   address = {Oakland}
 }
 
-@misc{djsniffEpPsi112011,
+* djsniffEpPsi112011
+misc{,
   title = {Ep. {{Psi}} 11.02},
   author = {Sniff, {\relax DJ}},
   year = {2011}
 }
 
-@article{dreverSoundscapeCompositionConvergence2002,
+* dreverSoundscapeCompositionConvergence2002
+article{,
   title = {Soundscape Composition: {{The}} Convergence of Ethnography and Acousmatic Music},
   author = {Drever, John Levack},
   year = {2002},
@@ -89,7 +99,8 @@
   pages = {21--27}
 }
 
-@article{duarteSoundscapeAnthropoceneOcean2021,
+* duarteSoundscapeAnthropoceneOcean2021
+article{,
   title = {The Soundscape of the {{Anthropocene}} Ocean},
   author = {Duarte, Carlos M. and Chapuis, Lucille and Collin, Shaun P. and Costa, Daniel P. and Devassy, Reny P. and Eguiluz, Victor M. and Erbe, Christine and Gordon, Timothy A. C. and Halpern, Benjamin S. and Harding, Harry R. and Havlik, Michelle N. and Meekan, Mark and Merchant, Nathan D. and {Miksis-Olds}, Jennifer L. and Parsons, Miles and Predragovic, Milica and Radford, Andrew N. and Radford, Craig A. and Simpson, Stephen D. and Slabbekoorn, Hans and Staaterman, Erica and Van Opzeeland, Ilse C. and Winderen, Jana and Zhang, Xiangliang and Juanes, Francis},
   year = {2021},
@@ -100,7 +111,8 @@
   publisher = {American Association for the Advancement of Science}
 }
 
-@incollection{eisenbergIslamSoundSpace2013,
+* eisenbergIslamSoundSpace2013
+incollection{,
   title = {Islam, Sound and Space: {{Acoustemology}} and {{Muslim}} Citizenship on the {{Kenyan}} Coast},
   booktitle = {Music, {{Sound}} and {{Space}}: {{Transformations}} of {{Public}} and {{Private Experience}}},
   author = {Eisenberg, Andrew J.},
@@ -112,7 +124,8 @@
   doi = {10.1017/CBO9780511675850.010}
 }
 
-@incollection{feldAcoustemology2015,
+* feldAcoustemology2015
+incollection{,
   title = {Acoustemology},
   booktitle = {Keywords in Sound},
   author = {Feld, Steven},
@@ -123,7 +136,8 @@
   address = {London}
 }
 
-@incollection{feldWaterfallSongsAcoustemology1996,
+* feldWaterfallSongsAcoustemology1996
+incollection{,
   title = {Waterfall of {{Songs}}: {{An Acoustemology}} of {{Place Resounding}} in {{Bosavi}}, {{Papua New Guinea}}},
   booktitle = {Senses of {{Place}}},
   author = {Feld, Steven},
@@ -134,7 +148,8 @@
   address = {Santa Fe}
 }
 
-@incollection{ferrariPresqueRienNdeg12012,
+* ferrariPresqueRienNdeg12012
+incollection{,
   title = {Presque {{Rien}} N°1, Ou Le Lever Du Jour Au Bord de La Mer (1967-1970)},
   booktitle = {Presque {{Rien}}},
   author = {Ferrari, Luc},
@@ -143,7 +158,8 @@
   address = {Paris}
 }
 
-@incollection{guillebaudSoundwalksShivaTemple2020,
+* guillebaudSoundwalksShivaTemple2020
+incollection{,
   title = {Soundwalks in Shiva Temple: {{A}} Situated Approach to Perceived Ambiance},
   booktitle = {Worship {{Sound Spaces}}: {{Architecture}}, {{Acoustics}} and {{Anthropology}}},
   author = {Guillebaud, Christine},
@@ -154,7 +170,8 @@
   address = {Oxon}
 }
 
-@article{hellerBuddhaBoxMateriality2014,
+* hellerBuddhaBoxMateriality2014
+article{,
   title = {Buddha in a Box: {{The}} Materiality of Recitation in Contemporary Chinese Buddhism},
   author = {Heller, Natasha},
   year = {2014},
@@ -164,7 +181,8 @@
   pages = {294--314}
 }
 
-@incollection{helmreichUnderwaterMusicTuning2012,
+* helmreichUnderwaterMusicTuning2012
+incollection{,
   title = {Underwater {{Music}}: {{Tuning Composition}} to the {{Sounds}} of {{Science}}},
   booktitle = {The {{Oxford}} Handbook of Sound Studies},
   author = {Helmreich, Stefan},
@@ -175,7 +193,8 @@
   address = {New York}
 }
 
-@book{hemptonEarthSolarPowered2016,
+* hemptonEarthSolarPowered2016
+book{,
   title = {Earth Is a {{Solar Powered Jukebox}}},
   author = {Hempton, Gordon},
   year = {2016},
@@ -183,14 +202,16 @@
   address = {Port Townsend}
 }
 
-@book{hemptonSoundtrackerPortraitGordon2010,
+* hemptonSoundtrackerPortraitGordon2010
+book{,
   title = {Soundtracker: {{A Portrait}} of {{Gordon Hempton}}},
   author = {Hempton, Gordon and Sherman, Nicholas J.},
   year = {2010},
   publisher = {Fou Films}
 }
 
-@incollection{hirschkindReligion2015,
+* hirschkindReligion2015
+incollection{,
   title = {Religion},
   booktitle = {Keywords in {{Sound}}},
   author = {Hirschkind, Charles},
@@ -201,7 +222,8 @@
   address = {Durham}
 }
 
-@article{hsiehPianoTransductionsMusic2019,
+* hsiehPianoTransductionsMusic2019
+article{,
   title = {Piano Transductions: {{Music}}, Sound and Noise in Urban {{Taiwan}}},
   author = {Hsieh, Jennifer C.},
   year = {2019},
@@ -212,7 +234,8 @@
   doi = {10.1080/20551940.2018.1564459}
 }
 
-@article{hurvitzWeiShouTreatise1956,
+* hurvitzWeiShouTreatise1956
+article{,
   title = {Wei Shou: {{Treatise}} on Buddhism and Taoism - an English Translation of the Original Chinese Text of Wei-Shu Cxiv and the Japanese Annotation of Tsukamoto Zenryū. {{Reprinted}} from Yun-Kang, the Buddhist Cave-Temples of the Fifth Century a.d. in North China.},
   author = {Hurvitz, Leon},
   year = {1956},
@@ -221,7 +244,8 @@
   pages = {25--103}
 }
 
-@book{jonesChinesePureLand2019,
+* jonesChinesePureLand2019
+book{,
   title = {Chinese {{Pure Land Buddhism}}: {{Understanding}} a {{Tradition}} of {{Practice}}},
   author = {Jones, Charles B.},
   year = {2019},
@@ -229,13 +253,15 @@
   address = {Honolulu}
 }
 
-@misc{konigGettingYourselfOrganised2016,
+* konigGettingYourselfOrganised2016
+misc{,
   title = {Getting {{Yourself Organised}} with {{Org-mode}}},
   author = {König, Rainer},
   year = {2016}
 }
 
-@incollection{krauseEcoacousticsItsExpression2017,
+* krauseEcoacousticsItsExpression2017
+incollection{,
   title = {Ecoacoustics and Its {{Expression}} through the {{Voice}} of the {{Arts}}: {{An Essay}}},
   booktitle = {Ecoacoustics: {{The}} Ecological Role of Sounds},
   author = {Krause, Bernie and Monacchi, David},
@@ -246,7 +272,8 @@
   address = {Hoboken}
 }
 
-@article{mccartneyCircumscribedJourneysSoundscape2002,
+* mccartneyCircumscribedJourneysSoundscape2002
+article{,
   title = {Circumscribed Journeys through Soundscape Composition},
   author = {McCartney, Andra},
   year = {2002},
@@ -256,7 +283,8 @@
   pages = {1--3}
 }
 
-@incollection{porcelloAfterword2005,
+* porcelloAfterword2005
+incollection{,
   title = {Afterword},
   booktitle = {Wired for Sound: Engineering and Technologies in Sonic Cultures},
   author = {Porcello, Thomas},
@@ -268,7 +296,8 @@
   address = {Middletown, Conn}
 }
 
-@book{powellRecordTungshan1986,
+* powellRecordTungshan1986
+book{,
   title = {{The record of Tung-shan}},
   author = {Powell, William F.},
   year = {1986},
@@ -276,13 +305,15 @@
   address = {Honolulu}
 }
 
-@misc{rodenFormsPaperRemastered2011,
+* rodenFormsPaperRemastered2011
+misc{,
   title = {Forms of {{Paper}} ({{Remastered}}). {{LINE}}\_053},
   author = {Roden, Steve},
   year = {2011}
 }
 
-@book{schaferSoundscapeOurSonic1994,
+* schaferSoundscapeOurSonic1994
+book{,
   title = {The Soundscape: {{Our}} Sonic Environment and the Tuning of the World},
   author = {Schafer, R. Murray},
   year = {1994},
@@ -290,7 +321,8 @@
   address = {Rochester}
 }
 
-@article{schmidtNiklasLuhmannCard2018,
+* schmidtNiklasLuhmannCard2018
+article{,
   title = {Niklas {{Luhmann}}'s {{Card Index}}: {{The Fabrication}} of {{Serendipity}}},
   author = {Schmidt, Johannes F K},
   year = {2018},
@@ -300,7 +332,8 @@
   pages = {8}
 }
 
-@book{sharfComingTermsChinese2002,
+* sharfComingTermsChinese2002
+book{,
   title = {Coming to Terms with {{Chinese Buddhism}}: {{A}} Reading of the Treasure Store Treatise},
   author = {Sharf, Robert H.},
   year = {2002},
@@ -308,7 +341,8 @@
   address = {Honolulu}
 }
 
-@book{shengkaiZhongGuoHanChuanFoJiaoLiYi2001,
+* shengkaiZhongGuoHanChuanFoJiaoLiYi2001
+book{,
   title = {中国汉传佛教礼仪},
   author = {{圣凯}},
   year = {2001},
@@ -316,7 +350,8 @@
   address = {北京}
 }
 
-@incollection{ShiGuoJingFoJiaoWuQingShuoFaDeXueLiTanJiuYiShengYanFaShiWeiLiDeXianDaiYingYong2017,
+* ShiGuoJingFoJiaoWuQingShuoFaDeXueLiTanJiuYiShengYanFaShiWeiLiDeXianDaiYingYong2017
+incollection{,
   title = {佛教「無情說法」的學理探究--以聖嚴法師為例的現代應用},
   booktitle = {聖嚴研究},
   author = {釋果鏡},
@@ -329,21 +364,24 @@
   address = {臺北}
 }
 
-@incollection{sturgeonYijingYiJingWestern,
+* sturgeonYijingYiJingWestern
+incollection{,
   title = {Yijing 易經 [{{Western}} Zhou 西周]},
   booktitle = {Chinese {{Text Project}}},
   editor = {Sturgeon, Donald},
   year = {2022}
 }
 
-@misc{tengOpenYourEars2018,
+* tengOpenYourEars2018
+misc{,
   title = {Open {{Your Ears}} and {{Listen Anew}} - {{Redesigning}} the {{Metro Soundscape}}},
   author = {Teng, Cathy},
   year = {2018},
   url = {https://www.taiwan-panorama.com/en/Articles/Details?Guid=07c45eba-5f60-420c-804d-b91f313b6e18}
 }
 
-@incollection{thibaudAfterwordWorldAttunements2020,
+* thibaudAfterwordWorldAttunements2020
+incollection{,
   title = {Afterword: A World of Attunements},
   booktitle = {Worship {{Sound Spaces}}: {{Architecture}}, {{Acoustics}} and {{Anthropology}}},
   author = {Thibaud, Jean-Paul},
@@ -354,13 +392,15 @@
   address = {Oxon}
 }
 
-@misc{thoughtbotEmacsWriters2015,
+* thoughtbotEmacsWriters2015
+misc{,
   title = {Emacs {{For Writers}}},
   author = {{Thoughtbot} and Dixit, Jay},
   year = {2015}
 }
 
-@article{truaxGenresTechniquesSoundscape2002,
+* truaxGenresTechniquesSoundscape2002
+article{,
   title = {Genres and Techniques of Soundscape Composition as Developed at {{Simon Fraser University}}},
   author = {Truax, Barry},
   year = {2002},
@@ -373,7 +413,8 @@
   url = {https://www.cambridge.org/core/product/identifier/S1355771802001024/type/journal_article}
 }
 
-@book{truaxHandbookAcousticEcology1999,
+* truaxHandbookAcousticEcology1999
+book{,
   title = {Handbook for {{Acoustic Ecology}}},
   editor = {Truax, Barry},
   year = {1999},
@@ -381,14 +422,16 @@
   address = {Vancouver}
 }
 
-@misc{truaxIslands2001,
+* truaxIslands2001
+misc{,
   title = {Islands},
   author = {Truax, Barry},
   year = {2001},
   publisher = {Cambridge Street Records – CSR-CD 0101}
 }
 
-@article{truaxSoundscapeCompositionGlobal2008,
+* truaxSoundscapeCompositionGlobal2008
+article{,
   title = {Soundscape {{Composition}} as {{Global Music}}: {{Electroacoustic}} Music as Soundscape},
   author = {Truax, Barry},
   year = {2008},
@@ -398,7 +441,8 @@
   pages = {103--109}
 }
 
-@article{westerkampLinkingSoundscapeComposition2002,
+* westerkampLinkingSoundscapeComposition2002
+article{,
   title = {Linking Soundscape Composition and Acoustic Ecology},
   author = {Westerkamp, Hildegard},
   year = {2002},
@@ -410,7 +454,8 @@
   url = {https://www.cambridge.org/core/product/identifier/S1355771802001085/type/journal_article}
 }
 
-@article{witternDigitalTextsPractice2020,
+* witternDigitalTextsPractice2020
+article{,
   title = {Digital {{Texts}} in {{Practice}}},
   author = {Wittern, Christian},
   year = {2020},
@@ -418,7 +463,8 @@
   number = {13}
 }
 
-@book{yanghsuan-chihRecordBuddhistMonasteries1984,
+* yanghsuan-chihRecordBuddhistMonasteries1984
+book{,
   title = {A Record of {{Buddhist}} Monasteries in {{Lo-yang}}},
   author = {{Yang Hsüan-chih}},
   year = {1984},
