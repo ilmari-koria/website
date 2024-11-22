@@ -24,9 +24,9 @@
         <xsl:text> Website: \href{</xsl:text>
         	<xsl:value-of select="resume/header/website/@href"/>
         	<xsl:text>}</xsl:text>
-        	<xsl:text>{</xsl:text>
+        	<xsl:text>{\texttt{</xsl:text>
         	<xsl:value-of select="resume/header/website"/>
-        <xsl:text>} &amp; </xsl:text>
+        <xsl:text>}} &amp; </xsl:text>
 
         <!-- chinese name -->
         <xsl:text>\chtex{華文姓名：}</xsl:text>
@@ -50,9 +50,9 @@
         <xsl:text> GitHub: \href{</xsl:text>
         	<xsl:value-of select="resume/header/github/@href"/>
         	<xsl:text>}</xsl:text>
-        	<xsl:text>{</xsl:text>
+        	<xsl:text>{\texttt{</xsl:text>
         	<xsl:value-of select="resume/header/github"/>
-        <xsl:text>} </xsl:text>
+        <xsl:text>}} </xsl:text>
         <xsl:text> &amp; </xsl:text>
 
         <!-- references -->
@@ -73,9 +73,9 @@
         <xsl:text>\href{</xsl:text>
         	<xsl:value-of select="resume/header/name-audio/@href"/>
         	<xsl:text>}</xsl:text>
-        	<xsl:text>{</xsl:text>
+        	<xsl:text>{\texttt{</xsl:text>
         	<xsl:value-of select="resume/header/name-audio"/>
-        <xsl:text>}</xsl:text>
+        <xsl:text>}}</xsl:text>
         <xsl:text> \\ </xsl:text>
 
         <xsl:text>
