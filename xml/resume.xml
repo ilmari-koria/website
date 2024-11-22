@@ -75,7 +75,7 @@
   </education>
   <training>
     <training-entry>
-      <name>Colleague Mentoring Scheme (End User Computing \&amp; IT Support)</name>
+      <name>Colleague Mentoring Scheme (Publishing IT Infrastructure)</name>
       <institute>Bloomsbury Publishing</institute>
       <training-hours>ongoing</training-hours>
       <date>2024</date>
@@ -120,7 +120,7 @@
     <skill-entry>Bash</skill-entry>
     <skill-entry>Batch (cmd.exe)</skill-entry>
     <skill-entry>BaseX</skill-entry>
-    <skill-entry>PostgreSQL (psql)</skill-entry>
+    <skill-entry>PostgreSQL</skill-entry>
     <skill-entry>GNU/Linux (Debian)</skill-entry>
     <skill-entry>Git</skill-entry>
     <skill-entry>GNU Emacs</skill-entry>
