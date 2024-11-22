@@ -32,9 +32,9 @@
         <xsl:text>\href{mailto:</xsl:text>
         	<xsl:value-of select="resume/header/email/@mailto"/>
         	<xsl:text>}</xsl:text>
-        	<xsl:text>{</xsl:text>
+        	<xsl:text>{\texttt{</xsl:text>
         	<xsl:value-of select="resume/header/email"/>
-        <xsl:text>}</xsl:text>
+        <xsl:text>}}</xsl:text>
         <xsl:text> --- </xsl:text>
         <xsl:value-of select="resume/header/address"/>
     <xsl:text>\end{center}</xsl:text>
@@ -116,7 +116,7 @@
         </xsl:for-each>
     <xsl:text>\end{itemize}</xsl:text>
     <xsl:text>
-      \subsection*{Technical Tools and Language Skills }
+      \subsection*{Technical Tools and Language Skills}
     </xsl:text>
     <xsl:for-each select="resume/skill-list/skill-entry">
       <xsl:value-of select="."/>
