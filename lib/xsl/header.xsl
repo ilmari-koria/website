@@ -30,6 +30,8 @@
       <link rel="stylesheet"
             href="style.css"
             type="text/css" />
+      <link rel="icon" type="image/png" href=
+            "static/favicon.ico"/>
       <title>
         <xsl:value-of select="$title" />
       </title>
