@@ -48,4 +48,13 @@
                   select="position()" />
     [<a href="#{$key}"><xsl:value-of select="$number" /></a>]<xsl:text></xsl:text>
   </xsl:template>
+
+  <xsl:template match="$bibliography//*:a[@href]">
+    <xsl:variable name="link"
+                  select="@href" />
+    <a href="{$link}">
+      <xsl:value-of select="normalize-space(.)" />
+    </a>
+  </xsl:template>
+
 </xsl:stylesheet>
