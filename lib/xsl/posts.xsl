@@ -128,17 +128,6 @@
     </a>
   </xsl:template>
 
-  <!-- TODO this is repeating values set in bib.xsl -->
-  <xsl:template match="org:link[contains(@raw-link, 'cite:')]">
-    <xsl:variable name="key"
-                  select="substring-after(@raw-link, 'cite:')" />
-    <xsl:variable name="bib-entry"
-                  select="$bibliography//*:a[@name = $key]/ancestor::*:tr" />
-    <xsl:variable name="number"
-                  select="$bib-entry//*:a[@name = $key]/text()" />
-    [<a href="#{$key}"><xsl:value-of select="$number" /></a>]
-  </xsl:template>
-
   <xsl:template match="org:link[@path and matches(@path, '\.(gif|jpg|jpeg|png)$')]">
     <figure>
       <img src="{@path}" alt="{@raw-link}" />
