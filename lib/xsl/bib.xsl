@@ -46,6 +46,6 @@
                   select="$bibliography//*:a[@name = $key]/ancestor::*:tr" />
     <xsl:variable name="number"
                   select="position()" />
-    [<a href="#{$key}"><xsl:value-of select="$number" /></a>]
+    [<a href="#{$key}"><xsl:value-of select="$number" /></a>]<xsl:text></xsl:text>
   </xsl:template>
 </xsl:stylesheet>
