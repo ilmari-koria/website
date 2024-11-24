@@ -1,4 +1,14 @@
 * 2024
+** TODO The Eternal Now
+:PROPERTIES:
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+05543940_140.jpg
+:Author: Paul Tillich
+:Pub_year: 2002
+:ISBN: 9780334028758
+:Publisher: SCM, London
+:Address: London
+:Date: 2024
+:END:
 ** TODO Listening After Nature: Field Recording, Ecology, Critical Practice
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+2055710476_140.jpg
