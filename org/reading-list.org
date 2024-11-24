@@ -5,7 +5,7 @@
 :Author: Paul Tillich
 :Pub_year: 2002
 :ISBN: 9780334028758
-:Publisher: SCM, London
+:Publisher: SCM
 :Address: London
 :Date: 2024
 :END:
