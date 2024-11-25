@@ -38,13 +38,11 @@
                                 select="../*:keyword[@key='DATE']/@value" />
                   <tr>
                     <td>
-                      <p><xsl:value-of select="format-date(xs:date($date), '[Y] [MNn,3-3] [D01]')" /></p>
+                      <xsl:value-of select="format-date(xs:date($date), '[Y] [MNn,3-3] [D01]')" />
                     </td>
                     <td>
-                      <p>
-                        <a href="https://ilmarikoria.xyz/{$date}-blog.html">
+                      <a href="https://ilmarikoria.xyz/{$date}-blog.html">
                         <xsl:value-of select="$title" /></a>
-                      </p>
                     </td>
                   </tr>
                 </xsl:for-each>
