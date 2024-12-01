@@ -73,10 +73,19 @@
       <address>Canterbury</address>
     </education-entry>
   </education>
+  <events>
+    <event-entry>
+      <name>Markup UK</name>
+      <description>XML technologies conference</description>
+      <date>2025</date>
+      <role>assistant to organisers</role>
+      <address>London</address>
+    </event-entry>
+  </events>
   <training>
     <training-entry>
-      <name>Colleague Mentoring Scheme (Publishing IT Infrastructure)</name>
-      <institute>Bloomsbury Publishing</institute>
+      <name>Mentee/Colleague Mentoring Scheme (Publishing IT Infrastructure)</name>
+      <institute>Bloomsbury Publishing Plc</institute>
       <training-hours>ongoing</training-hours>
       <date>2024</date>
     </training-entry>
@@ -111,20 +120,19 @@
     <skill-entry>XProc</skill-entry>
     <skill-entry>Schematron</skill-entry>
     <skill-entry>Saxon</skill-entry>
-    <skill-entry>DocBook</skill-entry>
-    <skill-entry>TEI</skill-entry>
     <skill-entry>HTML</skill-entry>
     <skill-entry>CSS</skill-entry>
     <skill-entry>JSON</skill-entry>
     <skill-entry>\LaTeX</skill-entry>
     <skill-entry>Bash</skill-entry>
-    <skill-entry>Batch (cmd.exe)</skill-entry>
+    <skill-entry>Batch</skill-entry>
     <skill-entry>BaseX</skill-entry>
     <skill-entry>PostgreSQL</skill-entry>
-    <skill-entry>GNU/Linux (Debian)</skill-entry>
+    <skill-entry>GNU/Linux</skill-entry>
     <skill-entry>Git</skill-entry>
     <skill-entry>GNU Emacs</skill-entry>
-    <skill-entry>Atlassian (Jira, Trello)</skill-entry>
+    <skill-entry>Jira</skill-entry>
+    <skill-entry>Trello</skill-entry>
   </skill-list>
   <language-list>
     <language-entry>
@@ -137,7 +145,7 @@
     </language-entry>
     <language-entry>
       <language>Mandarin</language>
-      <level>high-intermediate</level>
+      <level>intermediate</level>
     </language-entry>
     <language-entry>
       <language>Cantonese</language>
@@ -145,4 +153,3 @@
     </language-entry>
   </language-list>
 </resume>
-
