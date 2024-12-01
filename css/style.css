@@ -125,9 +125,14 @@ td {
         display: initial;
     }
 
+    #preamble h1 {
+        margin-bottom: 1rem;
+    }
+
     #preamble ul li {
-        display: initial;
+        display: block;
         margin-right: initial;
+        margin-bottom: 1rem;
     }
 
     p {
@@ -135,11 +140,6 @@ td {
         text-justify: initial;
     }
 
-     #preamble li {
-          position: relative;
-          margin-top: 1rem;
-    }
-    
     #content {
         width: initial;
         margin: 2rem 0 0 0;
