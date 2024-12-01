@@ -58,13 +58,13 @@
         <xsl:text>}</xsl:text>
         <xsl:text>, </xsl:text>
         <xsl:value-of select="department"/>
-        <xsl:text>, </xsl:text>
+        <xsl:text>\hfill </xsl:text>
         <xsl:value-of select="address"/>
       <xsl:text>}</xsl:text>
       <xsl:text>\begin{itemize}</xsl:text>
       	<xsl:text>\item\emph{</xsl:text>
       	<xsl:value-of select="role"/>
-      		<xsl:text>}, </xsl:text>
+      		<xsl:text>}\hfill </xsl:text>
         	<xsl:value-of select="time-start"/>
        		<xsl:text> -- </xsl:text>
         	<xsl:value-of select="time-end"/>
@@ -87,12 +87,29 @@
                       <xsl:value-of select="institute"/>
                   <xsl:text>}, </xsl:text>
                   <xsl:value-of select="result"/>
-                  <xsl:text>, </xsl:text>
+                  <xsl:text>\hfill  </xsl:text>
                   <xsl:value-of select="address"/>
         </xsl:for-each>
     <xsl:text>\end{itemize}</xsl:text>
+    <!-- <xsl:text>\subsection*{Industry Contributions}</xsl:text> -->
+    <!--   <xsl:text>\bulletlist</xsl:text> -->
+    <!--     <xsl:text>\begin{itemize}</xsl:text> -->
+    <!--       <xsl:for-each select="resume/events/event-entry"> -->
+    <!--         <xsl:text>\item </xsl:text> -->
+    <!--         <xsl:text>\textit{</xsl:text> -->
+    <!--         <xsl:value-of select="name"/> -->
+    <!--         <xsl:text>} (</xsl:text> -->
+    <!--         <xsl:value-of select="description"/> -->
+    <!--         <xsl:text>), </xsl:text> -->
+    <!--         <xsl:value-of select="role"/> -->
+    <!--         <xsl:text>, </xsl:text> -->
+    <!--         <xsl:value-of select="address"/> -->
+    <!--         <xsl:text> \hfill </xsl:text> -->
+    <!--         <xsl:value-of select="date"/> -->
+    <!--       </xsl:for-each> -->
+    <!--   <xsl:text>\end{itemize}</xsl:text> -->
     <xsl:text>
-      \subsection*{Technical Training}
+      \subsection*{Professional Development}
     </xsl:text>
     <xsl:text>\bulletlist</xsl:text>
     <xsl:text>\begin{itemize}</xsl:text>
@@ -106,19 +123,21 @@
                   <xsl:value-of select="training-hours"/>
                       <xsl:choose>
                           <xsl:when test="number(training-hours) != number(training-hours)">
-                              <xsl:text>, </xsl:text>
+                              <xsl:text> </xsl:text>
                           </xsl:when>
                           <xsl:otherwise>
-                              <xsl:text> hrs., </xsl:text>
+                              <xsl:text> hrs. </xsl:text>
                           </xsl:otherwise>
                       </xsl:choose>
+                  <xsl:text>\hfill </xsl:text>
                   <xsl:value-of select="date"/>
         </xsl:for-each>
     <xsl:text>\end{itemize}</xsl:text>
     <xsl:text>
-      \subsection*{Technical Tools and Language Skills}
+      \subsection*{Tools \&amp; Language Skills}
     </xsl:text>
     <xsl:for-each select="resume/skill-list/skill-entry">
+      <xsl:sort select="." data-type="text" order="ascending"/>
       <xsl:value-of select="."/>
       <xsl:if test="position() != last()">
         <xsl:text>, </xsl:text>
