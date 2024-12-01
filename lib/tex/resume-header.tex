@@ -75,12 +75,12 @@
 %% typeset lists
 \usepackage{enumitem}
 \renewcommand\labelitemi{}
-\renewcommand\labelitemii{-}
+\renewcommand\labelitemii{\hfill$\vcenter{\hbox{\footnotesize{$\bullet$}}}$\hfill}
 \setlist[itemize,1]{before=\normalsize,itemsep=0em,topsep=0em,leftmargin=*,labelindent=0em,labelsep=0em}
 \setlist[itemize,2]{before=\normalsize,itemsep=0em,topsep=0em,leftmargin=*,labelindent=0em,labelsep=0.5em}
 
 %% custom lists
-\newcommand{\bulletlist}{\renewcommand\labelitemi{-}\setlist[itemize,1]{before=\normalsize,itemsep=0em,topsep=0em,leftmargin=*,labelindent=0em,labelsep=0.5em}}
+\newcommand{\bulletlist}{\renewcommand\labelitemi{\hfill$\vcenter{\hbox{\footnotesize{$\bullet$}}}$\hfill}\setlist[itemize,1]{before=\normalsize,itemsep=0em,topsep=0em,leftmargin=*,labelindent=0em,labelsep=0.5em}}
 \newcommand{\nobulletlist}{\renewcommand\labelitemi{}\setlist[itemize,1]{before=\normalsize,itemsep=0em,topsep=0em,leftmargin=*,labelindent=0em,labelsep=0em}}
 
 
