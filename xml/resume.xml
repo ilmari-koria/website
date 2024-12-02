@@ -41,7 +41,7 @@
       <time-end>Present</time-end>
       <role>Content Analyst</role>
       <role-achievements>
-        <achievement>Quality assurance (QA), testing and management of platform XML content.</achievement>
+        <achievement>Quality assurance (QA), testing and management of platform XML content (Schematron, XQuery, XSLT).</achievement>
         <achievement>Checking XML coded texts against source editions for structural and textual errors.</achievement>
         <achievement>Following automated and manual routines and checklists systematically in order to identify and rectify XML errors.</achievement>
         <achievement>Inputting and checking any required metadata and taxonomy indexing to aid discoverability of XML texts.</achievement>
@@ -85,7 +85,7 @@
   <training>
     <training-entry>
       <name>Mentee/Colleague Mentoring Scheme (Publishing IT Infrastructure)</name>
-      <institute>Bloomsbury Publishing</institute>
+      <institute>Bloomsbury Publ.</institute>
       <training-hours>ongoing</training-hours>
       <date>2024 -- 2025</date>
     </training-entry>
@@ -123,7 +123,7 @@
     <skill-entry>HTML</skill-entry>
     <skill-entry>CSS</skill-entry>
     <skill-entry>JSON</skill-entry>
-    <skill-entry>\LaTeX</skill-entry>
+    <skill-entry>\LaTeX{}</skill-entry>
     <skill-entry>Bash</skill-entry>
     <skill-entry>Batch</skill-entry>
     <skill-entry>BaseX</skill-entry>
@@ -153,3 +153,4 @@
     </language-entry>
   </language-list>
 </resume>
+
