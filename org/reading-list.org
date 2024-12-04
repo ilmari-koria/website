@@ -1,4 +1,13 @@
 * 2024
+** TODO Backwater Reeds: Zen Buddhist Dharma Talks for the 21st Century
+:PROPERTIES:
+:Img_url: https://m.media-amazon.com/images/I/81RsyDVxObL._SL1500_.jpg
+:Author: Jeff Shore, Leonie Callaway
+:Pub_year: 2024
+:ISBN: 9798339907435
+:Publisher: beingwithoutself.org
+:Date: 2024
+:END:
 ** TODO The Eternal Now
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+05543940_140.jpg
@@ -9,7 +18,7 @@
 :Address: London
 :Date: 2024
 :END:
-** TODO Listening After Nature: Field Recording, Ecology, Critical Practice
+** DONE Listening After Nature: Field Recording, Ecology, Critical Practice
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+2055710476_140.jpg
 :Author: Mark Peter Wright
