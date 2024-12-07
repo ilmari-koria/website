@@ -13,7 +13,7 @@
   
   <xsl:function name="f:tokenize-sentences" as="xs:string*">
     <xsl:param name="text" as="xs:string"/>
-    <xsl:variable name="cleaned-text" select="replace($text, '\(.*?\)', '')"/>
+    <xsl:variable name="cleaned-text" select="replace($text, '[^()]*[.]', '')"/>
     <xsl:variable name="sentences" select="tokenize($cleaned-text, '[.!?]\s*')"/>
     <xsl:value-of select="$sentences"/>
   </xsl:function>
@@ -26,7 +26,7 @@
 
   <pattern>
     <rule context="//*:paragraph[not(child::*:caption)]/text()">
-      <let name="combined-string" value="f:combine-text(.)"
+      <let name="combined-string" value="f:combine-text(.)"/>
       <let name="sentences" value="f:tokenize-sentences($combined-string)"/>
       <let name="words" value="f:count-words-in-sentence($sentences)"/>
       <report test="every $n in (for $w in $words return $w) satisfies $n gt 25">
