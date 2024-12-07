@@ -114,6 +114,16 @@ td {
     max-width: 115px;
 }
 
+ul.reading-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+}
+
+li.book-list {
+    margin-bottom: 1rem;
+}
+
 /* media rules */
 @media (max-width: 768px) {
     body {
