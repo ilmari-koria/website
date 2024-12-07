@@ -7,6 +7,10 @@ XML_RESUME="./xml/resume.xml"
 DIR_HTML="./tmp/html"
 DIR_XML="./tmp/xml"
 FILE_BIB="./bib/bibliography.bib"
+GITHUB_ATOM="https://github.com/ilmari-koria/website/commits.atom"
+
+# retrieve github atom feed
+wget -O "$DIR_XML/github/github.atom" $GITHUB_ATOM
 
 # Generate bib
 # TODO generate bib xml with xquery
