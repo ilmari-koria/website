@@ -1,5 +1,4 @@
 #!/bin/bash
-
 SAXON="./bin/saxon/saxon-he-12.5.jar"
 SCHEMATRON="./lib/sch/blog.sch"
 SCHXSLT="./bin/schxslt/schxslt-1.10.1/2.0/pipeline-for-svrl.xsl"
@@ -8,6 +7,7 @@ SVRL_OUT="./tmp/sch/out.svrl"
 SCH_COMPILED="./tmp/sch/sch_compiled.xsl"
 HTML_OUT="./sch-report.html"
 INPUT_XML="./tmp/xml/posts/2021-06-07-blog.xml"
-
 java -jar "$SAXON" -xsl:"$SCHXSLT" -s:"$SCHEMATRON" -o:"$SCH_COMPILED"
 java -jar "$SAXON" -xsl:"$SCH_COMPILED" -s:"$INPUT_XML" -o:"$SVRL_OUT"
+java -jar "$SAXON" -xsl:"$XSLT_HTML" -s:"$SVRL_OUT" -o:"$HTML_OUT"
+xdg-open $HTML_OUT
