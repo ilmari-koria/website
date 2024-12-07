@@ -11,8 +11,11 @@
 
   <xsl:template name="preamble">
     <div id="preamble">
-      <h1>Ilmari's Webpage</h1>
-      <ul>
+      <div class="website-title">
+        <img id="logo" src="static/logo.png" alt="Statue of smiling Buddhist monk."/>
+        <h1>Ilmari's Webpage</h1>
+       </div>
+       <ul>
         <li><a href="https://ilmarikoria.xyz">Home</a></li>
         <li><a href="https://ilmarikoria.xyz/about.html">About</a></li>
         <li><a href="https://ilmarikoria.xyz/posts.html">Posts</a></li>
