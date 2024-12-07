@@ -5,7 +5,7 @@
 :Author: Jeff Shore, Leonie Callaway
 :Pub_year: 2024
 :ISBN: 9798339907435
-:Publisher: beingwithoutself.org
+:Publisher: www.beingwithoutself.org
 :Date: 2024
 :END:
 ** TODO The Eternal Now
