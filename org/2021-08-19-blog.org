@@ -33,8 +33,10 @@ Additionally the research team engaged with questions from the sound designers e
 * methodology 2: On Sources: Soundsnap etc                           :ignore:
 In terms of sound assets, these were limited to readily available online sources, such as [[https://www.soundsnap.com/][Soundsnap]], and [[https://freesound.org/][Freesound]]. While the variety of such assets was generally speaking good, there is a distinct lack of field recordings from Mainland China. This made some of the design decisions awkward, in which background ambiences, for example, used nature recordings from Japan, with Japanese flora and fauna. This means that some aspects of listener recognisability and immersion (especially for listeners from Henan province) was sacrificed to create an otherwise consisted soundscape. This was further complicated by the lack of quality recordings of Han-Chinese Buddhism (漢傳佛教), such as chanting (/fanbai/ 梵唄) and, for example, signalling instruments like the /yubang/ 魚梆 [[cite:shengkaiZhongGuoHanChuanFoJiaoLiYi2001][cite:truaxSoundscapeCompositionGlobal2008]]. What were utilised instead were field recordings from (what appear to be) Japanese Pure-Land (/Jōdo-shū/ 浄土宗) monasteries, as found on Soundsnap. All these points will be rectified in the future through effort put into in-situ field recording, and the creation of a dedicated sound archive. While not solving the anachronism of using contemporary sounds to communicate those of early-medieval China, this will help further emphasise the appropriate geographical context.
 
-#+CAPTION: "Yubang," (Still from /One Mind/, 2015) [[cite:burgerOneMind2015][cite:burgerOneMind2015]]
-[[static/yubang.jpg][static/yubang.jpg]]
+#+CAPTION: "Yubang," (Still from /One Mind/, 2015) 
+[[static/yubang.jpg][static/yubang.jpg]] 
+
+(Image source: [[cite:burgerOneMind2015][cite:burgerOneMind2015]])
 
 ** Some Further Issues
 # on skitsophonia
