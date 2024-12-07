@@ -26,9 +26,7 @@
             <xsl:variable name="number"
                           select="position()" />
             <tr>
-              <td>
-                <p id="{$key}">[<a href="#{$key}"><xsl:value-of select="$number" /></a>]</p>
-              </td>
+              <td>[<a id="{$key}" href="#{$key}"><xsl:value-of select="$number" /></a>]</td>
               <td>
                 <xsl:apply-templates select="$bib-entry//*:td[@class = 'bibtexitem']" />
               </td>
