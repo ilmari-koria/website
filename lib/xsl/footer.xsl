@@ -16,7 +16,7 @@
             [Latest commit: 
               <a href="{$github/*:feed/*:entry[1]/*:link/@href}">
                 <xsl:value-of select="substring(substring-after($github/*:feed/*:entry[1]/*:id, 'Commit/'), 1, 7)" />
-              </a>]
+              </a>].
         </li>
         <li>
           <a href="https://creativecommons.org/licenses/by-nc/4.0/">License</a>
