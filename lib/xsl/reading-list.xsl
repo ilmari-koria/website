@@ -59,12 +59,10 @@
   </xsl:template>
   <xsl:template match="*:headline[@todo-keyword='DONE']">
       <li class="book-list">
+          <em><xsl:value-of select="*:title"/></em><xsl:text>, </xsl:text>
           <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/><xsl:text> </xsl:text>
           (<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>)<xsl:text>. </xsl:text>
-          <em><xsl:value-of select="*:title"/></em><xsl:text>. </xsl:text>
-          <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Publisher']/@value"/><xsl:text>, </xsl:text>
-          <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/><xsl:text>. </xsl:text>
-          [<a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">Search Title on WorldCat</a>].
+          [<a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">WorldCat</a>].
       </li>
   </xsl:template>
 
