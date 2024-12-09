@@ -126,13 +126,7 @@ td {
 }
 
 ul.reading-list {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-}
-
-li.book-list {
-    margin-bottom: 1rem;
+    font-size: smaller;
 }
 
 /* media rules */
