@@ -28,9 +28,11 @@
           </div>
           <div id="list-done">
             <h3 id="reading-heading-done">Books I read in <xsl:value-of select="*:headline[@todo-keyword='DONE']/parent::*:headline[@level='1']/@raw-value"/>:</h3>
-            <ul class="reading-list">
+            <table class="reading-list-done">
+              <tbody>
                <xsl:apply-templates select="*:headline[@todo-keyword='DONE']"/>
-            </ul>
+              </tbody>
+            </table>
           </div>
         </div>
         <xsl:call-template name="footer" />
@@ -58,12 +60,12 @@
     </tr>
   </xsl:template>
   <xsl:template match="*:headline[@todo-keyword='DONE']">
-      <li class="book-list">
-          <em><xsl:value-of select="*:title"/></em><xsl:text>, </xsl:text>
-          <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/><xsl:text> </xsl:text>
-          (<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>)<xsl:text>. </xsl:text>
-          [<a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">WorldCat</a>].
-      </li>
+    <tr>
+      <td><em><xsl:value-of select="*:title"/></em></td>
+      <td><xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/></td>
+      <td>(<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>)</td>
+      <td>[<a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">WorldCat</a>].</td>
+    </tr>
   </xsl:template>
 
 </xsl:stylesheet>
