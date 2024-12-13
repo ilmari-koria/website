@@ -121,6 +121,14 @@ td {
     line-height: initial;
 }
 
+.reading-list-done {
+    font-size: small;
+}
+
+.reading-list-done td {
+    padding-bottom: 0;
+}
+
 .image-column img {
     max-width: 115px;
 }
