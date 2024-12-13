@@ -8,7 +8,7 @@
 :Publisher: www.beingwithoutself.org
 :Date: 2024
 :END:
-** TODO The Eternal Now
+** DONE The Eternal Now
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+05543940_140.jpg
 :Author: Paul Tillich
