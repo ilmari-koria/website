@@ -8,6 +8,16 @@
 :Publisher: www.beingwithoutself.org
 :Date: 2024
 :END:
+** TODO Geosonics: Listening Through Earth's Soundscapes
+:PROPERTIES:
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+1457963796_140.jpg
+:Author: Joshua Dittrich
+:Pub_year: 2024
+:ISBN: 9798765104590
+:Publisher: Bloomsbury Academic
+:Address: London
+:Date: 2024
+:END:
 ** DONE The Eternal Now
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+05543940_140.jpg
