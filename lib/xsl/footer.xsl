@@ -12,7 +12,7 @@
     <div id="postamble">
       <hr />
       <ul>
-        <li>This site was last generated on <xsl:call-template name="generate-timestamp" /> | Latest commit: 
+        <li>This site was last generated on <xsl:call-template name="generate-timestamp" /> | Commit: 
               <a href="{$github/*:feed/*:entry[1]/*:link/@href}">
                 <xsl:value-of select="substring(substring-after($github/*:feed/*:entry[1]/*:id, 'Commit/'), 1, 7)" />
               </a>.
