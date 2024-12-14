@@ -64,7 +64,7 @@
       <td><em><xsl:value-of select="*:title"/></em></td>
       <td><xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/></td>
       <td>(<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>)</td>
-      <td>[<a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">WorldCat</a>].</td>
+      <td>[<a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">WorldCat</a>]</td>
     </tr>
   </xsl:template>
 
