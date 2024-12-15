@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="../../schematron-023.xspec"
+        stylesheet="schematron-023-sch-preprocessed.xsl"
+        schematron="../../../../schematron/schematron-023.sch"
+        date="2000-01-01T00:00:00Z">
+   <scenario id="scenario1" xspec="../../schematron-023.xspec">
+      <label>valid with warning: expect-valid should pass</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    select="self::document-node()">
+            <document>
+               <section>
+                  <title>INTRODUCTION</title>
+                  <p>Some text</p>
+               </section>
+            </document>
+         </x:context>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <svrl:schematron-output xmlns:error="https://doi.org/10.5281/zenodo.1495494#error"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                                    xmlns:schxslt="https://doi.org/10.5281/zenodo.1495494"
+                                    xmlns:schxslt-api="https://doi.org/10.5281/zenodo.1495494#api"
+                                    xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                                    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+               <svrl:active-pattern documents="schematron-023-compiled.xsl"/>
+               <svrl:fired-rule context="/"/>
+               <svrl:fired-rule context="title"/>
+               <svrl:failed-assert location="/Q{}document[1]/Q{}section[1]/Q{}title[1]"
+                                   role="WARN"
+                                   id="a0003"
+                                   test="string() ne upper-case(string())">
+                  <svrl:text>
+                title should not be all upper case
+            </svrl:text>
+               </svrl:failed-assert>
+               <svrl:fired-rule context="p"/>
+               <svrl:successful-report location="/Q{}document[1]/Q{}section[1]/Q{}p[1]"
+                                       role="WARN"
+                                       id="a0004"
+                                       test="string-length() lt 10">
+                  <svrl:text>
+                paragraph is less than 10 characters long
+            </svrl:text>
+               </svrl:successful-report>
+            </svrl:schematron-output>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>valid</label>
+         <expect-test-wrap xmlns="">
+            <x:expect xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                      test="Q{http://purl.oclc.org/dsdl/svrl}schematron-output[Q{http://purl.oclc.org/dsdl/svrl}fired-rule] and empty(Q{http://purl.oclc.org/dsdl/svrl}schematron-output/(Q{http://purl.oclc.org/dsdl/svrl}failed-assert | Q{http://purl.oclc.org/dsdl/svrl}successful-report)[empty(@role) or (lower-case(@role) = ('error', 'fatal'))])"/>
+         </expect-test-wrap>
+         <expect select="()"/>
+      </test>
+   </scenario>
+   <scenario id="scenario2" xspec="../../schematron-023.xspec">
+      <label>error: expect-valid should fail</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    select="self::document-node()">
+            <document>
+               <section>
+                  <title>INTRODUCTION</title>
+               </section>
+            </document>
+         </x:context>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <svrl:schematron-output xmlns:error="https://doi.org/10.5281/zenodo.1495494#error"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                                    xmlns:schxslt="https://doi.org/10.5281/zenodo.1495494"
+                                    xmlns:schxslt-api="https://doi.org/10.5281/zenodo.1495494#api"
+                                    xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                                    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+               <svrl:active-pattern documents="schematron-023-compiled.xsl"/>
+               <svrl:fired-rule context="/"/>
+               <svrl:fired-rule context="title"/>
+               <svrl:failed-assert location="/Q{}document[1]/Q{}section[1]/Q{}title[1]"
+                                   role="ERROR"
+                                   id="a0002"
+                                   test="following-sibling::p">
+                  <svrl:text>
+                title must be followed by a paragraph
+            </svrl:text>
+               </svrl:failed-assert>
+               <svrl:failed-assert location="/Q{}document[1]/Q{}section[1]/Q{}title[1]"
+                                   role="WARN"
+                                   id="a0003"
+                                   test="string() ne upper-case(string())">
+                  <svrl:text>
+                title should not be all upper case
+            </svrl:text>
+               </svrl:failed-assert>
+            </svrl:schematron-output>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="false">
+         <label>valid</label>
+         <expect-test-wrap xmlns="">
+            <x:expect xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                      test="Q{http://purl.oclc.org/dsdl/svrl}schematron-output[Q{http://purl.oclc.org/dsdl/svrl}fired-rule] and empty(Q{http://purl.oclc.org/dsdl/svrl}schematron-output/(Q{http://purl.oclc.org/dsdl/svrl}failed-assert | Q{http://purl.oclc.org/dsdl/svrl}successful-report)[empty(@role) or (lower-case(@role) = ('error', 'fatal'))])"/>
+         </expect-test-wrap>
+         <expect select="()"/>
+      </test>
+   </scenario>
+   <scenario id="scenario3" xspec="../../schematron-023.xspec">
+      <label>fatal: expect-valid should fail</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    select="self::document-node()">
+            <adocument/>
+         </x:context>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <svrl:schematron-output xmlns:error="https://doi.org/10.5281/zenodo.1495494#error"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                                    xmlns:schxslt="https://doi.org/10.5281/zenodo.1495494"
+                                    xmlns:schxslt-api="https://doi.org/10.5281/zenodo.1495494#api"
+                                    xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                                    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+               <svrl:active-pattern documents="schematron-023-compiled.xsl"/>
+               <svrl:fired-rule context="/"/>
+               <svrl:failed-assert location="/" role="FATAL" id="a0001" test="document">
+                  <svrl:text>
+                root element must be document
+            </svrl:text>
+               </svrl:failed-assert>
+            </svrl:schematron-output>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="false">
+         <label>valid</label>
+         <expect-test-wrap xmlns="">
+            <x:expect xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                      test="Q{http://purl.oclc.org/dsdl/svrl}schematron-output[Q{http://purl.oclc.org/dsdl/svrl}fired-rule] and empty(Q{http://purl.oclc.org/dsdl/svrl}schematron-output/(Q{http://purl.oclc.org/dsdl/svrl}failed-assert | Q{http://purl.oclc.org/dsdl/svrl}successful-report)[empty(@role) or (lower-case(@role) = ('error', 'fatal'))])"/>
+         </expect-test-wrap>
+         <expect select="()"/>
+      </test>
+   </scenario>
+</report>

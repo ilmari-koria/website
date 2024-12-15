@@ -1,0 +1,25 @@
+{
+  "endOfLine": "auto",
+  "overrides": [
+    {
+      "files": ["*.css"],
+      "options": {
+        "tabWidth": 4,
+        "useTabs": true
+      }
+    },
+    {
+      "files": ["*.properties"],
+      "options": {
+        "keySeparator": "="
+      }
+    },
+    {
+      "files": ["*.yml"],
+      "options": {
+        "singleQuote": true
+      }
+    }
+  ],
+  "plugins": ["prettier-plugin-properties"]
+}

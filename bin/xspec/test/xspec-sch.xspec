@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description schematron="../src/schemas/xspec.sch"
+	xmlns:x="http://www.jenitennison.com/xslt/xspec">
+
+	<x:scenario label="Whitespace-only text node">
+		<x:scenario label="XSLT and XQuery">
+			<x:context href="ws-only-text.xspec" />
+			<x:expect-assert id="text-node-should-be-non-ignorable" label="function-param"
+				location="/x:description/x:scenario[starts-with(@label, 'In function-param,')]/x:scenario[1]/x:call/x:param/span/text()" />
+			<x:expect-assert id="text-node-should-be-non-ignorable"
+				label="$myv:global-var-span-element"
+				location="/x:description/x:variable[@name eq 'myv:global-var-span-element']/span/text()" />
+			<x:expect-assert id="text-node-should-be-non-ignorable"
+				label="$myv:local-var-span-element"
+				location="//x:scenario/x:variable[@name eq 'myv:local-var-span-element']/span/text()" />
+			<x:expect-assert id="text-node-should-be-non-ignorable" label="assertion"
+				location="/x:description/x:scenario[starts-with(@label, 'In assertion,')]/x:scenario[1]/x:expect/span/text()" />
+			<x:expect-assert id="text-node-should-be-non-ignorable" label="grandchild"
+				location="/x:description/x:scenario[starts-with(@label, 'In user-content,')]/x:scenario[3]/x:call/x:param/pre/span/text()" />
+			<x:expect-assert id="text-node-should-be-non-ignorable" label="sibling node"
+				location="/x:description/x:scenario[starts-with(@label, 'In user-content,')]/x:scenario[4]/x:call/x:param/p/span/text()" />
+			<x:expect-assert id="text-node-should-be-non-ignorable"
+				label="override ancestor scenario"
+				location="/x:description/x:scenario[starts-with(x:label, 'When @xml:space=preserve ')]/x:scenario[2]/x:scenario/x:call/x:param/span/text()" />
+			<x:expect-assert count="7" />
+		</x:scenario>
+
+		<x:scenario label="XSLT">
+			<x:context href="ws-only-text_stylesheet.xspec" />
+			<x:expect-assert id="text-node-should-be-non-ignorable" label="context template-param"
+				location="/x:description/x:scenario[starts-with(@label, 'In context template-param,')]/x:scenario[1]/x:context/x:param/span/text()" />
+			<x:expect-assert id="text-node-should-be-non-ignorable" label="context"
+				location="/x:description/x:scenario[starts-with(@label, 'In context,')]/x:scenario[1]/x:context/span/text()" />
+			<x:expect-assert id="text-node-should-be-non-ignorable"
+				label="template-call template-param"
+				location="/x:description/x:scenario[starts-with(@label, 'In template-call template-param,')]/x:scenario[1]/x:call/x:param/span/text()" />
+			<x:expect-assert id="text-node-should-be-non-ignorable"
+				label="$global-param-span-element"
+				location="/x:description/x:param[@name eq 'global-param-span-element']/span/text()" />
+			<x:expect-assert count="4" />
+		</x:scenario>
+
+		<x:scenario label="XSLT with @run-as=external">
+			<x:context href="external_ws-only-text_stylesheet.xspec" />
+			<x:expect-assert id="text-node-should-be-non-ignorable"
+				label="$scenario-param-span-element"
+				location="//x:scenario/x:param[@name eq 'scenario-param-span-element']/span/text()" />
+			<x:expect-assert count="1" />
+		</x:scenario>
+	</x:scenario>
+	<x:scenario label="x:expand-text in user content">
+		<x:scenario label="Generic user content">
+			<x:context href="tvt.xspec" />
+			<x:expect-not-assert id="user-element-expand-text"
+				label="user element with x:expand-text"
+				location="//x:scenario[@label='function-param']//x:scenario[@label='@*:expand-text=yes within user-content']//function-param-child[1]"/>
+			<x:expect-assert id="user-element-expand-text"
+				label="user element with expand-text"
+				location="//x:scenario[@label='function-param']//x:scenario[@label='@*:expand-text=yes within user-content']//function-param-child[2]"/>
+			<x:expect-assert id="user-element-expand-text"
+				label="user element with both x:expand-text and expand-text"
+				location="//x:scenario[@label='function-param']//x:scenario[@label='@*:expand-text=yes within user-content']//function-param-child[3]"/>
+			<x:expect-not-assert id="user-element-expand-text"
+				label="user element with neither x:expand-text nor expand-text"
+				location="//x:scenario[@label='function-param']//x:scenario[@label='@expand-text=yes on x:param']//function-param-child"/>
+		</x:scenario>
+		<x:scenario label="User content that happens to be XSLT">
+			<x:context href="tvt/detect-expand-text-user-content-xslt.xspec" />
+			<x:expect-assert id="user-element-expand-text" />
+		</x:scenario>
+	</x:scenario>
+	<x:scenario label="Ineffective pending and focus attributes">
+		<x:context href="schematron/xspec-sch-pending-focus.xspec"/>
+		<x:scenario label="Non-shared scenario">
+			<x:expect-report id="focused-pending-scenario"
+				location="//x:scenario[@label eq 'Non-shared scenario with pending and focus']"/>
+			<x:expect-not-report id="focused-pending-scenario"
+				location="//x:scenario[@label eq 'Non-shared scenario with pending but not focus']"/>
+			<x:expect-not-report id="focused-pending-scenario"
+				location="//x:scenario[@label eq 'Non-shared scenario with focus but not pending']"/>
+			<x:expect-not-report id="focused-pending-scenario"
+				location="//x:scenario[@label eq 'Non-shared scenario with neither pending nor focus']"/>
+		</x:scenario>
+		<x:scenario label="Shared scenario">
+			<x:scenario label="with both @focus and @pending">
+				<x:expect-report id="focused-shared-scenario"
+					location="//x:scenario[@label eq 'Shared scenario with pending and focus']"/>
+				<x:expect-not-report id="pending-shared-scenario"
+					label="(sch:rule for @focus shadows the one for @pending)"
+					location="//x:scenario[@label eq 'Shared scenario with pending and focus']"/>
+			</x:scenario>
+			<x:scenario label="with only @pending, not @focus">
+				<x:expect-report id="pending-shared-scenario"
+					location="//x:scenario[@label eq 'Shared scenario with pending but not focus']"/>
+				<x:expect-not-report id="focused-shared-scenario"
+					location="//x:scenario[@label eq 'Shared scenario with pending but not focus']"/>
+			</x:scenario>
+			<x:scenario label="with only @focus, not @pending">
+				<x:expect-report id="focused-shared-scenario"
+					location="//x:scenario[@label eq 'Shared scenario with focus but not pending']"/>
+				<x:expect-not-report id="pending-shared-scenario"
+					location="//x:scenario[@label eq 'Shared scenario with focus but not pending']"/>
+			</x:scenario>
+			<x:scenario label="with neither @focus nor @pending">
+				<x:expect-not-report id="focused-shared-scenario"
+					location="//x:scenario[@label eq 'Shared scenario with neither pending nor focus']"/>
+				<x:expect-not-report id="pending-shared-scenario"
+					location="//x:scenario[@label eq 'Shared scenario with neither pending nor focus']"/>
+			</x:scenario>
+		</x:scenario>
+	</x:scenario>
+
+</x:description>

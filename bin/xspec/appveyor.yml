@@ -1,0 +1,29 @@
+branches:
+  except:
+    - schxslt
+
+skip_tags: true
+
+skip_branch_with_pr: true
+
+environment:
+  matrix:
+    # Non-mainstream jobs are not included in favor of GitHub Actions and Azure Pipelines
+    - XSPEC_TEST_ENV: saxon-12
+
+install:
+  - cmd: test\ci\install-deps.cmd
+
+build: off
+
+test_script:
+  # XSpec unit tests and end-to-end tests omitted due to time limit. They run on GitHub Actions and Azure Pipelines.
+  - cmd: |
+      test\ci\print-env.cmd
+      test\run-bats.cmd
+      rem test\ci\maven-package.cmd -q
+      test\ci\compile-java.cmd -silent
+      test\ci\last-git-status.cmd
+      rem test\ci\test-maven-jar.cmd -silent
+
+deploy: off
