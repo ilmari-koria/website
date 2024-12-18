@@ -37,7 +37,7 @@
               <li>field recording/phonography</li>
               <li>tinkering with free and open-source software</li>
               <li>language learning, and</li>
-              <li>Zazen.</li>
+              <li>zazen.</li>
             </ul>
             </p>
             <p>On the work side of things, I am a content markup
