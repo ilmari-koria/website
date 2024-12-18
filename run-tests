@@ -1,8 +1,15 @@
 #!/bin/bash
 export SAXON_CP="./bin/saxon/saxon-he-12.5.jar"
 DIR_XSPEC="./bin/xspec"
-DIR_TESTS="./lib/xspec/"
+DIR_TESTS="./lib/xspec"
+DIR_TMP="./tmp/xspec"
 BIN_XSPEC="$DIR_XSPEC/bin/xspec.sh"
 
+# TODO check if there is a cleaner way to save different test results
+
 # test resume
-"$BIN_XSPEC" "$DIR_TESTS/tests-resume-xslt.xspec"
+export TEST_DIR="$DIR_TMP/resume"
+"$BIN_XSPEC" -t "$DIR_TESTS/tests-resume-xslt.xspec"
+
+# test misc
+# export TEST_DIR="$DIR_TMP/misc"
