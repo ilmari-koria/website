@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:r="http://ilmarikoria.xyz/ilmari-koria-resume.pdf"
+               xmlns:v="http://ilmarikoria.xyz/vars"
+               stylesheet="../xsl/resume.xsl">
+
+  <x:scenario label="calculate resume time difference">
+    <x:call template="format-date-range">
+      <x:param name="start-date" select="'01-2020'"/>
+      <x:param name="end-date" select="'02-2020'"/>
+    </x:call>
+    <x:expect
+        label="the result should be 'Jan 2020 -- Feb 2020 (\textbf{1m})' without linebreaks."
+        select="'Jan 2020 -- Feb 2020&#x2423;(\textbf{1m})'" />
+  </x:scenario>
+
+  <x:scenario label="calculate time until 'present'">
+    <x:call template="format-date-range">
+      <x:param name="start-date" select="'01-2020'" as="xs:string"/>
+      <x:param name="end-date" select="'Present'" as="xs:string"/>
+    </x:call>
+    <x:expect
+        label="the result should be Jan 2020 -- Present␣(\textbf{4y 11m}) without linebreaks."
+        select="'Jan 2020 -- Present&#x2423;(\textbf{4y 11m})'"/>
+
+  </x:scenario>
+
+</x:description>
