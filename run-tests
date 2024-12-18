@@ -1,0 +1,8 @@
+#!/bin/bash
+export SAXON_CP="./bin/saxon/saxon-he-12.5.jar"
+DIR_XSPEC="./bin/xspec"
+DIR_TESTS="./lib/xspec/"
+BIN_XSPEC="$DIR_XSPEC/bin/xspec.sh"
+
+# test resume
+"$BIN_XSPEC" "$DIR_TESTS/tests-resume-xslt.xspec"
