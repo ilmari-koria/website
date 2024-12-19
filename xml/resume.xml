@@ -24,13 +24,12 @@
     <address>London</address>
   </header>
   <about>
-    London-based content markup technologies professional and
-    University of London graduate. Comprehensive language competence
-    and digital literacy, with concentration in free open-source
-    tools. Proven communication skills, team working ability and
-    leadership initiative delivering XML data-driven solutions within
-    academic publishing. EU citizen with full working rights in the
-    United Kingdom.
+    London-based data professional and University of London graduate.
+    Comprehensive language competence and software literacy, with
+    concentration in free open-source tools. Proven ability to deliver
+    XML-driven solutions within academic publishing, with demonstrated
+    skills in communication, teamwork, and leadership. EU citizen with
+    full working rights in the UK.
   </about>
   <experience>
     <experience-entry>
@@ -59,17 +58,17 @@
     </education-entry>
     <education-entry>
       <institute>King's College London</institute>
-      <result>Master of Arts</result>
+      <result>Master of Arts in Digital Humanities</result>
       <address>London</address>
     </education-entry>
     <education-entry>
       <institute>SOAS University of London</institute>
-      <result>Postgraduate Diploma</result>
+      <result>Postgraduate Diploma in Chinese Studies</result>
       <address>London</address>
     </education-entry>
     <education-entry>
       <institute>University of Kent</institute>
-      <result>Bachelor of Arts with First Class Honours</result>
+      <result>Bachelor of Arts with First Class Honours in Asian Studies</result>
       <address>Canterbury</address>
     </education-entry>
   </education>
@@ -84,7 +83,7 @@
   </events>
   <training>
     <training-entry>
-      <name>Mentee/Colleague Mentoring Scheme (Publishing IT Infrastructure)</name>
+      <name>Colleague Mentoring Scheme (Publishing IT Infrastructure)</name>
       <institute>Bloomsbury Publ.</institute>
       <training-hours>ongoing</training-hours>
       <date>2024 -- 2025</date>
