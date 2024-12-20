@@ -16,6 +16,6 @@
   <x:scenario label="test GET atom feed">
     <x:call function="ik-fn:get-github-atom"/>
     <x:expect label="../../tmp/xml/github/ should contain 'github.atom'"
-              href="../../tmp/xml/github/github.atom" />
+              href="../../tmp/xml/github/github.atom"/>
   </x:scenario>
 </x:description>
