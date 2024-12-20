@@ -1,15 +1,31 @@
 #!/bin/bash
-export SAXON_CP="./bin/saxon/saxon-he-12.5.jar"
-DIR_XSPEC="./bin/xspec"
-DIR_TESTS="./lib/xspec"
-DIR_TMP="./tmp/xspec"
-BIN_XSPEC="$DIR_XSPEC/bin/xspec.sh"
+
+BIN="./bin"
+SAXON="$BIN/saxon/saxon-he-12.5.jar"
+BASEX="$BIN/basex/BaseX.jar"
+CALABASH="$BIN/xmlcalabash1/xmlcalabash-1.5.7-120.jar"
+MISC_JAR="$BIN/misc"
+XSPEC_HOME="file:/home/ilmari/my-files/blog/website/bin/xspec/"
+XSPEC_RUN="$XSPEC_HOME/bin/xspec.sh"
+XSPEC_HARNESS="$XSPEC_HOME/src/harnesses/basex/basex-standalone-xquery-harness.xproc"
+TESTS_DIR="./lib/xspec"
+TMP_DIR="./tmp/xspec"
+
+export SAXON_CP="$SAXON"
 
 # TODO check if there is a cleaner way to save different test results
+# TODO find cleaner way to express classpath
+# TODO fix $XSPEC_HOME path
 
-# test resume
+# -- test resume
 export TEST_DIR="$DIR_TMP/resume"
 "$BIN_XSPEC" -t "$DIR_TESTS/tests-resume-xslt.xspec"
 
-# test misc
-# export TEST_DIR="$DIR_TMP/misc"
+# -- test publish xq
+java -cp "$SAXON:$MISC_JAR/*:$CALABASH" com.xmlcalabash.drivers.Main \
+     -i source=$TESTS_DIR/tests-publish-xq.xspec \
+     -p xspec-home=$XSPEC_HOME \
+     -p basex-jar=$BASEX \
+     -o result=$TMP_DIR/xq/xquery-tutorial-result.html \
+     $XSPEC_HARNESS
+     
