@@ -3,19 +3,19 @@
 <x:description
     xmlns:x="http://www.jenitennison.com/xslt/xspec"
     xmlns:ik-fn="http://www.ilmarikoria.xyz"
+    xmlns:var="http://www.ilmarikoria.xyz/var"
     query="http://www.ilmarikoria.xyz" 
-    query-at="../xq/publish.xqm">
+    query-at="../xq/lib-publish.xqm">
 
-  <x:scenario label="test Hello World">
-    <x:call function="ik-fn:hello-world"/>
-    <x:expect label="Return 'Hello, World'"
-              select="'Hello, World'"/>
-  </x:scenario>
-
-  <!-- <x:scenario label="test GET atom feed"> -->
-  <!--   <x:variable name="var:path" select="../tmp/xml/github/github.atom" as="xs:string"/> -->
-  <!--   <x:call function="ik-fn:get-github-atom()"/> -->
-  <!--   <x:expect label="$var:dir should contain '/github.atom'" -->
-  <!--             select="'test'"/> -->
+  <!-- <x:scenario label="test Hello World"> -->
+  <!--   <x:call function="ik-fn:hello-world"/> -->
+  <!--   <x:expect label="Return 'Hello, World'" -->
+  <!--             select="'Hello, World'"/> -->
   <!-- </x:scenario> -->
+
+  <x:scenario label="test GET atom feed">
+    <x:call function="ik-fn:get-github-atom"/>
+    <x:expect label="../../tmp/xml/github/ should contain 'github.atom'"
+              href="../../tmp/xml/github/github.atom" />
+  </x:scenario>
 </x:description>
