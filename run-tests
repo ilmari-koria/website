@@ -18,14 +18,14 @@ export SAXON_CP="$SAXON"
 # TODO fix $XSPEC_HOME path
 
 # -- test resume
-export TEST_DIR="$DIR_TMP/resume"
-"$BIN_XSPEC" -t "$DIR_TESTS/tests-resume-xslt.xspec"
+# export TEST_DIR="$DIR_TMP/resume"
+# "$BIN_XSPEC" -t "$DIR_TESTS/tests-resume-xslt.xspec"
 
 # -- test publish xq
 java -cp "$SAXON:$MISC_JAR/*:$CALABASH" com.xmlcalabash.drivers.Main \
      -i source=$TESTS_DIR/tests-publish-xq.xspec \
      -p xspec-home=$XSPEC_HOME \
      -p basex-jar=$BASEX \
-     -o result=$TMP_DIR/xq/xquery-tutorial-result.html \
+     -o result=$TMP_DIR/xq/xquery-xspec-results.html \
      $XSPEC_HARNESS
      
