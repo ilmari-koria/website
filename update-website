@@ -6,7 +6,7 @@ XSL_RESUME="./lib/xsl/resume.xsl"
 XML_RESUME="./xml/resume.xml"
 DIR_HTML="./tmp/html"
 DIR_XML="./tmp/xml"
-FILE_BIB="./bib/bibliography.bib"
+FILE_BIB="./bibtex/bibliography.bib"
 GITHUB_ATOM="https://github.com/ilmari-koria/website/commits.atom"
 
 # retrieve github atom feed
