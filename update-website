@@ -1,13 +1,9 @@
 #!/bin/bash
-SAXON="./bin/saxon/saxon-he-12.5.jar"
 BASEX="./bin/basex/bin/basex"
 PUBLISH="./lib/xq/publish.xq"
-XSL_RESUME="./lib/xsl/resume.xsl"
-XML_RESUME="./xml/resume.xml"
 DIR_HTML="./tmp/html"
 DIR_XML="./tmp/xml"
 FILE_BIB="./bibtex/bibliography.bib"
-GITHUB_ATOM="https://github.com/ilmari-koria/website/commits.atom"
 
 # Generate bib
 # TODO generate bib xml with xquery
