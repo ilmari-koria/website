@@ -3,10 +3,10 @@ xquery version "3.1";
 module namespace ik-fn = "http://www.ilmarikoria.xyz";
 
 (: TODO adjust basex config for paths :)
-declare variable $ik-fn:dir-org := file:resolve-path("../../../org");
-declare variable $ik-fn:dir-lib := file:resolve-path("../../../lib");
-declare variable $ik-fn:dir-tmp := file:resolve-path("../../../tmp");
-declare variable $ik-fn:dir-xml := file:resolve-path("../../../xml");
+declare variable $ik-fn:dir-org := file:resolve-path("./org");
+declare variable $ik-fn:dir-lib := file:resolve-path("./lib");
+declare variable $ik-fn:dir-tmp := file:resolve-path("./tmp");
+declare variable $ik-fn:dir-xml := file:resolve-path("./xml");
 declare variable $ik-fn:source-concat := $ik-fn:dir-tmp || "xml/concat/posts-concat.xml";
 declare variable $ik-fn:reading-list := $ik-fn:dir-tmp || "xml/reading/reading-list.xml";
 
@@ -79,12 +79,12 @@ declare function ik-fn:get-github-atom() {
 
 declare function ik-fn:xsl-generate-resume-tex() {
   (: Note that this relies on `xslt:transform-text` :)
-  file:write($ik-fn:dir-tmp || "tex/resume.tex",
+  file:write($ik-fn:dir-tmp || "tex/ilmari-koria-resume.tex",
   xslt:transform-text($ik-fn:dir-xml || "resume.xml", $ik-fn:dir-lib || "xsl/resume.xsl"))
 };  
 
 declare function ik-fn:tex-generate-pdf() {
-  let $tex := $ik-fn:dir-tmp || "tex/resume.tex"
+  let $tex := $ik-fn:dir-tmp || "tex/ilmari-koria-resume.tex"
   let $pdflatex := "pdflatex"
   let $args := (
     "-output-directory", $ik-fn:dir-tmp || "html/",
@@ -106,8 +106,8 @@ declare function ik-fn:tex-clean-tmp-files() {
           $file-ext = "log" or
           $file-ext = "out"
     return
-      if (exists($file)) then
-        file:delete($file)
+      if (exists($dir || $file)) then
+        file:delete($dir || $file)
       else
-        $file
+        $dir || $file || " not found."
 };
