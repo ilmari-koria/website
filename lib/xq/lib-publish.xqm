@@ -3,10 +3,10 @@ xquery version "3.1";
 module namespace ik-fn = "http://www.ilmarikoria.xyz";
 
 (: TODO adjust basex config for paths :)
-declare variable $ik-fn:dir-org := file:resolve-path("./org");
-declare variable $ik-fn:dir-lib := file:resolve-path("./lib");
-declare variable $ik-fn:dir-tmp := file:resolve-path("./tmp");
-declare variable $ik-fn:dir-xml := file:resolve-path("./xml");
+declare variable $ik-fn:dir-org := file:resolve-path("../../../org");
+declare variable $ik-fn:dir-lib := file:resolve-path("../../../lib");
+declare variable $ik-fn:dir-tmp := file:resolve-path("../../../tmp");
+declare variable $ik-fn:dir-xml := file:resolve-path("../../../xml");
 declare variable $ik-fn:source-concat := $ik-fn:dir-tmp || "xml/concat/posts-concat.xml";
 declare variable $ik-fn:reading-list := $ik-fn:dir-tmp || "xml/reading/reading-list.xml";
 
@@ -96,5 +96,15 @@ declare function ik-fn:tex-generate-pdf() {
     else
       ".tex file not found."
   )
+};  
+
+declare function ik-fn:tex-clean-tmp-files() {
+  let $dir := $ik-fn:dir-tmp || "html/"
+  for $file in file:list($dir, false())
+    let $file-ext := substring-after($file, ".")
+    where $file-ext = "aux" or
+          $file-ext = "log" or
+          $file-ext = "out"
+    return file:delete($file)
 };  
 
