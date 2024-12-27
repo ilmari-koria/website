@@ -7,6 +7,7 @@
     query="http://www.ilmarikoria.xyz" 
     query-at="../xq/lib-publish.xqm">
 
+  <!-- hello world test -->
   <!-- <x:scenario label="test Hello World"> -->
   <!--   <x:call function="ik-fn:hello-world"/> -->
   <!--   <x:expect label="Return 'Hello, World'" -->
@@ -15,7 +16,10 @@
 
   <x:scenario label="test GET atom feed">
     <x:call function="ik-fn:get-github-atom"/>
-    <x:expect label="../../tmp/xml/github/ should contain 'github.atom'"
-              href="../../tmp/xml/github/github.atom"/>
+    <x:expect label="should contain 'github.atom'"
+              href="../../tmp/xml/github/github.atom"
+              select="/*:feed/*:entry"
+              as="element(*:entry)" />
   </x:scenario>
+  
 </x:description>
