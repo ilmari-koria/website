@@ -9,9 +9,6 @@ DIR_XML="./tmp/xml"
 FILE_BIB="./bibtex/bibliography.bib"
 GITHUB_ATOM="https://github.com/ilmari-koria/website/commits.atom"
 
-# retrieve github atom feed
-wget -O "$DIR_XML/github/github.atom" $GITHUB_ATOM
-
 # Generate bib
 # TODO generate bib xml with xquery
 bibtex2html --style "ieeetr" --footer "" --header "" --no-header --nodoc --nobibsource --ignore-errors --sort-as-bibtex --output $DIR_XML/bibliography/bibliography $FILE_BIB
@@ -22,12 +19,6 @@ $BASEX $PUBLISH
 
 # css
 cp ./css/style.css ./tmp/html/style.css
-
-#resume
-# TODO mv this to main publish query
-java -cp $SAXON net.sf.saxon.Transform  -t -s:"$XML_RESUME" -xsl:"$XSL_RESUME" -o:"$DIR_HTML/ilmari-koria-resume.tex"
-pdflatex -output-directory $DIR_HTML "$DIR_HTML/ilmari-koria-resume.tex"
-rm $DIR_HTML/*.log $DIR_HTML/*.tex $DIR_HTML/*.aux $DIR_HTML/*.out   
 
 rsync -avz --delete $DIR_HTML/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
 # TODO generate sitemap with xslt
