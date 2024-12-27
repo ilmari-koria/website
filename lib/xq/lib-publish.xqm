@@ -77,17 +77,26 @@ declare function ik-fn:get-github-atom() {
     file:write($ik-fn:dir-tmp || "/xml/github/github.atom", html:parse($body))
 };
 
-declare function ik-fn:xsl-generate-resume-tex() {
-  (: Note that this relies on `xslt:transform-text` :)
-  file:write($ik-fn:dir-tmp || "tex/ilmari-koria-resume.tex",
-  xslt:transform-text($ik-fn:dir-xml || "resume.xml", $ik-fn:dir-lib || "xsl/resume.xsl"))
-};  
+(: TODO use basex xslt:transform-text :)
+declare function ik-fn:xsl-generate-tex() {
+  let $java := "java"
+  let $saxon := "./bin/saxon/saxon-he-12.5.jar"
+  let $args := (
+  "-cp",$saxon,
+  "net.sf.saxon.Transform",
+  "-t",
+  "-s:./xml/resume.xml",
+  "-xsl:./lib/xsl/resume.xsl",
+  "-o:./tmp/tex/ilmari-koria-resume.tex"
+  )
+  return proc:system($java,$args)
+};
 
 declare function ik-fn:tex-generate-pdf() {
   let $tex := $ik-fn:dir-tmp || "tex/ilmari-koria-resume.tex"
   let $pdflatex := "pdflatex"
   let $args := (
-    "-output-directory", $ik-fn:dir-tmp || "html/",
+    "-output-directory", $ik-fn:dir-tmp || "html",
     $tex
   )
   return (
