@@ -1,4 +1,14 @@
 * 2024
+** TODO Silent Illumination : A Chan Buddhist Path to Natural Awakening
+:PROPERTIES:
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+0863614066_140.jpg
+:Author: Guo Gu
+:Pub_year: 2021
+:ISBN: 9781611808728
+:Publisher: Shambhala
+:Address: Boulder
+:Date: 2024
+:END:
 ** TODO Backwater Reeds: Zen Buddhist Dharma Talks for the 21st Century
 :PROPERTIES:
 :Img_url: https://m.media-amazon.com/images/I/81RsyDVxObL._SL1500_.jpg
