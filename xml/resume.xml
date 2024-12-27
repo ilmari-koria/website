@@ -114,6 +114,7 @@
     </training-entry>
   </training>
   <skill-list>
+    <skill-entry>Python</skill-entry>
     <skill-entry>XSLT</skill-entry>
     <skill-entry>XQuery</skill-entry>
     <skill-entry>XProc</skill-entry>
@@ -144,12 +145,7 @@
     </language-entry>
     <language-entry>
       <language>Mandarin</language>
-      <level>intermediate</level>
-    </language-entry>
-    <language-entry>
-      <language>Cantonese</language>
-      <level>basic</level>
+      <level>high-intermediate</level>
     </language-entry>
   </language-list>
 </resume>
-
