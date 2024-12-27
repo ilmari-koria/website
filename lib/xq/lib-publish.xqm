@@ -77,3 +77,8 @@ declare function ik-fn:get-github-atom() {
     file:write($ik-fn:dir-tmp || "/xml/github/github.atom", html:parse($body))
 };
 
+declare function ik-fn:xsl-generate-resume-tex() {
+  (: Note that this relies on `xslt:transform-text` :)
+  file:write($ik-fn:dir-tmp || "tex/resume.tex",
+  xslt:transform-text($ik-fn:dir-xml || "resume.xml", $ik-fn:dir-lib || "xsl/resume.xsl"))
+};  
