@@ -105,6 +105,9 @@ declare function ik-fn:tex-clean-tmp-files() {
     where $file-ext = "aux" or
           $file-ext = "log" or
           $file-ext = "out"
-    return file:delete($file)
-};  
-
+    return
+      if (exists($file)) then
+        file:delete($file)
+      else
+        $file
+};
