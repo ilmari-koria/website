@@ -82,3 +82,19 @@ declare function ik-fn:xsl-generate-resume-tex() {
   file:write($ik-fn:dir-tmp || "tex/resume.tex",
   xslt:transform-text($ik-fn:dir-xml || "resume.xml", $ik-fn:dir-lib || "xsl/resume.xsl"))
 };  
+
+declare function ik-fn:tex-generate-pdf() {
+  let $tex := $ik-fn:dir-tmp || "tex/resume.tex"
+  let $pdflatex := "pdflatex"
+  let $args := (
+    "-output-directory", $ik-fn:dir-tmp || "html/",
+    $tex
+  )
+  return (
+    if (exists($tex)) then
+      proc:system($pdflatex, $args)
+    else
+      ".tex file not found."
+  )
+};  
+
