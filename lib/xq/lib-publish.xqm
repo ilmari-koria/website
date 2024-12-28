@@ -63,6 +63,12 @@ declare function ik-fn:xsl-transform-posts() {
          xslt:transform($ik-fn:dir-tmp || "xml/posts/" || $file, $ik-fn:dir-lib || "xsl/posts.xsl"))
 };
 
+(: TODO is this really required? :)
+declare function ik-fn:xsl-generate-css() {
+  file:write($ik-fn:dir-tmp || "html/style.css",
+  xslt:transform-text($ik-fn:source-concat, $ik-fn:dir-lib || "xsl/css.xsl"))
+};  
+
 declare function ik-fn:get-github-atom() {
   let $url := "https://github.com/ilmari-koria/website/commits.atom"
   let $response := http:send-request(
