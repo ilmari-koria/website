@@ -127,3 +127,29 @@ declare function ik-fn:tex-clean-tmp-files() {
       else
         $dir || $file || " not found."
 };
+
+(:
+ : TODO this should return a map
+ : TODO fix line break formatting
+ :)
+declare function ik-fn:bibtex-to-map() {
+  let $bibtex := unparsed-text("../../bibtex/bibliography.bib")
+  let $map := map{}
+  let $cleaned-entry-lines := 
+    for $line in tokenize($bibtex, "\n")
+      let $clean-line := normalize-space($line)
+        => replace(" =",":")
+        => replace("\{","")
+        => replace("\}","")
+      return
+        for $line in tokenize($clean-line, "\n")
+          return
+            if (starts-with($line, "@")) then
+              " { key: " || $line
+            else if (not(ends-with($line, ","))) then
+              $line || " }"
+            else
+              $line
+  return
+    $cleaned-entry-lines
+};
