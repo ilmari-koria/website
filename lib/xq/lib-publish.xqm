@@ -89,12 +89,12 @@ declare function ik-fn:xsl-generate-tex() {
   let $java := "java"
   let $saxon := "./bin/saxon/saxon-he-12.5.jar"
   let $args := (
-  "-cp",$saxon,
-  "net.sf.saxon.Transform",
-  "-t",
-  "-s:./xml/resume.xml",
-  "-xsl:./lib/xsl/resume.xsl",
-  "-o:./tmp/tex/ilmari-koria-resume.tex"
+    "-cp",$saxon,
+    "net.sf.saxon.Transform",
+    "-t",
+    "-s:./xml/resume.xml",
+    "-xsl:./lib/xsl/resume.xsl",
+    "-o:./tmp/tex/ilmari-koria-resume.tex"
   )
   return proc:system($java,$args)
 };
