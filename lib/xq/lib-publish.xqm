@@ -64,6 +64,7 @@ declare function ik-fn:xsl-transform-posts() {
 };
 
 (: TODO is this really required? :)
+(: TODO find a more modular way of generating css :)
 declare function ik-fn:xsl-generate-css() {
   file:write($ik-fn:dir-tmp || "html/style.css",
   xslt:transform-text($ik-fn:source-concat, $ik-fn:dir-lib || "xsl/css.xsl"))
