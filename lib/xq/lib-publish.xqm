@@ -1,5 +1,11 @@
 xquery version "3.1";
 
+(:~
+ : blog publish functions 
+ : @author   ilmarikoria@posteo.net
+ : @version  0.1
+ :)
+
 module namespace ik-fn = "http://www.ilmarikoria.xyz";
 
 (: TODO adjust basex config for paths :)
