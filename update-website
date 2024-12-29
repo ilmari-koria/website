@@ -13,9 +13,6 @@ tidy -q --numeric-entities yes -asxhtml -o $DIR_XML/bibliography/bibliography.xm
 # call stylesheet transformations
 $BASEX $PUBLISH
 
-# css
-cp ./css/style.css ./tmp/html/style.css
-
 rsync -avz --delete $DIR_HTML/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
 # TODO generate sitemap with xslt
 sitemap-generator -l https://ilmarikoria.xyz
