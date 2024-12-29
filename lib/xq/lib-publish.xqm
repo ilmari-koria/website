@@ -126,7 +126,8 @@ declare function ik-fn:tex-clean-tmp-files() {
     let $file-ext := substring-after($file, ".")
     where $file-ext = "aux" or
           $file-ext = "log" or
-          $file-ext = "out"
+          $file-ext = "out" or
+          $file-ext = "tex"
     return
       if (exists($dir || $file)) then
         file:delete($dir || $file)
