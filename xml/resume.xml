@@ -24,12 +24,13 @@
     <address>London</address>
   </header>
   <about>
-    London-based data professional and University of London graduate.
-    Comprehensive language competence and software literacy, with
-    concentration in free open-source tools. Proven ability to deliver
-    XML-driven solutions within academic publishing, with demonstrated
-    skills in communication, teamwork, and leadership. EU citizen with
-    full working rights in the UK.
+    London-based content markup technologies professional and
+    University of London graduate. Comprehensive language competence
+    and software literacy, with concentration in free open-source
+    tools. Proven ability to deliver XML-driven solutions within
+    academic publishing, with demonstrated skills in communication,
+    teamwork, and leadership. EU citizen with settled status in the
+    United Kingdom.
   </about>
   <experience>
     <experience-entry>
@@ -114,7 +115,6 @@
     </training-entry>
   </training>
   <skill-list>
-    <skill-entry>Python</skill-entry>
     <skill-entry>XSLT</skill-entry>
     <skill-entry>XQuery</skill-entry>
     <skill-entry>XProc</skill-entry>
@@ -146,6 +146,10 @@
     <language-entry>
       <language>Mandarin</language>
       <level>high-intermediate</level>
+    </language-entry>
+    <language-entry>
+      <language>Cantonese</language>
+      <level>basic</level>
     </language-entry>
   </language-list>
 </resume>
