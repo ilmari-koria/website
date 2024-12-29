@@ -6,13 +6,14 @@ DIR_XML="./tmp/xml"
 FILE_BIB="./bibtex/bibliography.bib"
 
 # Generate bib
-# TODO generate bib xml with xquery
+# TODO generate this with xquery
 bibtex2html --style "ieeetr" --footer "" --header "" --no-header --nodoc --nobibsource --ignore-errors --sort-as-bibtex --output $DIR_XML/bibliography/bibliography $FILE_BIB
 tidy -q --numeric-entities yes -asxhtml -o $DIR_XML/bibliography/bibliography.xml $DIR_XML/bibliography/bibliography.html
 
-# call stylesheet transformations
+# publish website
 $BASEX $PUBLISH
 
+# TODO see if a restxq app can upload this stuff? probably not a good idea
 rsync -avz --delete $DIR_HTML/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
 # TODO generate sitemap with xslt
 sitemap-generator -l https://ilmarikoria.xyz
