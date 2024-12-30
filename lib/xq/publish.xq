@@ -7,15 +7,15 @@ import module namespace ik-fn = "http://www.ilmarikoria.xyz" at "lib-publish.xqm
  : @version  0.1
  :)
 
+(: retrieve github atom feed :)
+ik-fn:get-github-atom(),
+
 (: generate pages :)
 ik-fn:el-generate-xml-from-org(),
 ik-fn:concat-xml-files(),
 ik-fn:xsl-transform-misc(),
 ik-fn:xsl-transform-posts(),
 ik-fn:xsl-generate-css(),
-
-(: retrieve github atom feed :)
-ik-fn:get-github-atom(),
 
 (: generate resume :)
 ik-fn:xsl-generate-tex(),
