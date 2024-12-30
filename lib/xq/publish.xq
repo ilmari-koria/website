@@ -12,6 +12,7 @@ ik-fn:el-generate-xml-from-org(),
 ik-fn:concat-xml-files(),
 ik-fn:xsl-transform-misc(),
 ik-fn:xsl-transform-posts(),
+ik-fn:xsl-generate-css(),
 
 (: retrieve github atom feed :)
 ik-fn:get-github-atom(),
