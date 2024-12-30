@@ -42,9 +42,9 @@ h1,h2,h3,h4,h5 {
 }
 
 #preamble ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 #preamble ul li {
@@ -136,10 +136,21 @@ td {
 
 .reading-list-done {
     font-size: small;
+    border-collapse: collapse; 
 }
 
 .reading-list-done td {
-    padding-bottom: 0;
+    padding: 0 0.25rem 0 0.25rem;
+    border-right: solid 1px black; 
+    border-left: solid 1px black;
+}
+
+.reading-list-done tr {
+    border: none; 
+}
+
+.reading-list-done tr:nth-child(even) {
+    background-color: gainsboro;
 }
 
 .image-column img {
@@ -153,8 +164,8 @@ ul.reading-list {
 /* media rules */
 @media (max-width: 768px) {
     body {
-       font-size: 120%;
-       margin: 1rem;
+        font-size: 120%;
+        margin: 1rem;
     }
 
     #container {
@@ -199,7 +210,6 @@ ul.reading-list {
         text-align: left;
     }
 }
-
     </xsl:text>
   </xsl:template>
 </xsl:stylesheet>
