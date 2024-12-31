@@ -13,7 +13,9 @@
     </x:call>
     <x:expect
         label="Result should be 'Jan 2020 -- Feb 2020 (\textbf{1m})' without linebreaks."
-        select="'Jan 2020 -- Feb 2020&#x2423;(\textbf{1m})'" />
+        select="test/text()">
+      <test>Jan 2020 -- Feb 2020 (\textbf{1m})</test>
+    </x:expect>
   </x:scenario>
 
   <x:scenario label="calculate time until 'present'">
@@ -23,8 +25,11 @@
       <x:param name="end-date" select="'Present'" as="xs:string"/>
     </x:call>
     <x:expect
-        label="Result should be Jan 2020 -- Present␣(\textbf{4y 11m}) without linebreaks."
-        select="'Jan 2020 -- Present&#x2423;(\textbf{4y 11m})'"/>
+        label="Result should be Jan 2020 -- Present (\textbf{4y 11m}) without linebreaks."
+        select="test/text()">
+      <test>Jan 2020 -- Present (\textbf{4y 11m})</test>
+    </x:expect>
+
   </x:scenario>
 
 </x:description>
