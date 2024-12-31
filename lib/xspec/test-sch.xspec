@@ -14,4 +14,14 @@
               select="'this is a test sentence. this is another test sentence. this is yet another test sentence.'" />
   </x:scenario>
 
+  <x:scenario label="test tokenize text">
+    <x:call function="f:tokenize-sentences">
+      <x:param
+          select="'this is a test sentence? this is another (mixed) test sentence (就是說實例)! 這才是一句華文句子.'"/>
+    </x:call>
+    <x:expect label="test tokenized sentences"
+              select="'this is a test sentence this is another (mixed) test sentence (就是說實例) 這才是一句華文句子'" />
+  </x:scenario>
+
+
 </x:description>
