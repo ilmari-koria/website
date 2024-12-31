@@ -5,7 +5,7 @@ SAXON="$BIN/saxon/saxon-he-12.5.jar"
 BASEX="$BIN/basex/BaseX.jar"
 CALABASH="$BIN/xmlcalabash1/xmlcalabash-1.5.7-120.jar"
 MISC_JAR="$BIN/misc"
-XSPEC_HOME="file:/home/ilmari/my-files/blog/website/bin/xspec/"
+XSPEC_HOME="/home/ilmari/my-files/blog/website/bin/xspec/"
 XSPEC_RUN="$XSPEC_HOME/bin/xspec.sh"
 XSPEC_HARNESS="$XSPEC_HOME/src/harnesses/basex/basex-standalone-xquery-harness.xproc"
 TESTS_DIR="./lib/xspec"
@@ -13,19 +13,44 @@ TMP_DIR="./tmp/xspec"
 
 export SAXON_CP="$SAXON"
 
-# TODO check if there is a cleaner way to save different test results
-# TODO find cleaner way to express classpath
-# TODO fix $XSPEC_HOME path
+if [ $# -eq 0 ]; then
+    echo "Hint: Run with '-h' for usage."
+    exit 1
+fi
 
-# -- test resume
-# export TEST_DIR="$DIR_TMP/resume"
-# "$BIN_XSPEC" -t "$DIR_TESTS/tests-resume-xslt.xspec"
+while getopts "rqhs" option; do
+    case $option in
+        s)
+            echo "Running Schematron tests..."
+            export TEST_DIR="$TMP_DIR/sch"
+            "$XSPEC_RUN" -s "$TESTS_DIR/test-sch.xspec"
+            ;;
+        r)
+            echo "Running Resume tests..."
+            export TEST_DIR="$TMP_DIR/resume"
+            "$XSPEC_RUN" -t "$TESTS_DIR/tests-resume-xslt.xspec"
+            ;;
+        q)
+            echo "Running XQ tests..."
+            java -cp "$SAXON:$MISC_JAR/*:$CALABASH" com.xmlcalabash.drivers.Main \
+                 -i source=$TESTS_DIR/tests-publish-xq.xspec \
+                 -p xspec-home=$XSPEC_HOME \
+                 -p basex-jar=$BASEX \
+                 -o result=$TMP_DIR/xq/xquery-xspec-results.html \
+                 $XSPEC_HARNESS
+            ;;
+        h)
+            echo "Usage: $0 [-r] [-q]"
+            echo "  -r  Run Resume tests"
+            echo "  -q  Run XQ tests"
+            echo "  -s  Run Schematron tests"
+            exit 1
+            ;;
+        *)
+            echo "Hint: Run with '-h' for usage."
+            exit 1
+            ;;
+    esac
+done
 
-# -- test publish xq
-java -cp "$SAXON:$MISC_JAR/*:$CALABASH" com.xmlcalabash.drivers.Main \
-     -i source=$TESTS_DIR/tests-publish-xq.xspec \
-     -p xspec-home=$XSPEC_HOME \
-     -p basex-jar=$BASEX \
-     -o result=$TMP_DIR/xq/xquery-xspec-results.html \
-     $XSPEC_HARNESS
-     
+
