@@ -34,7 +34,7 @@ while getopts "rqhs" option; do
             echo "Running XQ tests..."
             java -cp "$SAXON:$MISC_JAR/*:$CALABASH" com.xmlcalabash.drivers.Main \
                  -i source=$TESTS_DIR/tests-publish-xq.xspec \
-                 -p xspec-home=$XSPEC_HOME \
+                 -p xspec-home=file:$XSPEC_HOME \
                  -p basex-jar=$BASEX \
                  -o result=$TMP_DIR/xq/xquery-xspec-results.html \
                  $XSPEC_HARNESS
