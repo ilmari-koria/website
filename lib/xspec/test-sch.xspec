@@ -1,3 +1,17 @@
 <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+               xmlns:f="#functions"
                schematron="../sch/blog.sch">
+
+  <x:scenario label="test combine text">
+    <x:call function="f:combine-text">
+       <x:param>
+         <test>this is a test sentence.</test>
+         <test>this is another test sentence.</test>
+         <test>this is yet another test sentence.</test>
+   </x:param>
+    </x:call>
+    <x:expect label="test joined nodes as xs:string*"
+              select="'this is a test sentence. this is another test sentence. this is yet another test sentence.'" />
+  </x:scenario>
+
 </x:description>
