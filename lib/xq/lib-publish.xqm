@@ -136,27 +136,42 @@ declare function ik-fn:tex-clean-tmp-files() {
 };
 
 (:
- : TODO this should return a map
- : TODO fix line break formatting
+ : TODO split this into functions
+ : TODO find cleaner way to replace @ letters (e.g. "<@","<")
  :)
-declare function ik-fn:bibtex-to-map() {
+
+declare function ik-fn:bibtex-to-xml() {
   let $bibtex := unparsed-text("../../bibtex/bibliography.bib")
-  let $map := map{}
-  let $cleaned-entry-lines := 
+  let $parsed-lines :=
     for $line in tokenize($bibtex, "\n")
       let $clean-line := normalize-space($line)
-        => replace(" =",":")
-        => replace("\{","")
-        => replace("\}","")
+         => replace("\{","")
+         => replace("\}","")        
+      let $line-split := tokenize($clean-line, ' = ')
+        return
+          if (count($line-split) = 2) then
+            $line-split[1] || ' = "' || normalize-space($line-split[2]) || '"'
+          else
+            $clean-line
+  let $xml-lines :=
+    for $line in $parsed-lines
       return
-        for $line in tokenize($clean-line, "\n")
-          return
-            if (starts-with($line, "@")) then
-              " { key: " || $line
-            else if (not(ends-with($line, ","))) then
-              $line || " }"
-            else
-              $line
+        if (starts-with($line, "@")) then
+          "<" || $line
+        else if (ends-with($line, ',"')) then
+          $line
+        else if ($line eq "") then
+          ""      
+        else
+          $line || "/>"
+   let $complete-lines :=
+     for $line in $xml-lines
+       let $cleaned-lines :=
+         replace(normalize-space($line), "<@","<")
+         => replace(',(\s*)$', '')
+         => replace(',\s*"', '"')
+       return $cleaned-lines
   return
-    $cleaned-entry-lines
+    $complete-lines
 };
+
