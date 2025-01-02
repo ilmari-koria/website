@@ -86,9 +86,10 @@ declare function ik-bib:bibtex-delete-empty-lines($bibtex-line) {
 
 declare function ik-bib:bibtex-wrap-xml-and-write($bibtex-line) {
   let $string-xml := "&lt;bibtex&gt;" || $bibtex-line || "&lt;/bibtex&gt;"
+  let $out-path := "./tmp/xml/bibtex/bibtex.xml"
   let $parsed-xml := parse-xml($string-xml)
    return 
-     file:write($ik-bib:dir-tmp || "/xml/bibtex/bibtex.xml", $parsed-xml)
+     file:write($out-path, $parsed-xml)
 };
 
 (: TODO this workflow really needs to be re-done :)
