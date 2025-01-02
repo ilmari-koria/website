@@ -26,7 +26,7 @@
         <xsl:value-of select="@key"/>
       </key>
       <data>
-        <!-- books -->
+        <!-- books and misc -->
         <xsl:if test="self::book or self::incollection or self::misc">
           <xsl:choose>
             <xsl:when test="not(@author)">
@@ -37,12 +37,21 @@
             </xsl:otherwise>
           </xsl:choose>
           (<xsl:value-of select="@year"/>).
-          <xsl:if test="@editor">
-            <xsl:value-of select="@editor"/><xsl:text> (eds.)</xsl:text>.
-          </xsl:if>
           <em><xsl:value-of select="@title"/>.</em>
-          <xsl:value-of select="@address"/>,
-          <xsl:value-of select="@publisher"/>.
+          <xsl:if test="self::incollection">
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="@booktitle"/>.
+          </xsl:if>
+          <xsl:text> </xsl:text>
+          <xsl:if test="@address">
+            <xsl:value-of select="@address"/>,
+          </xsl:if>
+          <xsl:if test="@publisher">
+            <xsl:value-of select="@publisher"/>.
+          </xsl:if>
+          <xsl:if test="@url">
+            <code><xsl:value-of select="@url"/></code>
+          </xsl:if>
         </xsl:if>
         <!-- articles -->
         <xsl:if test="self::article">
