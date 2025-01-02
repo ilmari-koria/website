@@ -135,43 +135,86 @@ declare function ik-fn:tex-clean-tmp-files() {
         $dir || $file || " not found."
 };
 
-(:
- : TODO split this into functions
- : TODO find cleaner way to replace @ letters (e.g. "<@","<")
- :)
-
-declare function ik-fn:bibtex-to-xml() {
-  let $bibtex := unparsed-text("../../bibtex/bibliography.bib")
-  let $parsed-lines :=
-    for $line in tokenize($bibtex, "\n")
-      let $clean-line := normalize-space($line)
-         => replace("\{","")
-         => replace("\}","")        
-      let $line-split := tokenize($clean-line, ' = ')
-        return
-          if (count($line-split) = 2) then
-            $line-split[1] || ' = "' || normalize-space($line-split[2]) || '"'
-          else
-            $clean-line
-  let $xml-lines :=
-    for $line in $parsed-lines
-      return
-        if (starts-with($line, "@")) then
-          "<" || $line
-        else if (ends-with($line, ',"')) then
-          $line
-        else if ($line eq "") then
-          ""      
-        else
-          $line || "/>"
-   let $complete-lines :=
-     for $line in $xml-lines
-       let $cleaned-lines :=
-         replace(normalize-space($line), "<@","<")
-         => replace(',(\s*)$', '')
-         => replace(',\s*"', '"')
-       return $cleaned-lines
-  return
-    $complete-lines
+(: crappy bibtex parser :)
+declare function ik-fn:bibtex-read-file-and-tokenize($bibtex-file-path) {
+  let $bibtex := unparsed-text($bibtex-file-path)
+  for $line in tokenize($bibtex, "\n")
+    return
+      if ($line ne "") then
+        $line
+      else if (contains($line, "&")) then
+        replace("&","&amp;")
+      else ()
 };
 
+declare function ik-fn:bibtex-replace-first-bracket($bibtex-line) {
+  for $line in $bibtex-line
+  return
+    if (starts-with($line, "@") and contains($line, "{")) then
+      replace($line, "\{", " key = ")
+    else 
+      $line
+};
+
+declare function ik-fn:bibtex-replace-brackets($bibtex-line) {
+  for $line in $bibtex-line
+  return
+    if (contains($line, "{") and contains($line, "}")) then
+      replace($line, "\{|\}", "")
+    else if (ends-with($line, "}")) then
+      replace($line, "\}", "")
+    else
+      $line
+};
+
+declare function ik-fn:bibtex-rm-trailing-commas($bibtex-line) {
+  for $line in $bibtex-line
+    return $line
+      => replace(',(\s*)$', ' ')
+      => replace(',\s*"', '"')
+};
+
+declare function ik-fn:bibtex-add-quotes($bibtex-line) {
+  for $line in $bibtex-line
+    let $line-split := tokenize($line, ' = ')
+    return
+      if (count($line-split) = 2) then
+        $line-split[1] || ' = "' || $line-split[2] || '"'
+      else
+        $line
+};
+
+declare function ik-fn:bibtex-add-angle-brackets($bibtex-line) {
+  for $line in $bibtex-line
+    return
+      if (starts-with($line, "@")) then
+        "<" || $line
+      else if (ends-with($line, ',"')) then
+        $line
+      else if ($line eq "") then
+        ""      
+      else
+        $line || " />"
+};
+
+declare function ik-fn:bibtex-replace-at-symbol($bibtex-line) {
+  for $line in $bibtex-line
+    return
+      replace($line, "<@","<")
+};
+
+declare function ik-fn:bibtex-delete-empty-lines($bibtex-line) {
+  for $line in $bibtex-line
+    return
+      if ($line ne "") then
+        $line
+      else ()
+};
+
+declare function ik-fn:bibtex-wrap-xml($bibtex-line) {
+  let $xml :=
+  "&lt;bibtex&gt;" || $bibtex-line || "&lt;/bibtex&gt;" 
+   return 
+   parse-xml($xml)
+};
+(: end crappy bibtex parser :)
