@@ -1,5 +1,7 @@
 xquery version "3.1";
 import module namespace ik-fn = "http://www.ilmarikoria.xyz" at "lib-publish.xqm";
+import module namespace ik-bib = "http://www.ilmarikoria.xyz/bibtex" at "bibtex-parser.xqm";
+declare option output:indent "yes";
 
 (:~
  : blog publish function calls
@@ -21,3 +23,7 @@ ik-fn:xsl-generate-css(),
 ik-fn:xsl-generate-tex(),
 ik-fn:tex-generate-pdf(),
 ik-fn:tex-clean-tmp-files()
+
+(:
+ : ik-fn:bibtex-call-functions()
+ :)
