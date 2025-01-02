@@ -138,13 +138,12 @@ declare function ik-fn:tex-clean-tmp-files() {
 (: crappy bibtex parser :)
 declare function ik-fn:bibtex-read-file-and-tokenize($bibtex-file-path) {
   let $bibtex := unparsed-text($bibtex-file-path)
-  for $line in tokenize($bibtex, "\n")
+  let $bibtex-clean := replace($bibtex, '&amp;', '&amp;amp;')
+  for $line in tokenize($bibtex-clean, "\n")
     return
-      if ($line ne "") then
-        $line
-      else if (contains($line, "&")) then
-        replace("&","&amp;")
-      else ()
+    if ($line ne "") then
+      $line
+    else ()
 };
 
 declare function ik-fn:bibtex-replace-first-bracket($bibtex-line) {
@@ -211,10 +210,25 @@ declare function ik-fn:bibtex-delete-empty-lines($bibtex-line) {
       else ()
 };
 
-declare function ik-fn:bibtex-wrap-xml($bibtex-line) {
-  let $xml :=
-  "&lt;bibtex&gt;" || $bibtex-line || "&lt;/bibtex&gt;" 
+declare function ik-fn:bibtex-wrap-xml-and-write($bibtex-line) {
+  let $string-xml := "&lt;bibtex&gt;" || $bibtex-line || "&lt;/bibtex&gt;"
+  let $parsed-xml := parse-xml($string-xml)
    return 
-   parse-xml($xml)
+     file:write($ik-fn:dir-tmp || "/xml/bibtex/bibtex.xml", $parsed-xml)
+};
+
+(: TODO this workflow really needs to be re-done :)
+declare function ik-fn:bibtex-call-functions() {
+  let $bibtex-file-path := "../../bibtex/bibliography.bib"
+  return
+    ik-fn:bibtex-read-file-and-tokenize($bibtex-file-path)
+      => ik-fn:bibtex-replace-first-bracket()
+      => ik-fn:bibtex-replace-brackets()
+      => ik-fn:bibtex-add-quotes()
+      => ik-fn:bibtex-add-angle-brackets()
+      => ik-fn:bibtex-rm-trailing-commas()
+      => ik-fn:bibtex-replace-at-symbol()
+      => ik-fn:bibtex-delete-empty-lines()
+      => ik-fn:bibtex-wrap-xml-and-write()
 };
 (: end crappy bibtex parser :)
