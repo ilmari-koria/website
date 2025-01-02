@@ -51,6 +51,11 @@ declare function ik-fn:concat-xml-files() {
     file:write($output, $concatenated)
 };
 
+declare function ik-fn:xsl-transform-bibtex() {
+  file:write($ik-fn:dir-tmp || "xml/bibliography/bibliography.xml",
+  xslt:transform($ik-fn:dir-tmp || "xml/bibtex/bibtex.xml", $ik-fn:dir-lib || "xsl/bibtex.xsl"))
+};
+
 declare function ik-fn:xsl-transform-misc() {
   file:write($ik-fn:dir-tmp || "html/posts.html", xslt:transform($ik-fn:source-concat, $ik-fn:dir-lib || "xsl/archive.xsl")),
   file:write($ik-fn:dir-tmp || "html/index.html", xslt:transform($ik-fn:source-concat, $ik-fn:dir-lib || "xsl/index.xsl")),
