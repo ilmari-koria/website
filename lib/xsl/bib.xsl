@@ -22,13 +22,13 @@
             <xsl:variable name="key"
                           select="substring-after(@raw-link, 'cite:')" />
             <xsl:variable name="bib-entry"
-                          select="$bibliography//*:a[@name = $key]/ancestor::*:tr" />
+                          select="$bibliography//entry[key=$key]/data" />
             <xsl:variable name="number"
                           select="position()" />
             <tr>
               <td>[<a id="{$key}" href="#{$key}"><xsl:value-of select="$number" /></a>]</td>
               <td>
-                <xsl:apply-templates select="$bib-entry//*:td[@class = 'bibtexitem']" />
+                <xsl:value-of select="$bib-entry" />
               </td>
             </tr>
           </xsl:for-each-group>
@@ -41,7 +41,7 @@
     <xsl:variable name="key"
                   select="substring-after(@raw-link, 'cite:')" />
     <xsl:variable name="bib-entry"
-                  select="$bibliography//*:a[@name = $key]/ancestor::*:tr" />
+                  select="$bibliography//entry[key=$key]/data" />
     <xsl:variable name="number"
                   select="position()" />
     [<a href="#{$key}"><xsl:value-of select="$number" /></a>]<xsl:text></xsl:text>
