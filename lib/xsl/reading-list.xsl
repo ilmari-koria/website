@@ -10,7 +10,7 @@
   <xsl:include href="footer.xsl" />
   <xsl:include href="preamble.xsl" />
 
-  <xsl:template match="/*:document/*:headline[@level='1']">
+  <xsl:template match="*:headline[@level='1']">
     <html>
       <xsl:call-template name="header">
         <xsl:with-param name="title" select="'Reading List'" />
@@ -22,24 +22,26 @@
             <h2 id="reading-heading-current">I am currently reading:</h2>
             <table class="reading-list">
               <tbody>
-                <xsl:apply-templates select="*:headline[@todo-keyword='TODO']"/>
+                <xsl:apply-templates select="//*:headline[@todo-keyword='TODO']"/>
               </tbody>
             </table>
           </div>
           <div id="list-done">
-            <h3 id="reading-heading-done">Books I read in <xsl:value-of select="*:headline[@todo-keyword='DONE']/parent::*:headline[@level='1']/@raw-value"/>:</h3>
+            <xsl:for-each select="//*:headline[@level='2']">
+            <h3 id="reading-heading-done">Books I read in <xsl:value-of select="@raw-value"/>:</h3>
             <table class="reading-list-done">
               <tbody>
                <xsl:apply-templates select="*:headline[@todo-keyword='DONE']"/>
               </tbody>
             </table>
+            </xsl:for-each>
           </div>
         </div>
         <xsl:call-template name="footer" />
       </body>
     </html>
   </xsl:template>
-  <xsl:template match="*:headline[@todo-keyword='TODO']">
+  <xsl:template match="//*:headline[@todo-keyword='TODO']">
     <tr>
       <td class="image-column">
         <img src="{*:section/*:property-drawer/*:node-property[@key='Img_url']/@value}" alt="Book Cover"/>
