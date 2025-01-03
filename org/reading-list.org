@@ -1,4 +1,4 @@
-* 2024
+* 2025
 ** TODO Silent Illumination : A Chan Buddhist Path to Natural Awakening
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+0863614066_140.jpg
@@ -7,15 +7,6 @@
 :ISBN: 9781611808728
 :Publisher: Shambhala
 :Address: Boulder
-:Date: 2024
-:END:
-** TODO Backwater Reeds: Zen Buddhist Dharma Talks for the 21st Century
-:PROPERTIES:
-:Img_url: https://m.media-amazon.com/images/I/81RsyDVxObL._SL1500_.jpg
-:Author: Jeff Shore, Leonie Callaway
-:Pub_year: 2024
-:ISBN: 9798339907435
-:Publisher: www.beingwithoutself.org
 :Date: 2024
 :END:
 ** TODO Geosonics: Listening Through Earth's Soundscapes
@@ -28,6 +19,16 @@
 :Address: London
 :Date: 2024
 :END:
+** DONE Backwater Reeds: Zen Buddhist Dharma Talks for the 21st Century
+:PROPERTIES:
+:Img_url: https://m.media-amazon.com/images/I/81RsyDVxObL._SL1500_.jpg
+:Author: Jeff Shore, Leonie Callaway
+:Pub_year: 2024
+:ISBN: 9798339907435
+:Publisher: www.beingwithoutself.org
+:Date: 2024
+:END:
+* 2024
 ** DONE The Eternal Now
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+05543940_140.jpg
