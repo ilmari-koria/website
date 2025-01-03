@@ -10,7 +10,7 @@
 :Address: Boulder
 :Date: 2024
 :END:
-*** DONE Geosonics: Listening Through Earth's Soundscapes
+*** TODO Geosonics: Listening Through Earth's Soundscapes
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+1457963796_140.jpg
 :Author: Joshua Dittrich
