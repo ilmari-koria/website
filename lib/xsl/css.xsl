@@ -142,7 +142,8 @@ td {
 
 .reading-list-done td {
     padding: 0 0.25rem 0 0.25rem;
-    border: solid 1px black; 
+    border-right: solid 1px black; 
+    border-left: solid 1px black;
 }
 
 .reading-list-done tr {
