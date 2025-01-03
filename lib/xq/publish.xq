@@ -12,6 +12,10 @@ declare option output:indent "yes";
 (: retrieve github atom feed :)
 ik-fn:get-github-atom(),
 
+(: generate bibliography :)
+ik-bib:bibtex-call-functions(),
+ik-fn:xsl-transform-bibtex(),
+
 (: generate pages :)
 ik-fn:el-generate-xml-from-org(),
 ik-fn:concat-xml-files(),
