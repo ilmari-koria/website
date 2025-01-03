@@ -136,7 +136,8 @@ td {
 
 .reading-list-done {
     font-size: small;
-    border-collapse: collapse; 
+    border-collapse: collapse;
+    width: 100%;
 }
 
 .reading-list-done td {
