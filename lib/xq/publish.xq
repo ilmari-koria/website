@@ -23,7 +23,3 @@ ik-fn:xsl-generate-css(),
 ik-fn:xsl-generate-tex(),
 ik-fn:tex-generate-pdf(),
 ik-fn:tex-clean-tmp-files()
-
-(:
- : ik-fn:bibtex-call-functions()
- :)
