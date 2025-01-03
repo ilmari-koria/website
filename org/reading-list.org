@@ -1,5 +1,6 @@
-* 2025
-** TODO Silent Illumination : A Chan Buddhist Path to Natural Awakening
+* List
+** 2025
+*** TODO Silent Illumination : A Chan Buddhist Path to Natural Awakening
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+0863614066_140.jpg
 :Author: Guo Gu
@@ -9,7 +10,7 @@
 :Address: Boulder
 :Date: 2024
 :END:
-** TODO Geosonics: Listening Through Earth's Soundscapes
+*** DONE Geosonics: Listening Through Earth's Soundscapes
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+1457963796_140.jpg
 :Author: Joshua Dittrich
@@ -19,7 +20,7 @@
 :Address: London
 :Date: 2024
 :END:
-** DONE Backwater Reeds: Zen Buddhist Dharma Talks for the 21st Century
+*** DONE Backwater Reeds: Zen Buddhist Dharma Talks for the 21st Century
 :PROPERTIES:
 :Img_url: https://m.media-amazon.com/images/I/81RsyDVxObL._SL1500_.jpg
 :Author: Jeff Shore, Leonie Callaway
@@ -28,8 +29,8 @@
 :Publisher: www.beingwithoutself.org
 :Date: 2024
 :END:
-* 2024
-** DONE The Eternal Now
+** 2024
+*** DONE The Eternal Now
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+05543940_140.jpg
 :Author: Paul Tillich
@@ -39,7 +40,7 @@
 :Address: London
 :Date: 2024
 :END:
-** DONE Listening After Nature: Field Recording, Ecology, Critical Practice
+*** DONE Listening After Nature: Field Recording, Ecology, Critical Practice
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+2055710476_140.jpg
 :Author: Mark Peter Wright
@@ -49,7 +50,7 @@
 :Address: London
 :Date: 2024
 :END:
-** DONE To You: Zen Sayings of Kodo Sawaki
+*** DONE To You: Zen Sayings of Kodo Sawaki
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+7502446986_140.jpg
 :Author: Kōdō Sawaki, Muhō Nöelke, Reihō Jesse Hassach
@@ -60,7 +61,7 @@
 :Date: 2024
 :END:
 
-** DONE The Art of Just Sitting: Essential Writings on the Zen Practice of Shikantaza
+*** DONE The Art of Just Sitting: Essential Writings on the Zen Practice of Shikantaza
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+008887911_140.jpg
 :Author: John Daido Loori
@@ -71,7 +72,7 @@
 :Date: 2024
 :END:
 
-** DONE Memoirs of a Birdman
+*** DONE Memoirs of a Birdman
 :PROPERTIES:
 :Img_url: https://ilmarikoria.xyz/static/koch-cover.jpg
 :Author: Ludwig Koch
@@ -81,7 +82,7 @@
 :Date: 2024
 :END:
 
-** DONE The Dharma Bums
+*** DONE The Dharma Bums
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+73321040_140.jpg
 :Author: Jack Kerouac
@@ -92,7 +93,7 @@
 :Date: 2024
 :END:
 
-** DONE The Zen Teaching of Homeless Kodo
+*** DONE The Zen Teaching of Homeless Kodo
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+331607943_140.jpg
 :Author: Kosho Uchiyama, Shohaku Okumura
@@ -103,7 +104,7 @@
 :Date: 2024
 :END:
 
-** DONE Discovering the True Self: Kodo Sawaki's Art of Zen Meditation
+*** DONE Discovering the True Self: Kodo Sawaki's Art of Zen Meditation
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+6201267166_140.jpg
 :Author: Kodo Sawaki
