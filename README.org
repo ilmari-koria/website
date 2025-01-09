@@ -2,6 +2,9 @@
 Work-in-progress org-mode + X-technologies workflow for my blog:
 [[https://ilmarikoria.xyz]].
 
+The majority of the stuff here is just me practising different XML
+tools.
+
 XML conversion via https://github.com/ndw/org-to-xml.
 
 [[./meme.png]]
