@@ -110,6 +110,18 @@ declare function ik-fn:xsl-generate-tex() {
   return proc:system($java,$args)
 };
 
+declare function ik-fn:ixml-generate-bibtex() {
+  let $java := "java"
+  let $coffeepot := "./bin/coffeepot/coffeepot-3.2.7.jar"
+  let $args := (
+    "-jar", $coffeepot,
+    "--pretty-print",
+    "--grammar:./lib/ixml/date-example.ixml",
+    "--input:./lib/ixml/date.txt"
+  )
+  return proc:system($java,$args)
+};
+
 declare function ik-fn:tex-generate-pdf() {
   let $tex := $ik-fn:dir-tmp || "tex/ilmari-koria-resume.tex"
   let $pdflatex := "pdflatex"
