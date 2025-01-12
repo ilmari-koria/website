@@ -84,30 +84,35 @@
   </events>
   <training>
     <training-entry>
-      <name>Colleague Mentoring Scheme (Mentee; Publishing IT Infrastructure)</name>
+      <role>Mentee</role>
+      <name>Colleague Mentoring Scheme (Publishing IT Infrastructure)</name>
       <institute>Bloomsbury Publ.</institute>
       <training-hours>ongoing</training-hours>
       <date>2024 -- 2025</date>
     </training-entry>
     <training-entry>
+      <role>Participant</role>
       <name>XML Summer School: XSLT \&amp; XQuery</name>
       <institute>University of Oxford</institute>
       <training-hours>15</training-hours>
       <date>2024</date>
     </training-entry>
     <training-entry>
+      <role>Completer (Online course)</role>
       <name>Practical Transformation Using XSLT and XPath</name>
-      <institute>Crane Softwrights Ltd. (Online course)</institute>
+      <institute>Crane Softwrights Ltd.</institute>
       <training-hours>24</training-hours>
       <date>2024</date>
     </training-entry>
     <training-entry>
+      <role>Participant</role>
       <name>DHOxSS: Applied Data Analysis for the Humanities</name>
       <institute>University of Oxford</institute>
       <training-hours>25</training-hours>
       <date>2019</date>
     </training-entry>
     <training-entry>
+      <role>Participant</role>
       <name>Introduction to Python: Data Analysis and Programming</name>
       <institute>University of London</institute>
       <training-hours>25</training-hours>
@@ -144,12 +149,12 @@
       <level>advanced</level>
     </language-entry>
     <language-entry>
-      <language>Mandarin</language>
+      <language>Mandarin Chinese</language>
       <level>high-intermediate</level>
     </language-entry>
-    <language-entry>
-      <language>Cantonese</language>
-      <level>basic</level>
-    </language-entry>
+    <!-- <language-entry> -->
+    <!--   <language>Cantonese</language> -->
+    <!--   <level>basic</level> -->
+    <!-- </language-entry> -->
   </language-list>
 </resume>
