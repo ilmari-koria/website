@@ -9,17 +9,24 @@ declare option output:indent "yes";
  : @version  0.1
  :)
 
+(: test ixml :)
+
+ik-fn:ixml-generate-bibtex()
+
+
 (: retrieve github atom feed :)
-ik-fn:get-github-atom(),
-
-(: generate pages :)
-ik-fn:el-generate-xml-from-org(),
-ik-fn:concat-xml-files(),
-ik-fn:xsl-transform-misc(),
-ik-fn:xsl-transform-posts(),
-ik-fn:xsl-generate-css(),
-
-(: generate resume :)
-ik-fn:xsl-generate-tex(),
-ik-fn:tex-generate-pdf(),
-ik-fn:tex-clean-tmp-files()
+(:
+ : ik-fn:get-github-atom(),
+ : 
+ : (\: generate pages :\)
+ : ik-fn:el-generate-xml-from-org(),
+ : ik-fn:concat-xml-files(),
+ : ik-fn:xsl-transform-misc(),
+ : ik-fn:xsl-transform-posts(),
+ : ik-fn:xsl-generate-css(),
+ : 
+ : (\: generate resume :\)
+ : ik-fn:xsl-generate-tex(),
+ : ik-fn:tex-generate-pdf(),
+ : ik-fn:tex-clean-tmp-files()
+ :)
