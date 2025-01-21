@@ -1,15 +1,5 @@
 * List
 ** 2025
-*** TODO Silent Illumination : A Chan Buddhist Path to Natural Awakening
-:PROPERTIES:
-:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+0863614066_140.jpg
-:Author: Guo Gu
-:Pub_year: 2021
-:ISBN: 9781611808728
-:Publisher: Shambhala
-:Address: Boulder
-:Date: 2024
-:END:
 *** TODO Geosonics: Listening Through Earth's Soundscapes
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+1457963796_140.jpg
@@ -18,6 +8,26 @@
 :ISBN: 9798765104590
 :Publisher: Bloomsbury Academic
 :Address: London
+:Date: 2024
+:END:
+*** TODO Sing Like Fish: How Sound Rules Life Under Water
+:PROPERTIES:
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+6075052486_140.jpg
+:Author: Amorina Kingdon
+:Pub_year: 2024
+:ISBN: 9780593442777
+:Publisher: Crown
+:Address: New York
+:Date: 2025
+:END:
+*** DONE Silent Illumination : A Chan Buddhist Path to Natural Awakening
+:PROPERTIES:
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+0863614066_140.jpg
+:Author: Guo Gu
+:Pub_year: 2021
+:ISBN: 9781611808728
+:Publisher: Shambhala
+:Address: Boulder
 :Date: 2024
 :END:
 *** DONE Backwater Reeds: Zen Buddhist Dharma Talks for the 21st Century
@@ -114,4 +124,3 @@
 :Address: New York
 :Date: 2024
 :END:
-
