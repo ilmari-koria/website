@@ -20,6 +20,16 @@
 :Address: New York
 :Date: 2025
 :END:
+*** TODO Passing Through the Gateless Barrier: Kōan Practice for Real Life
+:PROPERTIES:
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+692263574_140.jpg
+:Author: Huikai, Guo Gu
+:Pub_year: 2016
+:ISBN: 9781611802818
+:Publisher: Shambhala
+:Address: Boulder
+:Date: 2025
+:END:
 *** DONE Silent Illumination : A Chan Buddhist Path to Natural Awakening
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+0863614066_140.jpg
