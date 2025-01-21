@@ -140,7 +140,7 @@
     <xsl:text>
       \subsection*{Skills}
     </xsl:text>
-    <xsl:text>\textbf{Technical tools:} </xsl:text>
+    <xsl:text>\textbf{Tools:} </xsl:text>
     <xsl:for-each select="resume/skill-list/skill-entry">
       <xsl:sort select="translate(., '\', '')" data-type="text" order="ascending"/>
       <xsl:value-of select="."/>
@@ -149,7 +149,7 @@
       </xsl:if>
     </xsl:for-each>
     <xsl:text> --- </xsl:text>
-    <xsl:text>\textbf{Professional languages:} </xsl:text>
+    <xsl:text>\textbf{Languages:} </xsl:text>
     <xsl:for-each select="resume/language-list/language-entry">
       <xsl:value-of select="language"/>
       <xsl:if test="position() != last()">
