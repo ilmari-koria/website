@@ -30,6 +30,16 @@
 :Address: Boulder
 :Date: 2025
 :END:
+*** TODO Instructions to the Cook: A Zen Master's Lessons in Living a Life that Matters
+:PROPERTIES:
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+89364698_140.jpg
+:Author: Bernard Glassman, Rick Fields
+:Pub_year: 1996
+:ISBN: 9780517703779
+:Publisher: Bell Tower
+:Address: New York
+:Date: 2025
+:END:
 *** DONE Silent Illumination : A Chan Buddhist Path to Natural Awakening
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+0863614066_140.jpg
