@@ -1,15 +1,13 @@
 xquery version "3.1";
 
 (:~
- : bibtex to xml parser
- : -> wip <-
+ : crappy bibtex to xml converter
  : @author   ilmarikoria@posteo.net
  : @version  0.1
  :)
 
 module namespace ik-bib = "http://www.ilmarikoria.xyz/bibtex";
 
-(: crappy bibtex parser :)
 declare function ik-bib:bibtex-read-file-and-tokenize($bibtex-file-path) {
   let $bibtex := unparsed-text($bibtex-file-path)
   let $bibtex-clean := replace($bibtex, '&amp;', '&amp;amp;')
