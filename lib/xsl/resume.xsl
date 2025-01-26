@@ -142,7 +142,7 @@
     </xsl:text>
     <xsl:text>\textbf{Tools:} </xsl:text>
     <xsl:for-each select="resume/skill-list/skill-entry">
-      <xsl:sort select="translate(., '\', '')" data-type="text" order="ascending"/>
+      <xsl:sort select="lower-case(translate(., '\', ''))" data-type="text" order="ascending"/>
       <xsl:value-of select="."/>
       <xsl:if test="position() != last()">
         <xsl:text>, </xsl:text>
