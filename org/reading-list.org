@@ -40,6 +40,16 @@
 :Address: New York
 :Date: 2025
 :END:
+*** TODO Practical SQL, 2nd Edition: A Beginner’s Guide to Storytelling with Data
+:PROPERTIES:
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+6235236476_140.jpg
+:Author: Anthony DeBarros
+:Pub_year: 2022
+:ISBN: 9781718501072
+:Publisher: No Starch Press
+:Address: San Francisco
+:Date: 2025
+:END:
 *** DONE Silent Illumination : A Chan Buddhist Path to Natural Awakening
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+0863614066_140.jpg
