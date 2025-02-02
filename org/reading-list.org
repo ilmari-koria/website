@@ -30,7 +30,7 @@
 :Address: Boulder
 :Date: 2025
 :END:
-*** TODO Instructions to the Cook: A Zen Master's Lessons in Living a Life that Matters
+*** DONE Instructions to the Cook: A Zen Master's Lessons in Living a Life that Matters
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+89364698_140.jpg
 :Author: Bernard Glassman, Rick Fields
