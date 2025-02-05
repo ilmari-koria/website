@@ -1,17 +1,29 @@
 xquery version "3.1";
 import module namespace ik-fn = "http://www.ilmarikoria.xyz" at "lib-publish.xqm";
-import module namespace ik-bib = "http://www.ilmarikoria.xyz/bibtex" at "bibtex-parser.xqm";
+import module namespace test = 'http://basex.org/modules/xqunit-tests' at "tests.xqm";
 declare option output:indent "yes";
 
 (:~
  : blog publish function calls
  : @author   ilmarikoria@posteo.net
- : @version  0.1
+ : @version  0.2
  :)
 
 (: TODO check docs for best practices re- message vs. trace :)
 
+(: run tests :)
+try {
+  fn:message("🔬 Running tests..."),
+  test:assert-equals-hello-world(),
+  fn:message("🧪 Tests OK")
+} catch * {
+    fn:message('❌ Error [' || $err:code || ']: ' || $err:description)
+    }
 
+(: spooky comma :)
+,
+
+(: run pipeline :)
 try {
   fn:message("ℹ️  Retrieving commit details"),
   ik-fn:get-github-atom(),
@@ -35,7 +47,3 @@ try {
 } catch * {
     fn:message('❌ Error [' || $err:code || ']: ' || $err:description)
     }
-
-
-
-
