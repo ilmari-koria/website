@@ -37,17 +37,17 @@ h1,h2,h3,h4,h5 {
     margin-right: 1rem;
 }
 
-#preamble {
+header {
     margin: 2rem 0 2.5rem 0;
 }
 
-#preamble ul {
+header ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-#preamble ul li {
+header ul li {
     display: inline;
     margin-right: 0.5rem;
 }
@@ -173,11 +173,11 @@ ul.reading-list {
         display: initial;
     }
 
-    #preamble h1 {
+    header h1 {
         margin-bottom: 1rem;
     }
 
-    #preamble ul li {
+    header ul li {
         display: block;
         margin-right: initial;
         margin-bottom: 1rem;
