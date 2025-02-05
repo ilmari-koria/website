@@ -14,17 +14,17 @@
   <xsl:variable name="reading-list"
                 select="document('../../tmp/xml/reading-list/reading-list.xml')" />
 
+  <xsl:include href="meta.xsl" />
   <xsl:include href="header.xsl" />
   <xsl:include href="footer.xsl" />
-  <xsl:include href="preamble.xsl" />
 
   <xsl:template match="/">
     <html>
-      <xsl:call-template name="header">
+      <xsl:call-template name="meta">
         <xsl:with-param name="title" select="'About'" />
       </xsl:call-template>
       <body>
-        <xsl:call-template name="preamble" />
+        <xsl:call-template name="header" />
         <div id="content">
           <div id="about">
             <h2>About</h2>

@@ -13,17 +13,17 @@
   <xsl:variable name="posts"
                 select="document('../../tmp/xml/concat/posts-concat.xml')" />
 
+  <xsl:include href="meta.xsl" />
   <xsl:include href="header.xsl" />
   <xsl:include href="footer.xsl" />
-  <xsl:include href="preamble.xsl" />
 
   <xsl:template match="/">
     <html>
-      <xsl:call-template name="header">
+      <xsl:call-template name="meta">
         <xsl:with-param name="title" select="'Posts'" />
       </xsl:call-template>
       <body>
-        <xsl:call-template name="preamble" />
+        <xsl:call-template name="header" />
         <div id="content">
           <h2>Posts</h2>
           <xsl:call-template name="post-table" />
