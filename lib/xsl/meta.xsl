@@ -12,7 +12,7 @@
   <xsl:variable name="meta-description"
                 select="org:document/org:keyword[@key = 'DESCRIPTION']/@value" />
 
-  <xsl:template name="header">
+  <xsl:template name="meta">
     <xsl:param name="title" />
     <head>
       <meta charset="UTF-8" />

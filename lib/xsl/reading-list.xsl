@@ -12,11 +12,11 @@
 
   <xsl:template match="*:headline[@level='1']">
     <html>
-      <xsl:call-template name="header">
+      <xsl:call-template name="meta">
         <xsl:with-param name="title" select="'Reading List'" />
       </xsl:call-template>
       <body>
-        <xsl:call-template name="preamble" />
+        <xsl:call-template name="header" />
         <div id="content">
           <div id="list-todo">
             <h2 id="reading-heading-current">I am currently reading:</h2>

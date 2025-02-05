@@ -19,11 +19,11 @@
 
   <xsl:template match="/">
     <html>
-      <xsl:call-template name="header">
+      <xsl:call-template name="meta">
         <xsl:with-param name="title" select="'Index'" />
       </xsl:call-template>
       <body>
-          <xsl:call-template name="preamble" />
+          <xsl:call-template name="header" />
           <div id="content">
            <div id="recent-posts">
             <h2>Recent Posts</h2>

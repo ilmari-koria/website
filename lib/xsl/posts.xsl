@@ -10,19 +10,19 @@
               encoding="UTF-8"
               omit-xml-declaration="yes" />
 
+  <xsl:include href="meta.xsl" />
   <xsl:include href="header.xsl" />
-  <xsl:include href="footer.xsl" />
-  <xsl:include href="preamble.xsl" />
-  <xsl:include href="footnotes.xsl" />
   <xsl:include href="bib.xsl" />
+  <xsl:include href="footnotes.xsl" />
+  <xsl:include href="footer.xsl" />
 
   <xsl:template match="/">
     <html>
-      <xsl:call-template name="header">
+      <xsl:call-template name="meta">
         <xsl:with-param name="title" select="org:document/org:keyword[@key = 'TITLE']/@value" />
       </xsl:call-template>
       <body>
-        <xsl:call-template name="preamble" />
+        <xsl:call-template name="header" />
         <div id="content">
           <xsl:apply-templates select="org:keyword[@key = 'TITLE']"/>
           <xsl:apply-templates select="org:keyword[@key = 'DATE']"/>
