@@ -114,6 +114,7 @@ declare function ik-fn:tex-generate-pdf() {
   let $tex := $ik-fn:dir-tmp || "tex/ilmari-koria-resume.tex"
   let $pdflatex := "pdflatex"
   let $args := (
+    "-interaction=batchmode",
     "-output-directory", $ik-fn:dir-tmp || "html",
     $tex
   )
