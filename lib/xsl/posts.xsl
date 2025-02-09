@@ -21,13 +21,15 @@
       </xsl:call-template>
       <body>
         <xsl:call-template name="header" />
-        <div id="content">
-          <xsl:apply-templates select="org:keyword[@key = 'TITLE']"/>
-          <xsl:apply-templates select="org:keyword[@key = 'DATE']"/>
-          <xsl:apply-templates />
-          <xsl:call-template name="footnotes" />
-          <xsl:call-template name="bib" />
-        </div>
+        <section>
+          <article>
+            <xsl:apply-templates select="org:keyword[@key = 'TITLE']"/>
+            <xsl:apply-templates select="org:keyword[@key = 'DATE']"/>
+            <xsl:apply-templates />
+            <xsl:call-template name="footnotes" />
+            <xsl:call-template name="bib" />
+          </article>
+        </section>
         <xsl:call-template name="footer" />
       </body>
     </html>
