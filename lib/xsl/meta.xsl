@@ -5,9 +5,7 @@
                 version="2.0"
                 exclude-result-prefixes="org">
 
-  <xsl:output method="xml"
-              indent="yes"
-              omit-xml-declaration="yes" />
+  <xsl:include href="style.xsl" />
 
   <xsl:variable name="meta-description"
                 select="org:document/org:keyword[@key = 'DESCRIPTION']/@value" />
@@ -35,6 +33,7 @@
       <title>
         <xsl:value-of select="$title" />
       </title>
+      <xsl:call-template name="style"/>
     </head>
   </xsl:template>
 </xsl:stylesheet>
