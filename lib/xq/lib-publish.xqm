@@ -21,6 +21,8 @@ declare function ik-fn:hello-world() {
   return $string
 };
 
+(: TODO convert these into actual functions at some point :)
+
 declare function ik-fn:el-generate-xml-from-org() {
   let $om-to-xml := $ik-fn:dir-lib || "/el/convert-blog-posts-to-xml.el"
   let $emacs := "emacs"
@@ -73,13 +75,6 @@ declare function ik-fn:xsl-transform-posts() {
        file:write($ik-fn:dir-tmp || "html/" || $html-file,
          xslt:transform($ik-fn:dir-tmp || "xml/posts/" || $file, $ik-fn:dir-lib || "xsl/posts.xsl"))
 };
-
-(: TODO is this really required? :)
-(: TODO find a more modular way of generating css :)
-declare function ik-fn:xsl-generate-css() {
-  file:write($ik-fn:dir-tmp || "html/style.css",
-  xslt:transform-text($ik-fn:source-concat, $ik-fn:dir-lib || "xsl/css.xsl"))
-};  
 
 declare function ik-fn:get-github-atom() {
   let $url := "https://github.com/ilmari-koria/website/commits.atom"
