@@ -86,7 +86,7 @@
   <xsl:template name="contact">
     <h3>Contact</h3>
     <details>
-      <summary><p>Feel free to contact me via</p></summary>
+      <summary><p>Feel free to contact me via:</p></summary>
       <ul>
         <li><a href="mailto:ilmarikoria@posteo.net">ilmarikoria@posteo.net</a></li>
         <li>Public Key: <code><a href="https://ilmarikoria.xyz/static/ilmari-koria-public-key.asc">D8DA 85D0 4C6A BD1F 8DA4 2895 3E3B 85AB 3A8D FFD4</a></code>.</li>
