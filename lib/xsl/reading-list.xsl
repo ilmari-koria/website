@@ -26,18 +26,14 @@
 
   <xsl:template match="//*:headline[@todo-keyword='TODO']">
     <tr>
-      <td class="image-column">
+      <td>
         <img src="{*:section/*:property-drawer/*:node-property[@key='Img_url']/@value}" alt="Book Cover"/>
       </td>
       <td>
-        <p class="book-title"><xsl:value-of select="*:title"/></p>
-        <p>
-          <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/><xsl:text> </xsl:text>
-          (<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>)
-        </p>
-        <br/>
-        <p>
-          <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Publisher']/@value"/><xsl:text>, </xsl:text>
+        <p><i><xsl:value-of select="*:title"/></i>,
+          <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/>
+          (<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>),
+          <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Publisher']/@value"/>,
           <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/>
         </p>
         <p><a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">Search title on WorldCat</a></p>
@@ -47,17 +43,17 @@
 
   <xsl:template match="*:headline[@todo-keyword='DONE']">
     <tr>
-      <td><em><xsl:value-of select="*:title"/></em></td>
+      <td><i><xsl:value-of select="*:title"/></i></td>
       <td><xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/></td>
       <td><xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/></td>
-      <td>[<a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">WorldCat</a>]</td>
+      <td><a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">WorldCat</a></td>
     </tr>
   </xsl:template>
 
   <xsl:template name="current-reading">
-    <article id="list-todo">
-      <h2 id="reading-heading-current">I am currently reading:</h2>
-      <table class="reading-list">
+    <article>
+      <h2>I am currently reading:</h2>
+      <table>
         <tbody>
           <xsl:apply-templates select="//*:headline[@todo-keyword='TODO']"/>
         </tbody>
@@ -66,16 +62,34 @@
   </xsl:template>
 
   <xsl:template name="done-reading">
-    <article id="list-done">
-      <xsl:for-each select="//*:headline[@level='2']">
-        <h3 id="reading-heading-done">Books I read in <xsl:value-of select="@raw-value"/>:</h3>
-        <table class="reading-list-done">
-          <tbody>
-            <xsl:apply-templates select="*:headline[@todo-keyword='DONE']"/>
-          </tbody>
-        </table>
-      </xsl:for-each>
-    </article>
+    <section>
+      <h2>Books Read</h2>
+      <details>
+        <summary>
+          <xsl:for-each select="//*:headline[@level='2']">
+            <xsl:sort select="." order="ascending"/>
+            <em>
+              <p>
+                <xsl:value-of select="@raw-value"/>
+                <xsl:if test="position() != last()">
+                  <xsl:text>,</xsl:text>
+                </xsl:if>
+              </p>
+            </em>
+          </xsl:for-each>
+        </summary>
+        <article>
+          <xsl:for-each select="//*:headline[@level='2']">
+            <h3><xsl:value-of select="@raw-value"/></h3>
+            <table>
+              <tbody>
+                <xsl:apply-templates select="*:headline[@todo-keyword='DONE']"/>
+              </tbody>
+            </table>
+          </xsl:for-each>
+        </article>
+      </details>
+    </section>
   </xsl:template>
 
 </xsl:stylesheet>
