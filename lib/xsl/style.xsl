@@ -84,7 +84,7 @@
         margin: 1rem;
         }
       
-        header ul li {
+        nav ul li {
         display: block;
         margin-right: initial;
         margin-bottom: 1rem;
