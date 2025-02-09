@@ -5,10 +5,6 @@
                 version="2.0"
                 exclude-result-prefixes="org">
 
-  <xsl:output method="xml"
-              encoding="UTF-8"
-              indent="yes"/>
-
   <xsl:variable name="bibliography-footnotes"
                 select="document('../../tmp/xml/bibliography/bibliography.xml')" />
   <xsl:variable name="footnote-number"

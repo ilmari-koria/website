@@ -3,9 +3,7 @@
                 xmlns:org="https://nwalsh.com/ns/org-to-xml"
                 version="2.0"
                 exclude-result-prefixes="org">
-  <xsl:output method="xml"
-              indent="yes"
-              omit-xml-declaration="yes" />
+
   <xsl:template name="header">
     <header>
       <div class="website-title">
@@ -28,4 +26,5 @@
       </nav>
     </header>
   </xsl:template>
+
 </xsl:stylesheet>
