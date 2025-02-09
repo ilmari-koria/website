@@ -12,7 +12,7 @@
 
   <xsl:template name="footnotes">
     <xsl:if test="//org:footnote-definition != ''">
-      <div class="footnotes">
+      <section class="footnotes">
         <h2>Footnotes</h2>
         <table>
           <xsl:for-each-group select="//org:footnote-definition"
@@ -35,7 +35,7 @@
             </xsl:for-each>
           </xsl:for-each-group>
         </table>
-      </div>
+      </section>
     </xsl:if>
   </xsl:template>
 

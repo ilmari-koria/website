@@ -21,9 +21,9 @@
         <xsl:with-param name="title" select="'Index'" />
       </xsl:call-template>
       <body>
-          <xsl:call-template name="header" />
-          <div id="content">
-           <div id="recent-posts">
+        <xsl:call-template name="header" />
+        <section>
+          <article>
             <h2>Recent Posts</h2>
             <table>
               <xsl:for-each-group select="$posts/*:root/*:document/*:keyword[@key='TITLE']" group-by=".">
@@ -37,16 +37,16 @@
                         <xsl:value-of select="format-date(xs:date($date), '[Y] [MNn,3-3] [D01]')" />
                       </td>
                       <td>
-                          <a href="https://ilmarikoria.xyz/{$date}-blog.html">
-                          <xsl:value-of select="$title" /></a>
+                        <a href="https://ilmarikoria.xyz/{$date}-blog.html">
+                        <xsl:value-of select="$title" /></a>
                       </td>
                     </tr>
                   </xsl:if>
                 </xsl:for-each>
               </xsl:for-each-group>
             </table>
-           </div>
-          </div>
+          </article>
+        </section>
         <xsl:call-template name="footer" />
       </body>
     </html>

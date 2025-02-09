@@ -15,30 +15,15 @@
       </xsl:call-template>
       <body>
         <xsl:call-template name="header" />
-        <div id="content">
-          <div id="list-todo">
-            <h2 id="reading-heading-current">I am currently reading:</h2>
-            <table class="reading-list">
-              <tbody>
-                <xsl:apply-templates select="//*:headline[@todo-keyword='TODO']"/>
-              </tbody>
-            </table>
-          </div>
-          <div id="list-done">
-            <xsl:for-each select="//*:headline[@level='2']">
-            <h3 id="reading-heading-done">Books I read in <xsl:value-of select="@raw-value"/>:</h3>
-            <table class="reading-list-done">
-              <tbody>
-               <xsl:apply-templates select="*:headline[@todo-keyword='DONE']"/>
-              </tbody>
-            </table>
-            </xsl:for-each>
-          </div>
-        </div>
+        <section>
+          <xsl:call-template name="current-reading"/>
+          <xsl:call-template name="done-reading"/>
+        </section>
         <xsl:call-template name="footer" />
       </body>
     </html>
   </xsl:template>
+
   <xsl:template match="//*:headline[@todo-keyword='TODO']">
     <tr>
       <td class="image-column">
@@ -59,6 +44,7 @@
       </td>
     </tr>
   </xsl:template>
+
   <xsl:template match="*:headline[@todo-keyword='DONE']">
     <tr>
       <td><em><xsl:value-of select="*:title"/></em></td>
@@ -66,6 +52,30 @@
       <td><xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/></td>
       <td>[<a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">WorldCat</a>]</td>
     </tr>
+  </xsl:template>
+
+  <xsl:template name="current-reading">
+    <article id="list-todo">
+      <h2 id="reading-heading-current">I am currently reading:</h2>
+      <table class="reading-list">
+        <tbody>
+          <xsl:apply-templates select="//*:headline[@todo-keyword='TODO']"/>
+        </tbody>
+      </table>
+    </article>
+  </xsl:template>
+
+  <xsl:template name="done-reading">
+    <article id="list-done">
+      <xsl:for-each select="//*:headline[@level='2']">
+        <h3 id="reading-heading-done">Books I read in <xsl:value-of select="@raw-value"/>:</h3>
+        <table class="reading-list-done">
+          <tbody>
+            <xsl:apply-templates select="*:headline[@todo-keyword='DONE']"/>
+          </tbody>
+        </table>
+      </xsl:for-each>
+    </article>
   </xsl:template>
 
 </xsl:stylesheet>

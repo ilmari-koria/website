@@ -38,13 +38,13 @@
   </xsl:template>
 
   <xsl:template name="content">
-    <div id="content">
+    <section>
       <xsl:call-template name="about"/>
-    </div>
+    </section>
   </xsl:template>
 
   <xsl:template name="about">
-    <div id="about">
+    <article>
       <h2>About</h2>
       <p>Hello! My name is Ilmari. This (work in progress)
       blog is simply for me to share assorted reflections on
@@ -94,6 +94,6 @@
         </ol>
         </li>
       </ul>
-    </div>
+    </article>
   </xsl:template>
 </xsl:stylesheet>

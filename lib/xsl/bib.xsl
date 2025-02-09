@@ -5,12 +5,12 @@
                 version="2.0"
                 exclude-result-prefixes="org">
 
-  <xsl:variable name="bibliography"
+ <xsl:variable name="bibliography"
                 select="document('../../tmp/xml/bibliography/bibliography.xml')" />
 
   <xsl:template name="bib">
     <xsl:if test="//org:link[contains(@raw-link, 'cite:')] != ''">
-      <div id="references">
+      <section id="references">
         <h2>References</h2>
         <table>
           <xsl:for-each-group select="//org:link[contains(@raw-link, 'cite:')]"
@@ -29,7 +29,7 @@
             </tr>
           </xsl:for-each-group>
         </table>
-      </div>
+      </section>
     </xsl:if>
   </xsl:template>
 

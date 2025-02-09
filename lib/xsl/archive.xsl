@@ -22,10 +22,12 @@
       </xsl:call-template>
       <body>
         <xsl:call-template name="header" />
-        <div id="content">
-          <h2>Posts</h2>
-          <xsl:call-template name="post-table" />
-        </div>
+        <section>
+          <article>
+            <h2>Posts</h2>
+            <xsl:call-template name="post-table" />
+          </article>
+        </section>
         <xsl:call-template name="footer" />
       </body>
     </html>
