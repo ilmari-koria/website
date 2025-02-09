@@ -14,9 +14,7 @@
   <xsl:variable name="reading-list"
                 select="document('../../tmp/xml/reading-list/reading-list.xml')" />
 
-  <xsl:include href="meta.xsl" />
-  <xsl:include href="header.xsl" />
-  <xsl:include href="footer.xsl" />
+  <xsl:include href="templates.xsl" />
 
   <xsl:template match="/">
     <xsl:call-template name="html" />

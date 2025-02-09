@@ -13,9 +13,7 @@
   <xsl:variable name="posts"
                 select="document('../../tmp/xml/concat/posts-concat.xml')" />
 
-  <xsl:include href="meta.xsl" />
-  <xsl:include href="header.xsl" />
-  <xsl:include href="footer.xsl" />
+  <xsl:include href="templates.xsl" />
 
   <xsl:template match="/">
     <html>

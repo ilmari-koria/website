@@ -6,9 +6,7 @@
 
   <xsl:output method="xml" indent="yes" omit-xml-declaration="yes"/>
 
-  <xsl:include href="meta.xsl" />
-  <xsl:include href="header.xsl" />
-  <xsl:include href="footer.xsl" />
+  <xsl:include href="templates.xsl" />
 
   <xsl:template match="*:headline[@level='1']">
     <html>
