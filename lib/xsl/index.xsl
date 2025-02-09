@@ -22,7 +22,7 @@
       </xsl:call-template>
       <body>
         <xsl:call-template name="header" />
-        <section>
+        <main>
           <article>
             <h2>Recent Posts</h2>
             <table>
@@ -46,7 +46,7 @@
               </xsl:for-each-group>
             </table>
           </article>
-        </section>
+        </main>
         <xsl:call-template name="footer" />
       </body>
     </html>

@@ -38,9 +38,9 @@
   </xsl:template>
 
   <xsl:template name="content">
-    <section>
+    <main>
       <xsl:call-template name="about"/>
-    </section>
+    </main>
   </xsl:template>
 
   <xsl:template name="about">

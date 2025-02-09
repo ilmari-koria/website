@@ -21,7 +21,7 @@
       </xsl:call-template>
       <body>
         <xsl:call-template name="header" />
-        <section>
+        <main>
           <article>
             <xsl:apply-templates select="org:keyword[@key = 'TITLE']"/>
             <xsl:apply-templates select="org:keyword[@key = 'DATE']"/>
@@ -29,7 +29,7 @@
             <xsl:call-template name="footnotes" />
             <xsl:call-template name="bib" />
           </article>
-        </section>
+        </main>
         <xsl:call-template name="footer" />
       </body>
     </html>
@@ -46,11 +46,11 @@
   <xsl:template match="org:document/org:headline/org:tags[. = 'ignore']"/>
 
   <xsl:template match="org:keyword[@key = 'TITLE']">
-      <h2 class="post-title"><xsl:value-of select="@value" /></h2>
+      <h2><xsl:value-of select="@value" /></h2>
   </xsl:template>
 
   <xsl:template match="org:keyword[@key = 'DATE']">
-      <p class="post-date">Posted: <xsl:value-of select="@value" /></p>
+      <h3>Posted: <time><xsl:value-of select="@value" /></time></h3>
   </xsl:template>
 
   <xsl:template match="org:paragraph">
@@ -158,7 +158,7 @@
   <xsl:template match="//org:footnote-definition" />
 
  <xsl:template match="org:verse-block">
-    <blockquote class="verse-block">
+    <blockquote>
       <xsl:analyze-string select="."
                           regex="([^\r\n]+)">
         <xsl:matching-substring>

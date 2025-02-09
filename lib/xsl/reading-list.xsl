@@ -15,10 +15,10 @@
       </xsl:call-template>
       <body>
         <xsl:call-template name="header" />
-        <section>
+        <main>
           <xsl:call-template name="current-reading"/>
           <xsl:call-template name="done-reading"/>
-        </section>
+        </main>
         <xsl:call-template name="footer" />
       </body>
     </html>
