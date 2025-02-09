@@ -35,8 +35,6 @@ try {
   ik-fn:xsl-transform-misc(),
   fn:message("ℹ️  Transforming posts"),
   ik-fn:xsl-transform-posts(),
-  fn:message("ℹ️  Generating CSS"),
-  ik-fn:xsl-generate-css(),
   fn:message("ℹ️  Generating resume TeX markup"),
   ik-fn:xsl-generate-tex(),
   fn:message("ℹ️  Generating resume pdf"),
