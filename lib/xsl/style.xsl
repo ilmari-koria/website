@@ -10,39 +10,15 @@
         max-width: 50rem;
         margin: auto;
         padding: 0.5rem;
-        font-family: serif;
         }
 
-        h1,h2,h3,h4,h5 {
-        font-family: sans-serif;
-        }
-
-        .website-title {
-        display: flex;
-        align-items: center;
-        margin-bottom: 0.5rem;
-        }
-
-        .website-title h1 {
-        margin: 0;
-        }
-
-        #logo {
-        max-height: 50px;
-        margin-right: 1rem;
-        }
-
-        header {
-        margin: 2rem 0 2.5rem 0;
-        }
-
-        header ul {
+        nav ul {
         list-style-type: none;
         padding: 0;
         margin: 0;
         }
 
-        header ul li {
+        nav ul li {
         display: inline;
         margin-right: 0.5rem;
         }
@@ -53,39 +29,9 @@
         line-height: 175%;
         }
 
-        #about p {
-        line-height: initial;
-        text-align: initial;
-        text-justify: initial;
-        }
-
         sup {
         padding: 0;
         margin-left: -2.5px;
-        }
-
-        .post-title {
-        margin-bottom: 0;
-        }
-
-        .post-date {
-        margin-top: 0.45rem;
-        font-style: italic;
-        }
-
-        #about p {
-        text-align: initial;
-        text-justify: initial;
-        }
-
-        #about img {
-        height: auto;
-        max-width: 185px;
-        border: 2px solid black;
-        }
-
-        #about figcaption {
-        font-style: italic;
         }
 
         img {
@@ -96,65 +42,39 @@
         figure {
         display: block;
         width: auto;
+        margin: 0.25rem;
+        padding: 0;
         }
 
         figure figcaption {
         font-size: 85%;
         }
+ 
+        table {
+        border-collapse: collapse;
+        }
 
+        tr:nth-child(even) {
+        background-color: WhiteSmoke;
+        }
+       
+        td img {
+        max-width: 95px;
+        }
+
+        td p {
+        text-align: initial;
+        text-justify: initial;
+        line-height: initial;
+        }
+        
         td {
         vertical-align: top;
         padding: 0 0.5rem 0.25rem 0;
         }
 
-        #references td {
-        padding: 0 1rem 0.85rem 0;
-        }
-
-        .footnotes td {
-        padding: 0 1rem 0.85rem 0;
-        }
-
-
-        .book-title {
-        font-style: italic;
-        font-size: 110%;
-        }
-
-        .reading-list p {
-        margin: 0;
-        width: 80%;
-        text-align: initial;
-        text-justify: initial;
-        line-height: initial;
-        }
-
-        .reading-list-done {
-        font-size: small;
-        border-collapse: collapse;
-        width: 100%;
-        }
-
-        .reading-list-done td {
-        padding: 0 0.25rem 0 0.25rem;
-        border-right: solid 1px black; 
-        border-left: solid 1px black;
-        }
-
-        .reading-list-done tr {
-        border: none; 
-        }
-
-        .reading-list-done tr:nth-child(even) {
-        background-color: gainsboro;
-        }
-
-        .image-column img {
-        max-width: 115px;
-        }
-
-        ul.reading-list {
-        font-size: smaller;
+        summary p, summary h2 {
+            display: inline;
         }
 
         /* media rules */
@@ -163,15 +83,7 @@
         font-size: 120%;
         margin: 1rem;
         }
-
-        #container {
-        display: initial;
-        }
-
-        header h1 {
-        margin-bottom: 1rem;
-        }
-
+      
         header ul li {
         display: block;
         margin-right: initial;
@@ -182,30 +94,7 @@
         text-align: initial;
         text-justify: initial;
         }
-
-        #content {
-        width: initial;
-        margin: 2rem 0 0 0;
-        border: initial
-        }
-
-        #container-index {
-        display: initial;
-        }
-
-        #about {
-        display: initial;
-        }
-
-        #profile-pic {
-        display: initial;
-        margin: initial;
-        }
-
-        #profile-pic figcaption {
-        text-align: left;
-        }
-        }
+      }
       </xsl:text>
     </style>
   </xsl:template>
