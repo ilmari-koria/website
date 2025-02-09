@@ -66,17 +66,13 @@
       <h2>Books Read</h2>
       <details>
         <summary>
-          <xsl:for-each select="//*:headline[@level='2']">
-            <xsl:sort select="." order="ascending"/>
-            <em>
-              <p>
-                <xsl:value-of select="@raw-value"/>
-                <xsl:if test="position() != last()">
-                  <xsl:text>,</xsl:text>
-                </xsl:if>
-              </p>
-            </em>
-          </xsl:for-each>
+          <em>
+            <p>
+              <xsl:value-of select="//*:headline[@level='2'][last()]/@raw-value"/>
+              <xsl:text> - </xsl:text>
+              <xsl:value-of select="//*:headline[@level='2'][1]/@raw-value"/>
+            </p>
+          </em>
         </summary>
         <article>
           <xsl:for-each select="//*:headline[@level='2']">
