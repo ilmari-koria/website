@@ -27,9 +27,6 @@
             href="atom.xml" title="atom feed" />
       <link rel="canonical"
             href="https://ilmarikoria.xyz" />
-      <link rel="stylesheet"
-            href="style.css"
-            type="text/css" />
       <link rel="icon" type="image/png" href=
             "static/favicon.ico"/>
       <title>
