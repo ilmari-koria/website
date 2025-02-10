@@ -73,7 +73,7 @@
         padding: 0 0.5rem 0.25rem 0;
         }
 
-        summary p, summary h2 {
+        summary p, summary h2, summary h3 {
             display: inline;
         }
 
