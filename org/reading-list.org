@@ -30,16 +30,6 @@
 :Address: Boulder
 :Date: 2025
 :END:
-*** DONE Instructions to the Cook: A Zen Master's Lessons in Living a Life that Matters
-:PROPERTIES:
-:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+89364698_140.jpg
-:Author: Bernard Glassman, Rick Fields
-:Pub_year: 1996
-:ISBN: 9780517703779
-:Publisher: Bell Tower
-:Address: New York
-:Date: 2025
-:END:
 *** TODO Practical SQL, 2nd Edition: A Beginner’s Guide to Storytelling with Data
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+6235236476_140.jpg
@@ -48,6 +38,26 @@
 :ISBN: 9781718501072
 :Publisher: No Starch Press
 :Address: San Francisco
+:Date: 2025
+:END:
+*** TODO XQuery for Humanists 
+:PROPERTIES:
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+8965526066_140.jpg
+:Author: Clifford B. Anderson, Joseph Charles Wicentowski
+:Pub_year: 2020
+:ISBN: 9781623498306
+:Publisher: Texas A&M University Press
+:Address: College Station
+:Date: 2025
+:END:
+*** DONE Instructions to the Cook: A Zen Master's Lessons in Living a Life that Matters
+:PROPERTIES:
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+89364698_140.jpg
+:Author: Bernard Glassman, Rick Fields
+:Pub_year: 1996
+:ISBN: 9780517703779
+:Publisher: Bell Tower
+:Address: New York
 :Date: 2025
 :END:
 *** DONE Silent Illumination : A Chan Buddhist Path to Natural Awakening
