@@ -63,16 +63,13 @@
 
   <xsl:template name="done-reading">
     <section>
-      <h2>Books Read</h2>
       <details>
         <summary>
-          <em>
-            <p>
-              <xsl:value-of select="//*:headline[@level='2'][last()]/@raw-value"/>
-              <xsl:text> - </xsl:text>
-              <xsl:value-of select="//*:headline[@level='2'][1]/@raw-value"/>
-            </p>
-          </em>
+          <h3>Books Read
+          <xsl:value-of select="//*:headline[@level='2'][last()]/@raw-value"/>
+          <xsl:text> - </xsl:text>
+          <xsl:value-of select="//*:headline[@level='2'][1]/@raw-value"/>
+          </h3>
         </summary>
         <article>
           <xsl:for-each select="//*:headline[@level='2']">
