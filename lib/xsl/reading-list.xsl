@@ -35,11 +35,30 @@
           <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/>
           (<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>),
           <xsl:if test="string(*:section/*:property-drawer/*:node-property[@key='Publisher']/@value) != ''">
-            <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Publisher']/@value"/>,
+            <xsl:choose>
+              <xsl:when test="starts-with(*:section/*:property-drawer/*:node-property[@key='Publisher']/@value, 'www.')">
+                <a href="http://{*:section/*:property-drawer/*:node-property[@key='Publisher']/@value}">
+                  <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Publisher']/@value"/>
+                </a>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Publisher']/@value"/>
+              </xsl:otherwise>
+            </xsl:choose>
+            <xsl:if test="string(*:section/*:property-drawer/*:node-property[@key='Address']/@value) != ''">, </xsl:if>
           </xsl:if>
           <xsl:if test="string(*:section/*:property-drawer/*:node-property[@key='Address']/@value) != ''">
-            <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/>
-          </xsl:if>
+            <xsl:choose>
+              <xsl:when test="starts-with(*:section/*:property-drawer/*:node-property[@key='Address']/@value, 'www.')">
+                <a href="http://{*:section/*:property-drawer/*:node-property[@key='Address']/@value}">
+                  <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/>
+                </a>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:if>.
         </p>
         <xsl:if test="string(*:section/*:property-drawer/*:node-property[@key='ISBN']/@value) != ''">
           <p>
@@ -72,6 +91,7 @@
 
   <xsl:template name="done-reading">
     <section>
+      <br/>
       <details>
         <summary>
           <h3>Books Read
