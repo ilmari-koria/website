@@ -1,11 +1,16 @@
 (require 'package)
+; (add-to-list 'package-archives '("melpa"  . "https://melpa.org/packages/")     t)
+; (add-to-list 'package-archives '("gnu"    . "https://elpa.gnu.org/packages/")  t)
+; (add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/") t)
 (package-initialize)
 ;; (package-refresh-contents)
+
 
 (unless (package-installed-p 'dash)
   (package-refresh-contents)
   (package-install 'dash))
 
+;; this may initially need melpa
 (unless (package-installed-p 's)
   (package-refresh-contents)
   (package-install 's))
