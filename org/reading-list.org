@@ -50,6 +50,16 @@
 :Address: College Station
 :Date: 2025
 :END:
+*** TODO Mastering Emacs
+:PROPERTIES:
+:Img_url: https://ilmarikoria.xyz/static/petersen-cover.png
+:Author: Mickey Petersen
+:Pub_year: 2025
+:ISBN: 
+:Publisher: www.masteringemacs.org
+:Address: 
+:Date: 2025
+:END:
 *** DONE Instructions to the Cook: A Zen Master's Lessons in Living a Life that Matters
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+89364698_140.jpg

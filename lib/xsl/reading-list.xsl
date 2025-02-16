@@ -30,13 +30,22 @@
         <img src="{*:section/*:property-drawer/*:node-property[@key='Img_url']/@value}" alt="Book Cover"/>
       </td>
       <td>
-        <p><i><xsl:value-of select="*:title"/></i>,
+        <p>
+          <i><xsl:value-of select="*:title"/></i>,
           <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Author']/@value"/>
           (<xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Pub_year']/@value"/>),
-          <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Publisher']/@value"/>,
-          <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/>
+          <xsl:if test="string(*:section/*:property-drawer/*:node-property[@key='Publisher']/@value) != ''">
+            <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Publisher']/@value"/>,
+          </xsl:if>
+          <xsl:if test="string(*:section/*:property-drawer/*:node-property[@key='Address']/@value) != ''">
+            <xsl:value-of select="*:section/*:property-drawer/*:node-property[@key='Address']/@value"/>
+          </xsl:if>
         </p>
-        <p><a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">Search title on WorldCat</a></p>
+        <xsl:if test="string(*:section/*:property-drawer/*:node-property[@key='ISBN']/@value) != ''">
+          <p>
+            <a href="https://search.worldcat.org/search?q={*:section/*:property-drawer/*:node-property[@key='ISBN']/@value}&amp;offset=1" target="_blank">Search title on WorldCat</a>
+          </p>
+        </xsl:if>
       </td>
     </tr>
   </xsl:template>
