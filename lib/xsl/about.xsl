@@ -86,7 +86,7 @@
   <xsl:template name="contact">
     <details>
       <summary>
-        <h3>Feel free to contact me via:</h3>
+        <h3>Contact</h3>
       </summary>
       <ul>
         <li><a href="mailto:ilmarikoria@posteo.net">ilmarikoria@posteo.net</a></li>
