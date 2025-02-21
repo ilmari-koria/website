@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<!-- Converted from org-mode to XML by om-to-xml version 0.0.7 -->
+<!-- See https://github.com/ndw/org-to-xml -->
+<document xmlns="https://nwalsh.com/ns/org-to-xml">
+<headline raw-value="List" robust-begin="10" robust-end="4628" level="1" mode="first-section"><title>List</title>
+<headline raw-value="2025" robust-begin="18" robust-end="2513" level="2" mode="section"><title>2025</title>
+<headline raw-value="Geosonics: Listening Through Earth's Soundscapes" level="3" todo-keyword="TODO" todo-type="todo" mode="section"><title>Geosonics: Listening Through Earth's Soundscapes</title>
+<section robust-begin="74" robust-end="289" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://coverart.oclc.org/ImageWebSvc/oclc/+-+1457963796_140.jpg" mode="node-property"/>
+<node-property key="Author" value="Joshua Dittrich" mode="node-property"/>
+<node-property key="Pub_year" value="2024" mode="node-property"/>
+<node-property key="ISBN" value="9798765104590" mode="node-property"/>
+<node-property key="Publisher" value="Bloomsbury Academic" mode="node-property"/>
+<node-property key="Address" value="London" mode="node-property"/>
+<node-property key="Date" value="2024" mode="node-property"/>
+</property-drawer>
+</section>
+</headline>
+<headline raw-value="Sing Like Fish: How Sound Rules Life Under Water" level="3" todo-keyword="TODO" todo-type="todo"><title>Sing Like Fish: How Sound Rules Life Under Water</title>
+<section robust-begin="349" robust-end="552" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://coverart.oclc.org/ImageWebSvc/oclc/+-+6075052486_140.jpg" mode="node-property"/>
+<node-property key="Author" value="Amorina Kingdon" mode="node-property"/>
+<node-property key="Pub_year" value="2024" mode="node-property"/>
+<node-property key="ISBN" value="9780593442777" mode="node-property"/>
+<node-property key="Publisher" value="Crown" mode="node-property"/>
+<node-property key="Address" value="New York" mode="node-property"/>
+<node-property key="Date" value="2025" mode="node-property"/>
+</property-drawer>
+</section>
+</headline>
+<headline raw-value="Passing Through the Gateless Barrier: Kōan Practice for Real Life" level="3" todo-keyword="TODO" todo-type="todo"><title>Passing Through the Gateless Barrier: Kōan Practice for Real Life</title>
+<section robust-begin="630" robust-end="834" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://coverart.oclc.org/ImageWebSvc/oclc/+-+692263574_140.jpg" mode="node-property"/>
+<node-property key="Author" value="Huikai, Guo Gu" mode="node-property"/>
+<node-property key="Pub_year" value="2016" mode="node-property"/>
+<node-property key="ISBN" value="9781611802818" mode="node-property"/>
+<node-property key="Publisher" value="Shambhala" mode="node-property"/>
+<node-property key="Address" value="Boulder" mode="node-property"/>
+<node-property key="Date" value="2025" mode="node-property"/>
+</property-drawer>
+</section>
+</headline>
+<headline raw-value="Practical SQL, 2nd Edition: A Beginner’s Guide to Storytelling with Data" level="3" todo-keyword="TODO" todo-type="todo"><title>Practical SQL, 2nd Edition: A Beginner’s Guide to Storytelling with Data</title>
+<section robust-begin="918" robust-end="1137" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://coverart.oclc.org/ImageWebSvc/oclc/+-+6235236476_140.jpg" mode="node-property"/>
+<node-property key="Author" value="Anthony DeBarros" mode="node-property"/>
+<node-property key="Pub_year" value="2022" mode="node-property"/>
+<node-property key="ISBN" value="9781718501072" mode="node-property"/>
+<node-property key="Publisher" value="No Starch Press" mode="node-property"/>
+<node-property key="Address" value="San Francisco" mode="node-property"/>
+<node-property key="Date" value="2025" mode="node-property"/>
+</property-drawer>
+</section>
+</headline>
+<headline raw-value="XQuery for Humanists" level="3" todo-keyword="TODO" todo-type="todo"><title>XQuery for Humanists</title>
+<section robust-begin="1170" robust-end="1434" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://coverart.oclc.org/ImageWebSvc/oclc/+-+8965526066_140.jpg" mode="node-property"/>
+<node-property key="Author" value="Clifford B. Anderson, Joseph Charles Wicentowski" mode="node-property"/>
+<node-property key="Pub_year" value="2020" mode="node-property"/>
+<node-property key="ISBN" value="9781623498306" mode="node-property"/>
+<node-property key="Publisher" value="Texas A&amp;M University Press" mode="node-property"/>
+<node-property key="Address" value="College Station" mode="node-property"/>
+<node-property key="Date" value="2025" mode="node-property"/>
+</property-drawer>
+</section>
+</headline>
+<headline raw-value="Mastering Emacs" level="3" todo-keyword="TODO" todo-type="todo"><title>Mastering Emacs</title>
+<section robust-begin="1461" robust-end="1645" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://ilmarikoria.xyz/static/petersen-cover.png" mode="node-property"/>
+<node-property key="Author" value="Mickey Petersen" mode="node-property"/>
+<node-property key="Pub_year" value="2025" mode="node-property"/>
+<node-property key="ISBN" value="" mode="node-property"/>
+<node-property key="Publisher" value="www.masteringemacs.org" mode="node-property"/>
+<node-property key="Address" value="" mode="node-property"/>
+<node-property key="Date" value="2025" mode="node-property"/>
+</property-drawer>
+</section>
+</headline>
+<headline raw-value="Instructions to the Cook: A Zen Master's Lessons in Living a Life that Matters" level="3" todo-keyword="DONE" todo-type="done"><title>Instructions to the Cook: A Zen Master's Lessons in Living a Life that Matters</title>
+<section robust-begin="1735" robust-end="1955" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://coverart.oclc.org/ImageWebSvc/oclc/+-+89364698_140.jpg" mode="node-property"/>
+<node-property key="Author" value="Bernard Glassman, Rick Fields" mode="node-property"/>
+<node-property key="Pub_year" value="1996" mode="node-property"/>
+<node-property key="ISBN" value="9780517703779" mode="node-property"/>
+<node-property key="Publisher" value="Bell Tower" mode="node-property"/>
+<node-property key="Address" value="New York" mode="node-property"/>
+<node-property key="Date" value="2025" mode="node-property"/>
+</property-drawer>
+</section>
+</headline>
+<headline raw-value="Silent Illumination : A Chan Buddhist Path to Natural Awakening" level="3" todo-keyword="DONE" todo-type="done"><title>Silent Illumination : A Chan Buddhist Path to Natural Awakening</title>
+<section robust-begin="2030" robust-end="2227" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://coverart.oclc.org/ImageWebSvc/oclc/+-+0863614066_140.jpg" mode="node-property"/>
+<node-property key="Author" value="Guo Gu" mode="node-property"/>
+<node-property key="Pub_year" value="2021" mode="node-property"/>
+<node-property key="ISBN" value="9781611808728" mode="node-property"/>
+<node-property key="Publisher" value="Shambhala" mode="node-property"/>
+<node-property key="Address" value="Boulder" mode="node-property"/>
+<node-property key="Date" value="2024" mode="node-property"/>
+</property-drawer>
+</section>
+</headline>
+<headline raw-value="Backwater Reeds: Zen Buddhist Dharma Talks for the 21st Century" level="3" todo-keyword="DONE" todo-type="done"><title>Backwater Reeds: Zen Buddhist Dharma Talks for the 21st Century</title>
+<section robust-begin="2302" robust-end="2513" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://m.media-amazon.com/images/I/81RsyDVxObL._SL1500_.jpg" mode="node-property"/>
+<node-property key="Author" value="Jeff Shore, Leonie Callaway" mode="node-property"/>
+<node-property key="Pub_year" value="2024" mode="node-property"/>
+<node-property key="ISBN" value="9798339907435" mode="node-property"/>
+<node-property key="Publisher" value="www.beingwithoutself.org" mode="node-property"/>
+<node-property key="Date" value="2024" mode="node-property"/>
+</property-drawer>
+</section>
+</headline>
+</headline>
+<headline raw-value="2024" robust-begin="2525" robust-end="4628" level="2"><title>2024</title>
+<headline raw-value="The Eternal Now" level="3" todo-keyword="DONE" todo-type="done" mode="section"><title>The Eternal Now</title>
+<section robust-begin="2548" robust-end="2742" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://coverart.oclc.org/ImageWebSvc/oclc/+-+05543940_140.jpg" mode="node-property"/>
+<node-property key="Author" value="Paul Tillich" mode="node-property"/>
+<node-property key="Pub_year" value="2002" mode="node-property"/>
+<node-property key="ISBN" value="9780334028758" mode="node-property"/>
+<node-property key="Publisher" value="SCM" mode="node-property"/>
+<node-property key="Address" value="London" mode="node-property"/>
+<node-property key="Date" value="2024" mode="node-property"/>
+</property-drawer>
+</section>
+</headline>
+<headline raw-value="Listening After Nature: Field Recording, Ecology, Critical Practice" level="3" todo-keyword="DONE" todo-type="done"><title>Listening After Nature: Field Recording, Ecology, Critical Practice</title>
+<section robust-begin="2821" robust-end="3040" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://coverart.oclc.org/ImageWebSvc/oclc/+-+2055710476_140.jpg" mode="node-property"/>
+<node-property key="Author" value="Mark Peter Wright" mode="node-property"/>
+<node-property key="Pub_year" value="2022" mode="node-property"/>
+<node-property key="ISBN" value="9781501354519" mode="node-property"/>
+<node-property key="Publisher" value="Bloomsbury Publishing" mode="node-property"/>
+<node-property key="Address" value="London" mode="node-property"/>
+<node-property key="Date" value="2024" mode="node-property"/>
+</property-drawer>
+</section>
+</headline>
+<headline raw-value="To You: Zen Sayings of Kodo Sawaki" level="3" todo-keyword="DONE" todo-type="done"><title>To You: Zen Sayings of Kodo Sawaki</title>
+<section robust-begin="3086" robust-end="3333" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://coverart.oclc.org/ImageWebSvc/oclc/+-+7502446986_140.jpg" mode="node-property"/>
+<node-property key="Author" value="Kōdō Sawaki, Muhō Nöelke, Reihō Jesse Hassach" mode="node-property"/>
+<node-property key="Pub_year" value="2021" mode="node-property"/>
+<node-property key="ISBN" value="9781942493709" mode="node-property"/>
+<node-property key="Publisher" value="Hohm Press" mode="node-property"/>
+<node-property key="Address" value="Chino Valley" mode="node-property"/>
+<node-property key="Date" value="2024" mode="node-property"/>
+</property-drawer>
+</section> 
+</headline> 
+<headline raw-value="The Art of Just Sitting: Essential Writings on the Zen Practice of Shikantaza" level="3" todo-keyword="DONE" todo-type="done"><title>The Art of Just Sitting: Essential Writings on the Zen Practice of Shikantaza</title>
+<section robust-begin="3423" robust-end="3637" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://coverart.oclc.org/ImageWebSvc/oclc/+-+008887911_140.jpg" mode="node-property"/>
+<node-property key="Author" value="John Daido Loori" mode="node-property"/>
+<node-property key="Pub_year" value="2002" mode="node-property"/>
+<node-property key="ISBN" value="9780861713943" mode="node-property"/>
+<node-property key="Publisher" value="Simon and Schuster" mode="node-property"/>
+<node-property key="Address" value="London" mode="node-property"/>
+<node-property key="Date" value="2024" mode="node-property"/>
+</property-drawer>
+</section> 
+</headline> 
+<headline raw-value="Memoirs of a Birdman" level="3" todo-keyword="DONE" todo-type="done"><title>Memoirs of a Birdman</title>
+<section robust-begin="3670" robust-end="3839" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://ilmarikoria.xyz/static/koch-cover.jpg" mode="node-property"/>
+<node-property key="Author" value="Ludwig Koch" mode="node-property"/>
+<node-property key="Pub_year" value="1955" mode="node-property"/>
+<node-property key="Publisher" value="Phoenix House Ltd" mode="node-property"/>
+<node-property key="Address" value="London" mode="node-property"/>
+<node-property key="Date" value="2024" mode="node-property"/>
+</property-drawer>
+</section> 
+</headline> 
+<headline raw-value="The Dharma Bums" level="3" todo-keyword="DONE" todo-type="done"><title>The Dharma Bums</title>
+<section robust-begin="3867" robust-end="4071" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://coverart.oclc.org/ImageWebSvc/oclc/+-+73321040_140.jpg" mode="node-property"/>
+<node-property key="Author" value="Jack Kerouac" mode="node-property"/>
+<node-property key="Pub_year" value="2000" mode="node-property"/>
+<node-property key="ISBN" value="9780141184883" mode="node-property"/>
+<node-property key="Publisher" value="Penguin Books" mode="node-property"/>
+<node-property key="Address" value="London" mode="node-property"/>
+<node-property key="Date" value="2024" mode="node-property"/>
+</property-drawer>
+</section> 
+</headline> 
+<headline raw-value="The Zen Teaching of Homeless Kodo" level="3" todo-keyword="DONE" todo-type="done"><title>The Zen Teaching of Homeless Kodo</title>
+<section robust-begin="4117" robust-end="4351" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://coverart.oclc.org/ImageWebSvc/oclc/+-+331607943_140.jpg" mode="node-property"/>
+<node-property key="Author" value="Kosho Uchiyama, Shohaku Okumura" mode="node-property"/>
+<node-property key="Pub_year" value="2014" mode="node-property"/>
+<node-property key="ISBN" value="9781614290483" mode="node-property"/>
+<node-property key="Publisher" value="Wisdom Publications" mode="node-property"/>
+<node-property key="Address" value="Somerville" mode="node-property"/>
+<node-property key="Date" value="2024" mode="node-property"/>
+</property-drawer>
+</section> 
+</headline> 
+<headline raw-value="Discovering the True Self: Kodo Sawaki's Art of Zen Meditation" level="3" todo-keyword="DONE" todo-type="done"><title>Discovering the True Self: Kodo Sawaki's Art of Zen Meditation</title>
+<section robust-begin="4426" robust-end="4628" mode="section">
+<property-drawer mode="planning">
+<node-property key="Img_url" value="https://coverart.oclc.org/ImageWebSvc/oclc/+-+6201267166_140.jpg" mode="node-property"/>
+<node-property key="Author" value="Kodo Sawaki" mode="node-property"/>
+<node-property key="Pub_year" value="2020" mode="node-property"/>
+<node-property key="ISBN" value="9781640093775" mode="node-property"/>
+<node-property key="Publisher" value="Catapult" mode="node-property"/>
+<node-property key="Address" value="New York" mode="node-property"/>
+<node-property key="Date" value="2024" mode="node-property"/>
+</property-drawer>
+</section>
+</headline>
+</headline>
+</headline></document>

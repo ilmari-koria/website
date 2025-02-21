@@ -1,0 +1,10 @@
+<package xmlns="http://expath.org/ns/pkg"
+         name="http://www.ilmarikoria.xyz"
+         abbrev="blog"
+         version="0.2" spec="1.0">
+  <title>Blog Publish Functions</title>
+  <xquery>
+    <namespace>http://www.ilmarikoria.xyz</namespace>
+    <file>publish-functions.xqm</file>
+  </xquery>
+</package>

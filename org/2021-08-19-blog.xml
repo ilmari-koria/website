@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!-- Converted from org-mode to XML by om-to-xml version 0.0.7 -->
+<!-- See https://github.com/ndw/org-to-xml -->
+<document xmlns="https://nwalsh.com/ns/org-to-xml">
+<keyword key="TITLE" value="Digital Luoyang Project Internship Report" mode="top-comment" granularity="element" cached="t"/>
+<keyword key="FILETAGS" value="soundscape history buddhism" granularity="element" cached="t"/>
+<keyword key="DESCRIPTION" value="Report on internship" granularity="element" cached="t"/>
+<keyword key="DATE" value="2021-08-19" granularity="element" cached="t"/> 
+<headline raw-value="Introduction" robust-begin="165" robust-end="1642" level="1" mode="first-section"><title>Introduction</title>
+<section robust-begin="163" robust-end="1642" mode="section">
+<paragraph mode="planning">Recently I had the opportunity to participate in the cultural heritage project <italic>Digital Luoyang</italic>, developed by the Chinese Art and Media Lab at Harvard University<footnote-reference label="1" type="standard"/>. A work intersecting history and art, it seeks to recreate sensory impressions of Northern Wei 北魏 (386-534) Luoyang 洛陽, then the Buddhist capital of China <italic>par excellence</italic>. This reconstruction effort is based on primary sources, notably the 6th century <italic>Record of Buddhist Monasteries in Luoyang</italic> (<italic>Luoyang qielan</italic> ji洛陽伽藍記; henceforth the <italic>Record</italic>), by Yang Xuanzhi 楊衒之 (d. 555?) <link type="fuzzy" path="cite:yanghsuan-chihRecordBuddhistMonasteries1984" format="bracket" raw-link="cite:yanghsuan-chihRecordBuddhistMonasteries1984">cite:yanghsuan-chihRecordBuddhistMonasteries1984</link> <footnote-reference label="2" type="standard"/>. The part of the project concerning here was to recreate the soundscape of the important Yongning temple (Yongning si 永寧寺), split into several chapters. This includes sounds of the construction of the pagoda, sounds of its adoration and ritual activity, and finally its destruction by fire in 534. The final product will be part of an interactive website and, potentially, evolve as part of an exhibition of Luoyang's history. My role involved mainly sound design and finally "soundscape composition" <link type="fuzzy" path="cite:truaxSoundscapeCompositionGlobal2008" format="bracket" raw-link="cite:truaxSoundscapeCompositionGlobal2008">cite:truaxSoundscapeCompositionGlobal2008</link>, which presented a series of unique challenges in terms of theory, research and methodology. In what follows is a discussion on my experiences in this effort, which I hope will be useful for similar academic projects in the future.
+</paragraph>
+</section> 
+</headline> 
+<headline raw-value="On Historical Soundscapes" robust-begin="1675" robust-end="3257" level="1" mode="first-section"><title>On Historical Soundscapes</title>
+<section robust-begin="1673" robust-end="3257" mode="section">
+<paragraph mode="planning">Continuing the above, the <italic>Record</italic>, written after the destruction of Luoyang, describes the perceived golden age of Buddhism and temple building in the city. Apart from economic activity, the work also points to the sensory impression that the author had when visiting the city, including details on sounds heard. This makes the <italic>Record</italic> an important source for historical soundscape studies, with Yang being a crucial "earwitness<footnote-reference label="3" type="standard"/>" to the vicissitudes of Six Dynasties China <link type="fuzzy" path="cite:schaferSoundscapeOurSonic1994" format="bracket" raw-link="cite:schaferSoundscapeOurSonic1994">cite:schaferSoundscapeOurSonic1994</link>. Among the descriptions provided by Yang, is that of the aforementioned Yongning temple commissioned by Empress Dowager Ling 靈太后 (d. 528) in 516. The seven story pagoda associated with the temple being considered the tallest building in the Northern Wei realm. The author writes how the temple apparently had golden bells (<italic>jinduo</italic> 金鐸) all around the tower, some the size of stone pots (<italic>shiweng</italic> 石甕). On the temple eaves, some 120 bells were suspended which, during windy nights, could be heard be heard 10 <italic>li</italic> 里 (~4 km) away<footnote-reference label="4" type="standard"/>. Even the purported first patriarch of the Zen (Chan 禪) school, Bodhidharma 菩提達摩 (<italic>fl.</italic> 5-6th century), was impressed by the sounds emitting from the complex. Apparently moved by hearing the ringing of bejewelled bells carried in the wind, the meditation master sang songs of praise and chanted <italic>namo</italic> 南無 continuously <footnote-reference label="5" type="standard"/>. The above excerpts instil a rich sonic impression of the temple during its golden age, making it a particularly attractive context for historical soundscape composition.
+</paragraph>
+</section> 
+</headline> 
+<headline raw-value="On Historical Soundscape Composition pt 1" robust-begin="3340" robust-end="4757" level="1" mode="first-section"><tags>ignore</tags><title>On Historical Soundscape Composition pt 1</title>
+<section robust-begin="3338" robust-end="4757" mode="section">
+<paragraph mode="planning"> As this project is not strictly one of acoustic ecology, I interpret soundscape composition more broadly to include approaches influenced from film and game audio. However, a basic set of guidelines for soundscape composition, developed by Barry Truax, were kept in mind in which,
+</paragraph> <quote-block><plain-list type="ordered"><structure>363501. <nil/><nil/><nil/>3751375102. <nil/><nil/><nil/>3938393803. <nil/><nil/><nil/>4201420104. <nil/><nil/><nil/>4409</structure><item bullet="1. " mode="item"><structure>363501. <nil/><nil/><nil/>3751375102. <nil/><nil/><nil/>3938393803. <nil/><nil/><nil/>4201420104. <nil/><nil/><nil/>4409</structure>
+<paragraph>Listener recognisability of the source material is maintained, even if it subsequently undergoes transformation.
+</paragraph></item><item bullet="2. " mode="item"><structure>363501. <nil/><nil/><nil/>3751375102. <nil/><nil/><nil/>3938393803. <nil/><nil/><nil/>4201420104. <nil/><nil/><nil/>4409</structure>
+<paragraph>The listener’s knowledge of the environmental and psychological context of the soundscape material is invoked and encouraged to complete the network of meanings ascribed to the music.
+</paragraph></item><item bullet="3. " mode="item"><structure>363501. <nil/><nil/><nil/>3751375102. <nil/><nil/><nil/>3938393803. <nil/><nil/><nil/>4201420104. <nil/><nil/><nil/>4409</structure>
+<paragraph>The composer’s knowledge of the environmental and psychological context of the soundscape material is allowed to influence the shape of the composition at every level, and ultimately the composition is inseparable from some or all of those aspects of reality.
+</paragraph></item><item bullet="4. " mode="item"><structure>363501. <nil/><nil/><nil/>3751375102. <nil/><nil/><nil/>3938393803. <nil/><nil/><nil/>4201420104. <nil/><nil/><nil/>4409</structure>
+<paragraph>The work enhances our understanding of the world, and its influence carries over into everyday perceptual habits <link type="fuzzy" path="cite:truaxSoundscapeCompositionGlobal2008" format="bracket" raw-link="cite:truaxSoundscapeCompositionGlobal2008">cite:truaxSoundscapeCompositionGlobal2008</link>.  
+</paragraph></item></plain-list></quote-block> 
+<paragraph>Truax suggests that the goal of such composition should ultimately be to reintegrate the listener with the environment, in a balanced ecological relationship. This is problematic when dealing with entirely fictional historical soundscapes, meaning that a more liberal and experimental attitude to composition was maintained throughout. 
+</paragraph>
+</section> 
+</headline> 
+<headline raw-value="Regarding Methodology" robust-begin="4786" robust-end="6025" level="1" mode="first-section"><title>Regarding Methodology</title>
+<section robust-begin="4784" robust-end="6025" mode="section">
+<paragraph mode="planning">Borrowing from film sound design, the team decided to firstly construct a script for the chapters, with particular emphasis placed on individual sounds. The script, compiled by a gifted fellow sound designer, was written figuratively emphasising specific moods, with each event having a date stamp to contextualise it further. This was bolstered by a detailed spreadsheet of sound events from sources consolidated by a talented research team, including their respective spatial context and time. For example, the entry for "wind sounds," includes
+</paragraph> <plain-list type="ordered"><structure>533201. <nil/><nil/><nil/>5352535202. <nil/><nil/><nil/>5436543603. <nil/><nil/><nil/>5467</structure><item bullet="1. " mode="item"><structure>533201. <nil/><nil/><nil/>5352535202. <nil/><nil/><nil/>5436543603. <nil/><nil/><nil/>5467</structure>
+<paragraph>a location (永寧寺)
+</paragraph></item><item bullet="2. " mode="item"><structure>533201. <nil/><nil/><nil/>5352535202. <nil/><nil/><nil/>5436543603. <nil/><nil/><nil/>5467</structure>
+<paragraph>an excerpt and reference ("至孝昌二年中。大風發屋拔樹。剎上寶瓶隨風而落入地丈餘." CBETA T.2092.51:0999c10)
+</paragraph></item><item bullet="3. " mode="item"><structure>533201. <nil/><nil/><nil/>5352535202. <nil/><nil/><nil/>5436543603. <nil/><nil/><nil/>5467</structure>
+<paragraph>a time period (孝昌二年中)<footnote-reference label="6" type="standard"/>
+</paragraph></item></plain-list> 
+<paragraph>Additionally the research team engaged with questions from the sound designers establishing, for example, what kinds of warning instruments would have been played during fires. This made sure that specific details were correct, such as including a wooden watchman's rattle (<italic>mutuo</italic> 木柝), over a metal one (<italic>jintuo</italic> 金柝), the acoustic difference of which need not too much explication. In general, the insights provided by the research team proved indispensable, and represent the foundation for any serious future efforts in historical soundscape composition. 
+</paragraph>
+</section> 
+</headline> 
+<headline raw-value="methodology 2: On Sources: Soundsnap etc" robust-begin="6108" robust-end="9777" level="1" mode="first-section"><tags>ignore</tags><title>methodology 2: On Sources: Soundsnap etc</title>
+<section robust-begin="6106" robust-end="7658" mode="section">
+<paragraph mode="planning">In terms of sound assets, these were limited to readily available online sources, such as <link type="https" path="//www.soundsnap.com/" format="bracket" raw-link="https://www.soundsnap.com/">Soundsnap</link>, and <link type="https" path="//freesound.org/" format="bracket" raw-link="https://freesound.org/">Freesound</link>. While the variety of such assets was generally speaking good, there is a distinct lack of field recordings from Mainland China. This made some of the design decisions awkward, in which background ambiences, for example, used nature recordings from Japan, with Japanese flora and fauna. This means that some aspects of listener recognisability and immersion (especially for listeners from Henan province) was sacrificed to create an otherwise consisted soundscape. This was further complicated by the lack of quality recordings of Han-Chinese Buddhism (漢傳佛教), such as chanting (<italic>fanbai</italic> 梵唄) and, for example, signalling instruments like the <italic>yubang</italic> 魚梆 <link type="fuzzy" path="cite:shengkaiZhongGuoHanChuanFoJiaoLiYi2001" format="bracket" raw-link="cite:shengkaiZhongGuoHanChuanFoJiaoLiYi2001">cite:truaxSoundscapeCompositionGlobal2008</link>. What were utilised instead were field recordings from (what appear to be) Japanese Pure-Land (<italic>Jōdo-shū</italic> 浄土宗) monasteries, as found on Soundsnap. All these points will be rectified in the future through effort put into in-situ field recording, and the creation of a dedicated sound archive. While not solving the anachronism of using contemporary sounds to communicate those of early-medieval China, this will help further emphasise the appropriate geographical context.
+</paragraph> 
+<paragraph><caption>"Yubang," (Still from <italic>One Mind</italic>, 2015)</caption><link type="fuzzy" path="static/yubang.jpg" format="bracket" raw-link="static/yubang.jpg">static/yubang.jpg</link> 
+</paragraph> 
+<paragraph>(Image source: <link type="fuzzy" path="cite:burgerOneMind2015" format="bracket" raw-link="cite:burgerOneMind2015">cite:burgerOneMind2015</link>)
+</paragraph>
+</section> 
+<headline raw-value="Some Further Issues" robust-begin="7686" robust-end="9777" level="2"><title>Some Further Issues</title>
+<section robust-begin="7684" robust-end="9777" mode="section"><comment value="on skitsophonia" mode="planning"/>
+<paragraph>The sounds utilised inevitably create a sense of "schizophonia<footnote-reference label="7" type="standard"/>," i.e. the split between an original sound and its electroacoustic reproduction in a (synthetic) soundscape <link type="fuzzy" path="cite:schaferSoundscapeOurSonic1994" format="bracket" raw-link="cite:schaferSoundscapeOurSonic1994">cite:schaferSoundscapeOurSonic1994</link>. However, the goal here is not to recreate historical scenes as realistically as possible, rather the idea (in my opinion) is to communicate historical ideas. It goes without saying that any historical narrative is not without bias. In this sense, historical soundscape composition (itself a linear narrative) is a clear abstraction, in this case for scholarly investigation and artistic expression. It goes without saying that this type of composition is no more transparent or representative than historical textual accounts. An artistic license is liberally utilised, presenting any findings through a medium that relies on generalisations for an intended audience. 
+</paragraph> 
+<paragraph>Some of these issues can be addressed through a reflexive approach to composition, involving a critical self-awareness of the processes of producing cultural representation <link type="fuzzy" path="cite:dreverSoundscapeCompositionConvergence2002" format="bracket" raw-link="cite:dreverSoundscapeCompositionConvergence2002">cite:dreverSoundscapeCompositionConvergence2002</link>. Any results of the work here, while perhaps "factual" to the composer, are seen as filtered through the individual sensorium, and its subjectivity’s. Furthermore, they also filtered through a process of editing, that inevitably enhances the relevance of certain details over others. As with any historical narrative, the designers biases are not hidden, but made integral to the final work. Following Andra McCartney, the role of a composer is fundamentally that of an ‘interpreter of cultures and places’ <link type="fuzzy" path="cite:mccartneyCircumscribedJourneysSoundscape2002" format="bracket" raw-link="cite:mccartneyCircumscribedJourneysSoundscape2002">cite:mccartneyCircumscribedJourneysSoundscape2002</link>. Design choices are honed through a deep and focused listening, and a self-reflexive approach to recording, editing and composing. These processes are freely mediated by time, memory and place, not only in relation to the composer, but the very subject matter itself.
+</paragraph>
+</section> 
+</headline> 
+</headline> 
+<headline raw-value="Conclusion" robust-begin="9795" robust-end="10617" level="1" mode="first-section"><title>Conclusion</title>
+<section robust-begin="9793" robust-end="10617" mode="section">
+<paragraph mode="planning">The point of this post was to explore some of the ideas that struck me during my time interning for the Digital Luoyang project. I believe the project raises important questions for scholarship related to historical sound studies, especially concerning theory and methodology. In this sense, utilising contemporary mixed media materials to communicate early-medieval Chinese Buddhist ideas will surely raise a few eyebrows. I nevertheless think that creative uses of sound, and other sensory mediums, can complement our methods for such communication. Historical soundscape composition could potentially bolster a textual account, itself also having a clear narrative structure, within a fixed timeline. Future efforts could then involve fleshing out this complementary role of sound in the study of Chinese Buddhist history.
+</paragraph>
+</section> 
+</headline> 
+<headline raw-value="Disclosure" robust-begin="10635" robust-end="11685" level="1" mode="first-section"><title>Disclosure</title>
+<section robust-begin="10633" robust-end="11685" mode="section">
+<paragraph mode="planning">This post was written to conform with project disclosure agreement. Any conceptual musings or findings reflect my own judgement, and not those of Harvard CAMLab.
+</paragraph> <footnote-definition label="1">
+<paragraph><link type="https" path="//camlab.fas.harvard.edu/Digital-Luoyang" format="bracket" raw-link="https://camlab.fas.harvard.edu/Digital-Luoyang">www.camlab.fas.harvard.edu/Digital-Luoyang</link>
+</paragraph></footnote-definition> <footnote-definition label="2">
+<paragraph>Another important source includes, for example, <italic>The Book of the Northern Wei</italic> (<italic>Weishu</italic> 魏書) by Wei Shou 魏收 (507–572), that includes contemporaneous discussions of Buddhism in Luoyang <link type="fuzzy" path="cite:hurvitzWeiShouTreatise1956" format="bracket" raw-link="cite:hurvitzWeiShouTreatise1956">cite:hurvitzWeiShouTreatise1956</link>.
+</paragraph></footnote-definition> <footnote-definition label="3">
+<paragraph>To borrow Barry Truax's succinct definition, an earwitness is ‘the author of verbal or written descriptions of sounds, usually those of the past.’ <link type="fuzzy" path="cite:truaxHandbookAcousticEcology1999" format="bracket" raw-link="cite:truaxHandbookAcousticEcology1999">cite:truaxHandbookAcousticEcology1999</link>
+</paragraph></footnote-definition> <footnote-definition label="4">
+<paragraph>至於高風。永夜寶鐸和鳴。鏗鏘之聲聞及十餘里. CBETA T.2092.51:0999c10.
+</paragraph></footnote-definition> <footnote-definition label="5">
+<paragraph>[...] 寶鐸含風響出天外。歌詠讚歎實是神功。[...] 此口唱南無合掌連日. CBETA T.2092.51:0999c10.
+</paragraph></footnote-definition> <footnote-definition label="6">
+<paragraph>My own formatting.
+</paragraph></footnote-definition> <footnote-definition label="7">
+<paragraph>Greek: schizo = split; phone = voice, sound  <link type="fuzzy" path="cite:truaxHandbookAcousticEcology1999" format="bracket" raw-link="cite:truaxHandbookAcousticEcology1999">cite:truaxHandbookAcousticEcology1999</link>
+</paragraph></footnote-definition>
+</section>
+</headline></document>

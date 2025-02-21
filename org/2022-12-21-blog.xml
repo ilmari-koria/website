@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!-- Converted from org-mode to XML by om-to-xml version 0.0.7 -->
+<!-- See https://github.com/ndw/org-to-xml -->
+<document xmlns="https://nwalsh.com/ns/org-to-xml">
+<keyword key="TITLE" value="Listening to a &quot;This-Wordly Pure Land&quot;: Buddhist Temple Acoustemologies in Taiwan" mode="top-comment" granularity="element" cached="t"/>
+<keyword key="FILETAGS" value="acoustemology buddhism Taiwan" granularity="element" cached="t"/>
+<keyword key="DESCRIPTION" value="This post explores sound epistemology in Taiwanese Buddhist Temples." granularity="element" cached="t"/>
+<keyword key="DATE" value="2022-12-21" granularity="element" cached="t"/> 
+<headline raw-value="Introduction" robust-begin="255" robust-end="1952" level="1" mode="first-section"><title>Introduction</title>
+<section robust-begin="253" robust-end="1952" mode="section">
+<paragraph mode="planning">As perhaps made apparent in <link type="https" path="//ilmarikoria.xyz/2021-06-07-blog.html" format="bracket" raw-link="https://ilmarikoria.xyz/2021-06-07-blog.html">a previous post</link>, I have been curious about the function of electroacoustic devices in Buddhist temples in Taiwan. From more prominent speakers to smaller hand-held "Buddha-name recitation devices" (<italic>nianfoji</italic> 念佛機), hearing electronically reproduced sound is a ubiquitous part of visiting these spaces. The above is not necessarily intended to replace sounding practices (oral recitation, religious instruments) but rather to establish a ‘spiritually efficacious environment’ <link type="fuzzy" path="cite:hellerBuddhaBoxMateriality2014" format="bracket" raw-link="cite:hellerBuddhaBoxMateriality2014">cite:hellerBuddhaBoxMateriality2014</link>. Here, electronically reproduced sound delineates sacred space, providing the ear with a medium to tune oneself to religious sensibilities, whether moral or transcendental. 
+</paragraph> 
+<paragraph>Apart from the purely doctrinal, expedient or aesthetic justifications for reproducing such sound, I have also been curious about its epistemic or <italic>acoustemological</italic> qualities <link type="fuzzy" path="cite:feldAcoustemology2015" format="bracket" raw-link="cite:feldAcoustemology2015">cite:feldAcoustemology2015</link> <link type="fuzzy" path="cite:feldWaterfallSongsAcoustemology1996" format="bracket" raw-link="cite:feldWaterfallSongsAcoustemology1996">cite:feldWaterfallSongsAcoustemology1996</link>. As a form of acoustic knowing situated within a relational ontology, acoustemology explores how sounding practices help us make sense of our surroundings. With this in mind, this post freely explores these recitation devices, suggesting that they can act as potent mediums for religious place-making in Taiwanese Buddhism. It further proposes that their study can help reveal the sonic conditions by which religious experience is conditioned and maintained. The above points are illustrated with audio examples from temples around Taipei City recorded by the author<footnote-reference label="1" type="standard"/>.
+</paragraph>
+</section> 
+</headline> 
+<headline raw-value="On Acoustemology" robust-begin="1976" robust-end="3966" level="1" mode="first-section"><title>On Acoustemology</title>
+<section robust-begin="1974" robust-end="3966" mode="section"><export-block type="HTML" value="&lt;audio controls=&quot;true&quot;&gt;
+  	&lt;source src=&quot;static/guanyinsi-ambience.mp3&quot; type=&quot;audio/mpeg&quot;/&gt;
+	Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;div class=&quot;audio-description&quot;&gt;
+	&lt;b&gt;Field-recording 1:&lt;/b&gt; &lt;em&gt;Soundscape of Shiguanyin xiangguang si &lt;/em&gt; 石觀音祥光寺 &lt;em&gt; (Taipei), recorded on a quiet rainy day&lt;/em&gt;.&lt;br/&gt;
+	&lt;b&gt;Note:&lt;/b&gt; Headphones recommended 🎧.
+&lt;/div&gt;
+" mode="planning"/> 
+<paragraph>Acoustemology emphasises the role of audible sound in the experience of place, together with acoustic ways of knowledge production and dissemination <link type="fuzzy" path="cite:feldAcoustemology2015" format="bracket" raw-link="cite:feldAcoustemology2015">cite:feldAcoustemology2015</link> <link type="fuzzy" path="cite:feldWaterfallSongsAcoustemology1996" format="bracket" raw-link="cite:feldWaterfallSongsAcoustemology1996">cite:feldWaterfallSongsAcoustemology1996</link>. This modality of knowing is concerned with how the physical aspects of sound interrelate with the social, political and cultural processes of listening. In this context, what is known through sound is relational, experiential and contextual. By being mindful of these notions within our soundscapes, we can begin to understand how sound shapes and mediates our experiences. Acoustemology evolves out of ethnographic efforts and appreciates the reflexive and contingent nature of doing research. As discussed above, it is not related to metaphysical approaches to epistemology but is based on experiential truth. Within the academic study of religion, scholars who have utilised acoustemological approaches include Andrew J. Eisenberg. In his study of Muslim communities in Mombasa (Kenya), the researcher emphasises the centrality of religious sounding and listening practice in Muslim subject formation <link type="fuzzy" path="cite:eisenbergIslamSoundSpace2013" format="bracket" raw-link="cite:eisenbergIslamSoundSpace2013">cite:eisenbergIslamSoundSpace2013</link>. He argues how Islamic sounding practices (notably the electroacoustic <italic>adhān</italic>) reinforce the identity of the Muslim–Swahili community, itself surrounded by a larger non-Muslim populace. The author suggests that such practices are ways of understanding and enacting the material environment as a ‘place-in-the-world.’
+</paragraph>
+</section> 
+</headline> 
+<headline raw-value="Listening to the Pure Land" robust-begin="4000" robust-end="6590" level="1" mode="first-section"><title>Listening to the Pure Land</title>
+<section robust-begin="3998" robust-end="6590" mode="section"><export-block type="HTML" value="&lt;audio controls=&quot;true&quot;&gt;
+  	&lt;source src=&quot;static/longshansi-ambience.mp3&quot; type=&quot;audio/mpeg&quot;/&gt;
+	Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;div class=&quot;audio-description&quot;&gt;
+	&lt;b&gt;Field-recording 2:&lt;/b&gt; &lt;em&gt;Soundscape of Lungshan Temple&lt;/em&gt; 龍山寺&lt;em&gt; (Taipei), recorded during a normal Friday afternoon&lt;/em&gt;.&lt;br/&gt;
+	&lt;b&gt;Note:&lt;/b&gt; Headphones recommended 🎧.
+&lt;/div&gt;
+" mode="planning"/> 
+<paragraph>The humble Buddha-name recitation device is a radio-like box (often portable) that produces different recordings of nianfo. The sounds emanating from these devices are partly intended to mirror the environmental sounds heard in the Western Pure Land (<italic>Jile Jingtu</italic> 極樂淨土), a prevalent eschatological goal in Chinese Buddhism <link type="fuzzy" path="cite:hellerBuddhaBoxMateriality2014" format="bracket" raw-link="cite:hellerBuddhaBoxMateriality2014">cite:hellerBuddhaBoxMateriality2014</link>. In this Pure Land, these sounds arise from the environment for the spiritual benefit of the hearer on their march towards Buddhahood. While conventionally categorised as music, Buddhist scriptural sources indicate that this is only a result of the fleeting mental constructions that pertain to culturally organised sound <link type="fuzzy" path="cite:chenSoundEmptinessMusic2001" format="bracket" raw-link="cite:chenSoundEmptinessMusic2001">cite:chenSoundEmptinessMusic2001</link>. These sounds are better understood as aids towards nianfo, a practice that emphasises constantly keeping in mind the name of the Buddha, which results in meditative absorption. 
+</paragraph> 
+<paragraph><caption>Nianfo devices owned by the author.</caption><link type="fuzzy" path="static/nianfoji-collection.jpg" format="bracket" raw-link="static/nianfoji-collection.jpg"/>
+</paragraph> 
+<paragraph>In Taiwan, these devices seem ubiquitous, being sometimes carried on-person by devotees outside of temples during, for example, hikes or other outdoor activities. They can, in this sense, function as part of wearable religious paraphernalia, akin to Buddhist rosaries or protective amulet necklaces <link type="fuzzy" path="cite:hellerBuddhaBoxMateriality2014" format="bracket" raw-link="cite:hellerBuddhaBoxMateriality2014">cite:hellerBuddhaBoxMateriality2014</link>. The tinny recording that they produce is a soundmark <link type="fuzzy" path="cite:schaferSoundscapeOurSonic1994" format="bracket" raw-link="cite:schaferSoundscapeOurSonic1994">cite:schaferSoundscapeOurSonic1994</link> of Taiwanese religious spaces and completes the sensory experience of temple visits. It invites all beings, corporeal and non-corporeal, to attune towards the salvatory functions of hearing the name of an efficacious (<italic>ling</italic> 靈) Buddhist spiritual being. Upon entering such a religious ambience, our sensory faculties settle unto the stimuli therein, a process through which place starts to make sense for us <link type="fuzzy" path="cite:feldWaterfallSongsAcoustemology1996" format="bracket" raw-link="cite:feldWaterfallSongsAcoustemology1996">cite:feldWaterfallSongsAcoustemology1996</link>. These processes are mediated by individual listening histories, with as many unfolding religious soundscapes as there are listeners. 
+</paragraph>
+</section> 
+</headline> 
+<headline raw-value="A Buddhist Techoustemology?" robust-begin="6625" robust-end="9445" level="1" mode="first-section"><title>A Buddhist Techoustemology?</title>
+<section robust-begin="6623" robust-end="9445" mode="section"><export-block type="HTML" value="&lt;audio controls=&quot;true&quot;&gt;
+  	&lt;source src=&quot;static/zhangshansi-ambience.mp3&quot; type=&quot;audio/mpeg&quot;/&gt;
+	Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;div class=&quot;audio-description&quot;&gt;
+	&lt;b&gt;Field-recording 3:&lt;/b&gt; &lt;em&gt;Zhangshansi&lt;/em&gt; 樟山寺 &lt;em&gt;(Taipei) ambience, recorded during a busy Sunday.&lt;/em&gt;&lt;br/&gt;
+	&lt;b&gt;Note:&lt;/b&gt; Headphones recommended 🎧.
+&lt;/div&gt;
+" mode="planning"/> 
+<paragraph>The above notions are perhaps best understood as part of religious attunement via technology <link type="fuzzy" path="cite:thibaudAfterwordWorldAttunements2020" format="bracket" raw-link="cite:thibaudAfterwordWorldAttunements2020">cite:thibaudAfterwordWorldAttunements2020</link>. Religious atmospheres (of which sound is a key component) have the power to stage religious experience that is always embodied and situated. An ambience favourable to these experiences must be designed and maintained for attunement to take place successfully. Importantly, this requires sacred space to be delineated as a part of the mundane world and its habits. Eisenberg writes how upon hearing the adhan, Mombasa Old-Town Muslims instinctively perform prescribed responses, such as quietly uttering the <italic>Takbir</italic> (<italic>Allahu Akbar</italic>). These practices are responses to a constructed Islamic soundscape that help to index a Muslim's ethical life and religious devotion <link type="fuzzy" path="cite:eisenbergIslamSoundSpace2013" format="bracket" raw-link="cite:eisenbergIslamSoundSpace2013">cite:eisenbergIslamSoundSpace2013</link>. Analogous in form to the Takbir, devotees of Chinese Buddhism often utter the name of Amitābha (Emituofo 阿彌陀佛; the Buddha of the Western Pure Land) as a greeting or a habitual response to something auspicious.
+</paragraph> 
+<paragraph>Acoustemology understands that one's life processes are always shared with other actors, whether living or non-living, including technological <link type="fuzzy" path="cite:feldAcoustemology2015" format="bracket" raw-link="cite:feldAcoustemology2015">cite:feldAcoustemology2015</link>. Leaning on Thomas Porcello's ‘techoustemology’ (technology and acoustemology) <link type="fuzzy" path="cite:porcelloAfterword2005" format="bracket" raw-link="cite:porcelloAfterword2005">cite:porcelloAfterword2005</link>, the impact of electroacoustically mediated religious soundscapes further shapes our in-situ perceptions of the Pure Land. To quote Porcello, the idea of techoustemology was developed:
+</paragraph> <quote-block>
+<paragraph>‘to foreground the implication of forms of technological mediation on individuals' knowledge and interpretations of, sensations in, and consequent actions upon their acoustic environments as grounded in the specific times and places of the production and reception of sound’ <link type="fuzzy" path="cite:porcelloAfterword2005" format="bracket" raw-link="cite:porcelloAfterword2005">cite:porcelloAfterword2005</link>.
+</paragraph></quote-block> 
+<paragraph>Techoustemology suggests that acoustemological inquiry needs to emphasise the engineering processes of sounding practices as historically situated, socially constructed and culturally defined. In this sense, the way we express a this-worldly Pure Land is mediated by the individual perceiver's historical, cultural and social processes. And the engineering decisions that construct and maintain our religious ambiences.
+</paragraph>
+</section> 
+</headline> 
+<headline raw-value="Conclusion" robust-begin="9463" robust-end="10543" level="1" mode="first-section"><title>Conclusion</title>
+<section robust-begin="9461" robust-end="10543" mode="section">
+<paragraph mode="planning">This post shared a few notes related to how electroacoustic sound shapes religious place in Taiwanese Buddhism. Further efforts could involve expanding Porcello's notion of techoustemology in the study of digital religion, especially as it pairs with religious attunement <link type="fuzzy" path="cite:thibaudAfterwordWorldAttunements2020" format="bracket" raw-link="cite:thibaudAfterwordWorldAttunements2020">cite:thibaudAfterwordWorldAttunements2020</link>. Additionally, it would be interesting to further focus on techoustemology in different mediums, asking how technological mediation extends to other acoustic environments. As food for thought, I have added a hydrophone (underwater microphone) recording of the Tamsui 淡水 river that I took near a private Buddhist temple (Appendix 1). In the recording, one can hear the reach of nianfo into an acoustic space that humans have evolved past the need to hear clearly in. Underwater soundscapes extend the reach of a "this-worldly Pure Land" beyond the human, contributing to a more nuanced sound portrait of our religious environments.
+</paragraph> <footnote-definition label="1">
+<paragraph>I recorded all sounds with a pair of Soundman OKM II binaural (in-ear) microphones.
+</paragraph></footnote-definition>
+</section> 
+</headline> 
+<headline raw-value="Appendix 1: Hydrophone Recording of Private Temple in Tamsui 淡水, Taipei" robust-begin="10622" robust-end="10759" level="1" mode="first-section"><title>Appendix 1: Hydrophone Recording of Private Temple in Tamsui 淡水, Taipei</title>
+<section robust-begin="10620" robust-end="10759" mode="section"><export-block type="HTML" value="&lt;video width=&quot;420&quot; controls=&quot;muted&quot;&gt;
+&lt;source src=&quot;static/tamsui-nianfo.webm&quot; type=&quot;video/webm&quot;/&gt;
+&lt;/video&gt;
+" mode="planning"/>
+</section> 
+</headline> </document>

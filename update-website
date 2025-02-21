@@ -1,20 +1,5 @@
 #!/bin/bash
-BASEX="./bin/basex/bin/basex"
-PUBLISH="./lib/xq/publish.xq"
-DIR_HTML="./tmp/html"
-DIR_XML="./tmp/xml"
-FILE_BIB="./bibtex/bibliography.bib"
-
-# Generate bib
-# TODO generate this with xquery
-bibtex2html --style "ieeetr" --footer "" --header "" --no-header --nodoc --nobibsource --ignore-errors --sort-as-bibtex --output $DIR_XML/bibliography/bibliography $FILE_BIB
-tidy -q --numeric-entities yes -asxhtml -o $DIR_XML/bibliography/bibliography.xml $DIR_XML/bibliography/bibliography.html
-
-# publish website
-$BASEX -t $PUBLISH && $BASEX $PUBLISH
-
-# TODO see if a restxq app can upload this stuff? probably not a good idea
-rsync -avz --delete $DIR_HTML/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
-# TODO generate sitemap with xslt
-sitemap-generator -l https://ilmarikoria.xyz
-rsync -avz --delete sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
+BASEX="./basex/bin/basex"
+PUBLISH="./publish.xq"
+ORG_FILES="/home/ilmari/my-files/website/org"
+$BASEX -bpath-to-org-files=$ORG_FILES $PUBLISH

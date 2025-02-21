@@ -80,7 +80,7 @@ declare function ik-fn:get-github-atom() {
   let $url := "https://github.com/ilmari-koria/website/commits.atom"
   let $response := http:send-request(
     <http:request 
-       method='get' 
+nn       method='get' 
        href='{$url}' 
        timeout='10'
        override-media-type='text/plain'/>
@@ -135,3 +135,11 @@ declare function ik-fn:tex-clean-tmp-files() {
       else
         $dir || $file || " not found."
 };
+
+
+
+
+
+
+
+
