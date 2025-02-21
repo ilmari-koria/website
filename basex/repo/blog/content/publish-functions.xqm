@@ -35,12 +35,34 @@ declare %private function blg:convert-org(
     )
 };
 
-declare %public function blg:update-org-files(
+declare %public %updating function blg:update-org-files(
   $path-to-org-files as xs:string) {
   for $file in file:list($path-to-org-files, false(), '*.xml')
     let $path := $path-to-org-files || $file
     where not(file:is-dir($path))
       return
-        db:put('org', doc($path), $file),
-        file:delete($path)
+        db:put('org', doc($path), $file)
+};
+
+declare %public function blg:generate-resume($input-xml,$output-dir) {
+  let $path := file:create-temp-dir("resume","/")
+  let $tex-path := $path || "/resume.tex"
+  let $generate-tex :=  
+    file:write($tex-path,
+    xslt:transform-text(
+      $input-xml,
+      $blg:lib || "/xsl/resume.xsl",
+      { "resume-header" : "/home/ilmari/my-files/website/basex/repo/blog/content/lib/tex/resume-header.tex" }
+  ))
+  let $args := (
+    "-interaction=batchmode",
+    "-output-directory", $output-dir,
+    $tex-path
+  )
+  let $generate-pdf :=
+    proc:system("pdflatex", $args)
+  return (
+    $generate-tex,
+    $generate-pdf
+    )
 };

@@ -12,98 +12,57 @@
               omit-xml-declaration="yes"/>
 
   <xsl:include href="resume-header-expanded.xsl" />
-
-  <!-- TODO split these into templates -->
+  <xsl:param name="resume-header"/>
 
   <xsl:template match="/">
-
-    <!-- header --> 
-    <xsl:text>
-      \input{../../lib/tex/resume-header.tex}
+      \input{<xsl:value-of select="$resume-header"/>}
       \begin{document}
       \pagestyle{fancy}
-    </xsl:text>
+      \section*{<xsl:value-of select="resume/header/name"/>}
 
-    <!-- name top --> 
-    <xsl:text>\section*{</xsl:text>
-      <xsl:value-of select="resume/header/name"/>
-    <xsl:text>}</xsl:text>
+      \begin{center}
+      Résumé: Generated <xsl:value-of select="format-date(current-date(), '[D01] [MNn] [Y0001]')"/>
+      ---
+      \href{mailto: <xsl:value-of select="resume/header/email/@mailto"/>}
+      {\texttt{<xsl:value-of select="resume/header/email"/>}}
+      --- <xsl:value-of select="resume/header/address"/>
+      \end{center}
 
-    <!-- top meta -->
-    <xsl:text>\begin{center}</xsl:text>
-      <xsl:text>Résumé: Generated </xsl:text><xsl:value-of select="format-date(current-date(), '[D01] [MNn] [Y0001]')"/>
-      <xsl:text> --- </xsl:text>
-      <xsl:text>\href{mailto:</xsl:text>
-        <xsl:value-of select="resume/header/email/@mailto"/>
-        <xsl:text>}</xsl:text>
-        <xsl:text>{\texttt{</xsl:text>
-        <xsl:value-of select="resume/header/email"/>
-      <xsl:text>}}</xsl:text>
-      <xsl:text> --- </xsl:text>
-      <xsl:value-of select="resume/header/address"/>
-    <xsl:text>\end{center}</xsl:text>
+      <xsl:call-template name="resume-header-expanded"/>
 
-    <!-- expanded header details -->
-    <xsl:call-template name="resume-header-expanded"/>
+      \subsection*{About}
+      <xsl:value-of select="resume/about" />
 
-    <!-- blurb/about  -->
-    <xsl:text>\subsection*{About}</xsl:text>
-    <xsl:value-of select="resume/about" />
-
-    <!-- experience -->
-    <xsl:text>
       \subsection*{Experience}
-    </xsl:text>
-    <xsl:for-each select="resume/experience/experience-entry">
-      <xsl:text>
-        \subsubsection*{
-      </xsl:text>
-      <xsl:text>\textbf{</xsl:text>
-      	<xsl:value-of select="company"/>
-        <xsl:text>}</xsl:text>
-        <xsl:text>, </xsl:text>
-        <xsl:value-of select="department"/>
-        <xsl:text>\hfill </xsl:text>
-        <xsl:value-of select="address"/>
-      <xsl:text>}</xsl:text>
-      <xsl:text>\begin{itemize}</xsl:text>
-      	<xsl:text>\item\emph{</xsl:text>
-      	<xsl:value-of select="role"/>
-      <xsl:text>}\hfill </xsl:text>
+      <xsl:for-each select="resume/experience/experience-entry">
+      \subsubsection*{
+      \textbf{<xsl:value-of select="company"/>}, 
+      <xsl:value-of select="department"/>
+      \hfill <xsl:value-of select="address"/>}
+      \begin{itemize}
+      \item\emph{<xsl:value-of select="role"/>}\hfill
 
-      <!-- experience time duration -->
         <xsl:call-template name="format-date-range">
             <xsl:with-param name="start-date" select="time-start"/>
             <xsl:with-param name="end-date" select="time-end"/>
         </xsl:call-template>
 
-       <!-- achievements -->
-          <xsl:text>\begin{itemize}</xsl:text>               
-       	    <xsl:for-each select="role-achievements/achievement">
-       	      <xsl:text>\item </xsl:text>
-       	      <xsl:value-of select="."/>
-       	      <xsl:text> </xsl:text>
-       	    </xsl:for-each>
-          <xsl:text>\end{itemize}</xsl:text>
-      <xsl:text>\end{itemize}</xsl:text>
-    </xsl:for-each>
-    <!-- experience ends here -->
+      \begin{itemize}
+        <xsl:for-each select="role-achievements/achievement">
+       	\item <xsl:value-of select="."/>
+       	<xsl:text> </xsl:text>
+       	</xsl:for-each>
+        \end{itemize}
+        \end{itemize}
+       </xsl:for-each>
 
-    <!-- training/courses -->
-    <xsl:text>
       \subsection*{Professional Development}
-    </xsl:text>
-    <xsl:text>\bulletlist</xsl:text>
-    <xsl:text>\begin{itemize}</xsl:text>
-      <xsl:for-each select="resume/training/training-entry">
-        <xsl:text>\item </xsl:text>
-          <xsl:value-of select="role"/>
-            <xsl:text>: </xsl:text>
-          <xsl:text>\textit{</xsl:text>
-            <xsl:value-of select="name"/>
-          <xsl:text>}, </xsl:text>
-          <xsl:value-of select="institute"/>
-          <xsl:text>, </xsl:text>
+      \bulletlist
+      \begin{itemize}
+        <xsl:for-each select="resume/training/training-entry">
+        \item <xsl:value-of select="role"/>:
+        \textit{<xsl:value-of select="name"/>},
+          <xsl:value-of select="institute"/>,
           <xsl:value-of select="training-hours"/>
             <xsl:choose>
               <xsl:when test="number(training-hours) != number(training-hours)">
@@ -113,50 +72,38 @@
                 <xsl:text> hrs. </xsl:text>
               </xsl:otherwise>
             </xsl:choose>
-          <xsl:text>\hfill </xsl:text>
+          \hfill
           <xsl:value-of select="date"/>
       </xsl:for-each>
-    <xsl:text>\end{itemize}</xsl:text>
+      \end{itemize}
 
-    <!-- education -->
-    <xsl:text>
       \subsection*{Education}
-    </xsl:text>
     <xsl:for-each select="resume/education/education-entry">
-      <xsl:text>\textbf{</xsl:text>
-        <xsl:value-of select="institute"/>
-      <xsl:text>}, </xsl:text>
-      <xsl:text>\textit{</xsl:text>
-        <xsl:value-of select="result"/>
-      <xsl:text>}, </xsl:text>
+      \textbf{<xsl:value-of select="institute"/>}, 
+      \textit{<xsl:value-of select="result"/>}, 
       <xsl:value-of select="address"/>
       <xsl:if test="position() != last()">
         <xsl:text> --- </xsl:text>
       </xsl:if>
-    </xsl:for-each>
-    <xsl:text>.</xsl:text>
+    </xsl:for-each>.
 
-    <!-- skills -->
-    <xsl:text>
-      \subsection*{Skills}
-    </xsl:text>
-    <xsl:text>\textbf{Tools:} </xsl:text>
+     \subsection*{Skills}
+     \textbf{Tools:}
     <xsl:for-each select="resume/skill-list/skill-entry">
       <xsl:sort select="lower-case(translate(., '\', ''))" data-type="text" order="ascending"/>
       <xsl:value-of select="."/>
       <xsl:if test="position() != last()">
-        <xsl:text>, </xsl:text>
+       ,
       </xsl:if>
     </xsl:for-each>
-    <xsl:text> --- </xsl:text>
-    <xsl:text>\textbf{Languages:} </xsl:text>
+    --- 
+    \textbf{Languages:}
     <xsl:for-each select="resume/language-list/language-entry">
       <xsl:value-of select="language"/>
       <xsl:if test="position() != last()">
-        <xsl:text>, </xsl:text>
+       , 
       </xsl:if>
-    </xsl:for-each>
-    <xsl:text>.</xsl:text>
+    </xsl:for-each>.
   <xsl:text>\end{document}</xsl:text>
 </xsl:template>
 
