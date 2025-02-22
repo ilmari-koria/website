@@ -11,6 +11,7 @@ declare variable $blg:lib := file:resolve-path("basex/repo/blog/content/lib");
 
 declare %private function blg:generate-el(
   $path-to-org-files as xs:string) {
+    fn:message("Generating Elisp."),
     file:write($blg:lib || "/el/convert-blog-posts-to-xml.el",
     xslt:transform-text(
       <dummy/>,
@@ -21,6 +22,7 @@ declare %private function blg:generate-el(
 
 declare %private function blg:convert-org(
   $path-to-org-files as xs:string) {
+  fn:message("Converting org files."),
   blg:generate-el($path-to-org-files),
   let $args := (
     "--batch",
@@ -37,14 +39,27 @@ declare %private function blg:convert-org(
 
 declare %public %updating function blg:update-org-files(
   $path-to-org-files as xs:string) {
+  fn:message("Updating org-files"),
   for $file in file:list($path-to-org-files, false(), '*.xml')
-    let $path := $path-to-org-files || $file
+    let $path := $path-to-org-files || "/" || $file
     where not(file:is-dir($path))
       return
-        db:put('org', doc($path), $file)
+        if (fn:ends-with($path, "-blog.xml")) then (
+          db:put(
+            'posts',
+             doc($path),
+             fn:trace($file, "Adding/updating: ")),
+             file:delete(fn:trace($path, "Deleting: "), false())) 
+        else (
+          db:put(
+            'org',
+            doc($path),
+            fn:trace($file, "Adding/updating: ")),
+            file:delete(fn:trace($path, "Deleting: "), false()))
 };
 
-declare %public function blg:generate-resume($input-xml,$output-dir) {
+declare %public function blg:generate-resume($input-xml, $output-dir) {
+  fn:message("Generating resume."),
   let $path := file:create-temp-dir("resume","/")
   let $tex-path := $path || "/resume.tex"
   let $generate-tex :=  
