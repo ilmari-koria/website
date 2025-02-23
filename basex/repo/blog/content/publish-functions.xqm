@@ -59,24 +59,6 @@ declare %public %updating function blg:update-org-files(
             file:delete(fn:trace($path, "Deleting: "), false()))
 };
 
-declare %public function blg:publish-posts(
-  $output-path as xs:string,
-  $github-atom as xs:string) {
-  let $posts := collection("posts")//*:document
-  for $post in $posts
-    let $path :=
-      $output-path || "/" || fn:substring-after(fn:base-uri($post),"/posts/")
-        => fn:replace(".xml", ".html")
-     return (
-       file:write($path,
-       xslt:transform(
-         $post,
-         $blg:lib || "/xsl/posts.xsl",
-         { "github-atom-path" : collection("misc")})
-         )
-     )
-};
-
 declare %public function blg:generate-pdf-with-pdflatex(
   $input-xml,
   $output-dir,
@@ -92,7 +74,7 @@ declare %public function blg:generate-pdf-with-pdflatex(
   )
 };
 
-declare %private function blg:download-text-file(
+declare %public function blg:download-file(
   $uri as xs:string,
   $out-path as xs:string) {
   let $response := http:send-request(
@@ -103,6 +85,19 @@ declare %private function blg:download-text-file(
        override-media-type='text/plain'/>
   )  
   let $body := tail($response)
-  return
+  return (
+    fn:message("Downloading file: " || $uri),
     file:write($out-path, html:parse($body))
+    )
+};
+
+declare %public function blg:delete-tmp-files(){
+  for $file in file:list($blg:tmp)
+    return
+      file:delete(
+        fn:trace(
+          $file,
+          "Deleting tmp file: "
+          )
+       )
 };
