@@ -1,15 +1,5 @@
-* List
+* Reading List
 ** 2025
-*** TODO Geosonics: Listening Through Earth's Soundscapes
-:PROPERTIES:
-:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+1457963796_140.jpg
-:Author: Joshua Dittrich
-:Pub_year: 2024
-:ISBN: 9798765104590
-:Publisher: Bloomsbury Academic
-:Address: London
-:Date: 2024
-:END:
 *** TODO Sing Like Fish: How Sound Rules Life Under Water
 :PROPERTIES:
 :Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+6075052486_140.jpg
@@ -59,6 +49,16 @@
 :Publisher: www.masteringemacs.org
 :Address: 
 :Date: 2025
+:END:
+*** DONE Geosonics: Listening Through Earth's Soundscapes
+:PROPERTIES:
+:Img_url: https://coverart.oclc.org/ImageWebSvc/oclc/+-+1457963796_140.jpg
+:Author: Joshua Dittrich
+:Pub_year: 2024
+:ISBN: 9798765104590
+:Publisher: Bloomsbury Academic
+:Address: London
+:Date: 2024
 :END:
 *** DONE Instructions to the Cook: A Zen Master's Lessons in Living a Life that Matters
 :PROPERTIES:
