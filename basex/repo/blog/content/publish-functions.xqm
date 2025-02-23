@@ -40,7 +40,7 @@ declare %public function blg:convert-org(
 
 declare %public %updating function blg:update-org-files(
   $path-to-org-files as xs:string) {
-  fn:message("Updating org-files"),
+  fn:message("Updating org files"),
   for $file in file:list($path-to-org-files, false(), '*.xml')
     let $path := $path-to-org-files || "/" || $file
     where not(file:is-dir($path))
@@ -102,7 +102,7 @@ declare %public function blg:delete-tmp-files(){
 
 declare %public function blg:transform-and-write-no-source(
   $output-path as xs:string, $stylesheet as xs:string){
-  fn:message("Generating file with " || file:name($stylesheet)),
+  fn:message("Generated: " || file:name($stylesheet)),
   file:write($output-path,
   xslt:transform(<dummy/>, $stylesheet))
 };

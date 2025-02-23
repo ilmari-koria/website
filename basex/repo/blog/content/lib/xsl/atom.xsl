@@ -9,9 +9,6 @@
               indent="yes"
               encoding="utf-8"/>
 
-  <xsl:variable name="posts-concat"
-                select="document('../../tmp/xml/concat/posts-concat.xml')" />
-
   <xsl:template match="/">
     <feed xmlns="http://www.w3.org/2005/Atom">
       <title>Ilmarikoria.xyz Feed</title>
@@ -19,7 +16,7 @@
       <id>https://ilmarikoria.xyz/atom.xml</id>
       <!-- i.e., latest post -->
       <updated>
-        <xsl:for-each select="$posts-concat//org:keyword[@key = 'DATE']/@value">
+        <xsl:for-each select="//org:keyword[@key = 'DATE']/@value">
           <xsl:sort select="." order="descending" data-type="text"/>
           <xsl:if test="position() = 1">
             <xsl:value-of select="concat(., 'T00:00:00Z')"/>
@@ -31,7 +28,7 @@
         <email>ilmarikoria@posteo.net</email>
       </author>
       <!-- posts -->
-      <xsl:for-each select="$posts-concat/*/org:document">
+      <xsl:for-each select="//org:document">
         <xsl:variable name="date" select="org:keyword[@key='DATE']/@value" />
         <entry>
           <title>

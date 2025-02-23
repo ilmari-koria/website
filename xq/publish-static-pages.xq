@@ -42,6 +42,13 @@ let $transform-reading :=
      $blg:lib || "xsl/reading-list.xsl")
    )
 
+let $transform-atom :=
+ file:write(
+   $atom,
+   xslt:transform(
+     $concatenated,
+     $blg:lib || "xsl/atom.xsl")
+   )
 
 return (
   fn:message("Generated: " || file:name($archive)),
@@ -49,5 +56,8 @@ return (
   fn:message("Generated: " || file:name($index)),
   $transform-index,
   fn:message("Generated: " || file:name($reading)),
-  $transform-reading
+  $transform-reading,
+  fn:message("Generated: " || file:name($atom)),
+  $transform-atom,
+  blg:transform-and-write-no-source($about, $blg:lib || "xsl/about.xsl")
   )
