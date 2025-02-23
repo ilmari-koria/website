@@ -9,6 +9,7 @@ let $index := $publish-path || "/index.html"
 let $about := $publish-path || "/about.html"
 let $atom := $publish-path || "/atom.xml"
 let $reading := $publish-path || "/reading-list.html"
+let $atom-path := $blg:tmp || "atom.xml"
 
 let $concatenated :=
   <root>
@@ -23,7 +24,8 @@ let $transform-archive :=
    $archive,
    xslt:transform(
      $concatenated,
-     $blg:lib || "xsl/archive.xsl")
+     $blg:lib || "xsl/archive.xsl",
+     { "github-atom-path" : $atom-path })
    )
 
 let $transform-index :=
@@ -31,7 +33,8 @@ let $transform-index :=
    $index,
    xslt:transform(
      $concatenated,
-     $blg:lib || "xsl/index.xsl")
+     $blg:lib || "xsl/index.xsl",
+     { "github-atom-path" : $atom-path })
    )
 
 let $transform-reading :=
@@ -39,7 +42,8 @@ let $transform-reading :=
    $reading,
    xslt:transform(
      $reading-list,
-     $blg:lib || "xsl/reading-list.xsl")
+     $blg:lib || "xsl/reading-list.xsl",
+     { "github-atom-path" : $atom-path })
    )
 
 let $transform-atom :=
@@ -50,6 +54,12 @@ let $transform-atom :=
      $blg:lib || "xsl/atom.xsl")
    )
 
+let $transform-about := 
+  file:write($about,
+  xslt:transform(<dummy/>, $blg:lib || "xsl/about.xsl", { "github-atom-path" : $atom-path })
+  )
+
+
 return (
   fn:message("Generated: " || file:name($archive)),
   $transform-archive,
@@ -59,5 +69,6 @@ return (
   $transform-reading,
   fn:message("Generated: " || file:name($atom)),
   $transform-atom,
-  blg:transform-and-write-no-source($about, $blg:lib || "xsl/about.xsl")
+  fn:message("Generated: " || file:name($about)),
+  $transform-about
   )

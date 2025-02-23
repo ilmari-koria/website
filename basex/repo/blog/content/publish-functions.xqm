@@ -100,10 +100,5 @@ declare %public function blg:delete-tmp-files(){
           )
 };
 
-declare %public function blg:transform-and-write-no-source(
-  $output-path as xs:string, $stylesheet as xs:string){
-  fn:message("Generated: " || file:name($stylesheet)),
-  file:write($output-path,
-  xslt:transform(<dummy/>, $stylesheet))
-};
+
 
