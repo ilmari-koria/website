@@ -12,3 +12,4 @@ $BASEX -bpublish-path=$PUBLISH_DIR $XQ/transform-org-files-and-publish.xq
 rm $BIBTEX/bibliography.xml $BIBTEX/bibliography.html
 $BASEX -bpublish-path=$PUBLISH_DIR $XQ/publish-static-pages.xq
 $BASEX -bpublish-path=$PUBLISH_DIR $XQ/generate-resume.xq
+rm $PUBLISH_DIR/*.log $PUBLISH_DIR/*.out $PUBLISH_DIR/*.aux
