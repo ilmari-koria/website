@@ -4,7 +4,7 @@
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:r="http://ilmarikoria.xyz/ilmari-koria-resume.pdf"
                 exclude-result-prefixes="r"
-                version="3.0">
+                version="2.0">
 
   <xsl:output method="text"
               encoding="UTF-8"
@@ -15,7 +15,7 @@
 
   <xsl:template match="/">
     
-    \input{/home/ilmari/my-files/website/basex/repo/blog/content/lib/tex/resume-header.tex}
+    \input{~/my-files/website/basex/repo/blog/content/lib/tex/resume-header.tex}
 
     \begin{document}
     \pagestyle{fancy}
