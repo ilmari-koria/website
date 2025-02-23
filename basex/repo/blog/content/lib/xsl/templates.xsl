@@ -7,8 +7,9 @@
 
   <xsl:include href="style.xsl" />
 
+  <xsl:param name="github-atom-path"/>
   <xsl:variable name="github"
-                select="document('../../tmp/xml/github/github.atom')" />
+                select="document($github-atom-path)" />
   <xsl:variable name="meta-description"
                 select="org:document/org:keyword[@key = 'DESCRIPTION']/@value" />
 

@@ -10,9 +10,9 @@
               encoding="UTF-8"
               omit-xml-declaration="yes" />
 
-  <xsl:include href="templates.xsl" />
-  <xsl:include href="bib.xsl" />
-  <xsl:include href="footnotes.xsl" />
+  <xsl:include href="./templates.xsl" />
+  <xsl:include href="./bib.xsl" />
+  <xsl:include href="./footnotes.xsl" />
 
   <xsl:template match="/">
     <html>

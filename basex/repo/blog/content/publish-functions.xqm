@@ -8,6 +8,7 @@
 module namespace blg = "http://www.ilmarikoria.xyz";
 
 declare variable $blg:lib := file:resolve-path("basex/repo/blog/content/lib");
+declare variable $blg:tmp := file:resolve-path("basex/repo/blog/content/lib/tmp/");
 
 declare %private function blg:generate-el(
   $path-to-org-files as xs:string) {
@@ -20,10 +21,10 @@ declare %private function blg:generate-el(
   ))
 };
 
-declare %private function blg:convert-org(
+declare %public function blg:convert-org(
   $path-to-org-files as xs:string) {
-  fn:message("Converting org files."),
   blg:generate-el($path-to-org-files),
+  fn:message("Converting org files."),
   let $args := (
     "--batch",
     "-l", $blg:lib || "/el/convert-blog-posts-to-xml.el",
@@ -58,26 +59,50 @@ declare %public %updating function blg:update-org-files(
             file:delete(fn:trace($path, "Deleting: "), false()))
 };
 
-declare %public function blg:generate-resume($input-xml, $output-dir) {
-  fn:message("Generating resume."),
-  let $path := file:create-temp-dir("resume","/")
-  let $tex-path := $path || "/resume.tex"
-  let $generate-tex :=  
-    file:write($tex-path,
-    xslt:transform-text(
-      $input-xml,
-      $blg:lib || "/xsl/resume.xsl",
-      { "resume-header" : "/home/ilmari/my-files/website/basex/repo/blog/content/lib/tex/resume-header.tex" }
-  ))
-  let $args := (
+declare %public function blg:publish-posts(
+  $output-path as xs:string,
+  $github-atom as xs:string) {
+  let $posts := collection("posts")//*:document
+  for $post in $posts
+    let $path :=
+      $output-path || "/" || fn:substring-after(fn:base-uri($post),"/posts/")
+        => fn:replace(".xml", ".html")
+     return (
+       file:write($path,
+       xslt:transform(
+         $post,
+         $blg:lib || "/xsl/posts.xsl",
+         { "github-atom-path" : collection("misc")})
+         )
+     )
+};
+
+declare %public function blg:generate-pdf-with-pdflatex(
+  $input-xml,
+  $output-dir,
+  $tex-path) {
+   let $args := (
     "-interaction=batchmode",
     "-output-directory", $output-dir,
     $tex-path
   )
-  let $generate-pdf :=
-    proc:system("pdflatex", $args)
   return (
-    $generate-tex,
-    $generate-pdf
-    )
+    fn:message("Generating PDF from: " || fn:base-uri($input-xml)),
+    proc:system("pdflatex", $args)
+  )
+};
+
+declare %private function blg:download-text-file(
+  $uri as xs:string,
+  $out-path as xs:string) {
+  let $response := http:send-request(
+    <http:request 
+       method='get' 
+       href='{$uri}' 
+       timeout='10'
+       override-media-type='text/plain'/>
+  )  
+  let $body := tail($response)
+  return
+    file:write($out-path, html:parse($body))
 };

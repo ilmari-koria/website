@@ -4,9 +4,10 @@
                 xmlns:org="https://nwalsh.com/ns/org-to-xml"
                 version="2.0"
                 exclude-result-prefixes="org">
-
+  
+  <!-- convert this into a param -->
   <xsl:variable name="bibliography-footnotes"
-                select="document('../../tmp/xml/bibliography/bibliography.xml')" />
+                select="document('../../../../../../bibtex/bibliography.xml')" />
   <xsl:variable name="footnote-number"
                 select="org:footnote-reference/@label" />
 
