@@ -30,9 +30,10 @@
     \begin{footnotesize}
       \centering
         \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}l}
+
           Website: \href{<xsl:value-of select="resume/header/website/@href"/>}
-          {\texttt{<xsl:value-of select="resume/header/website"/>}}
-          &amp;
+          {\texttt{<xsl:value-of select="resume/header/website"/>}} &amp;
+          
           \chtex{華文姓名：}
           \ruby{\chtex{<xsl:value-of select="/resume/header/name-zh/family"/>}}
                       {<xsl:value-of select="/resume/header/name-zh-pinyin/family"/>}
@@ -40,66 +41,63 @@
                       {<xsl:value-of select="/resume/header/name-zh-pinyin/given-first"/>}
           \ruby{\chtex{<xsl:value-of select="/resume/header/name-zh/given-second"/>}}
                       {<xsl:value-of select="/resume/header/name-zh-pinyin/given-second"/>} \\
+
           GitHub: \href{<xsl:value-of select="resume/header/github/@href"/>}
-          {\texttt{<xsl:value-of select="resume/header/github"/>}}
-          &amp;
+          {\texttt{<xsl:value-of select="resume/header/github"/>}} &amp;
+
           References: <xsl:value-of select="resume/header/references"/> \\
+
           Public key: \href{<xsl:value-of select="resume/header/public-key/@href"/>}
-          {\texttt{<xsl:value-of select="resume/header/public-key"/>}}
-          <xsl:text disable-output-escaping="yes"><![CDATA[&]]></xsl:text>
+          {\texttt{<xsl:value-of select="resume/header/public-key"/>}} &amp;
+
           \href{<xsl:value-of select="resume/header/name-audio/@href"/>}
           {\texttt{<xsl:value-of select="resume/header/name-audio"/>}} \\ 
+
         \end{tabular*}
     \end{footnotesize}
 
-    \subsection*{About}
+    \subsection*{About}<xsl:text> </xsl:text>
     <xsl:value-of select="resume/about" />
 
-    \subsection*{Experience}
+    \subsection*{Experience}<xsl:text> </xsl:text>
     <xsl:for-each select="resume/experience/experience-entry">
-      \subsubsection*{
-      \textbf{<xsl:value-of select="company"/>}, 
-      <xsl:value-of select="department"/>
-      \hfill <xsl:value-of select="address"/>}
+      \subsubsection*{\textbf{<xsl:value-of select="company"/>}, <xsl:value-of select="department"/>
+        \hfill <xsl:value-of select="address"/>}
       \begin{itemize}
-      \item\emph{<xsl:value-of select="role"/>}\hfill
-
-      <xsl:call-template name="format-date-range">
-        <xsl:with-param name="start-date" select="time-start"/>
-        <xsl:with-param name="end-date" select="time-end"/>
-      </xsl:call-template>
-
-      \begin{itemize}
-      <xsl:for-each select="role-achievements/achievement">
-       	\item <xsl:value-of select="."/>
-       	<xsl:text> </xsl:text>
-      </xsl:for-each>
-      \end{itemize}
+        \item\emph{<xsl:value-of select="role"/>}
+        \hfill <xsl:call-template name="format-date-range">
+                 <xsl:with-param name="start-date" select="time-start"/>
+                 <xsl:with-param name="end-date" select="time-end"/>
+               </xsl:call-template>
+        \begin{itemize}<xsl:text> </xsl:text>
+          <xsl:for-each select="role-achievements/achievement">
+            \item <xsl:value-of select="."/>
+          </xsl:for-each>
+        \end{itemize}
       \end{itemize}
     </xsl:for-each>
 
     \subsection*{Professional Development}
     \bulletlist
-    \begin{itemize}
-    <xsl:for-each select="resume/training/training-entry">
-      \item <xsl:value-of select="role"/>:
-      \textit{<xsl:value-of select="name"/>},
-      <xsl:value-of select="institute"/>,
-      <xsl:value-of select="training-hours"/>
-      <xsl:choose>
-        <xsl:when test="number(training-hours) != number(training-hours)">
-          <xsl:text> </xsl:text>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:text> hrs. </xsl:text>
-        </xsl:otherwise>
-      </xsl:choose>
-      \hfill
-      <xsl:value-of select="date"/>
-    </xsl:for-each>
+    \begin{itemize}<xsl:text> </xsl:text>
+      <xsl:for-each select="resume/training/training-entry">
+        \item <xsl:value-of select="role"/>:
+        \textit{<xsl:value-of select="name"/>},
+        <xsl:value-of select="institute"/>,
+        <xsl:value-of select="training-hours"/>
+        <xsl:choose>
+          <xsl:when test="number(training-hours) != number(training-hours)">
+            <xsl:text> </xsl:text>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text> hrs. </xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
+        \hfill <xsl:value-of select="date"/>
+      </xsl:for-each>
     \end{itemize}
 
-    \subsection*{Education}
+    \subsection*{Education}<xsl:text> </xsl:text>
     <xsl:for-each select="resume/education/education-entry">
       \textbf{<xsl:value-of select="institute"/>}, 
       \textit{<xsl:value-of select="result"/>}, 
@@ -111,22 +109,19 @@
 
       \subsection*{Skills}
       \textbf{Tools:}
-      <xsl:for-each select="resume/skill-list/skill-entry">
-        <xsl:sort select="lower-case(translate(., '\', ''))" data-type="text" order="ascending"/>
-        <xsl:value-of select="."/>
-        <xsl:if test="position() != last()">
-          ,
-        </xsl:if>
-      </xsl:for-each>
-      --- 
-      \textbf{Languages:}
-      <xsl:for-each select="resume/language-list/language-entry">
-        <xsl:value-of select="language"/>
-        <xsl:if test="position() != last()">
-          , 
-        </xsl:if>
-        </xsl:for-each>.
-        <xsl:text>\end{document}</xsl:text>
+        <xsl:for-each select="resume/skill-list/skill-entry">
+          <xsl:sort select="lower-case(translate(., '\', ''))" data-type="text" order="ascending"/>
+          <xsl:value-of select="."/>
+          <xsl:if test="position() != last()">, </xsl:if>
+        </xsl:for-each>
+        --- 
+        \textbf{Languages:}
+          <xsl:for-each select="resume/language-list/language-entry">
+            <xsl:value-of select="language"/>
+            <xsl:if test="position() != last()">, </xsl:if>
+          </xsl:for-each>.
+
+    <xsl:text>\end{document}</xsl:text>
   </xsl:template>
 
   <xsl:template name="format-date-range">
@@ -152,4 +147,5 @@
     <xsl:value-of select="$adjusted-months"/>
     <xsl:text>m})</xsl:text>
   </xsl:template>
+
 </xsl:stylesheet>
