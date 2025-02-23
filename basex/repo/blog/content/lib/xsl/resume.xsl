@@ -11,6 +11,8 @@
               indent="no"
               omit-xml-declaration="yes"/>
 
+<!-- this stylesheet should not be auto-indented. -->
+
   <xsl:template match="/">
     
     \input{/home/ilmari/my-files/website/basex/repo/blog/content/lib/tex/resume-header.tex}
