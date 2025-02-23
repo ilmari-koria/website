@@ -10,9 +10,6 @@
               indent="yes"
               omit-xml-declaration="yes" />
 
-  <xsl:variable name="posts"
-                select="document('../../tmp/xml/concat/posts-concat.xml')" />
-
   <xsl:include href="templates.xsl" />
 
   <xsl:template match="/">
@@ -26,7 +23,7 @@
           <article>
             <h2>Recent Posts</h2>
             <table>
-              <xsl:for-each-group select="$posts/*:root/*:document/*:keyword[@key='TITLE']" group-by=".">
+              <xsl:for-each-group select="/*:root/*:document/*:keyword[@key='TITLE']" group-by=".">
                 <xsl:for-each select="current-group()">
                   <xsl:sort select="../*:keyword[@key='DATE']/@value" order="descending" data-type="text" />
                   <xsl:if test="position() &lt;= 3">

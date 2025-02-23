@@ -10,9 +10,6 @@
               indent="yes"
               omit-xml-declaration="yes" />
 
-  <xsl:variable name="posts"
-                select="document('../../tmp/xml/concat/posts-concat.xml')" />
-
   <xsl:include href="templates.xsl" />
 
   <xsl:template match="/">
@@ -35,7 +32,7 @@
 
   <xsl:template name="post-table">
     <table>
-      <xsl:for-each-group select="$posts/*:root/*:document/*:keyword[@key='TITLE']"
+      <xsl:for-each-group select="/*:root/*:document/*:keyword[@key='TITLE']"
                           group-by=".">
         <xsl:for-each select="current-group()">
           <xsl:sort select="../*:keyword[@key='DATE']/@value"

@@ -1,7 +1,7 @@
 (:~
  : blog publish functions 
  :
- : @author   ilmarikoria@posteo.net
+n : @author   ilmarikoria@posteo.net
  : @version  0.2
  :)
 
@@ -94,10 +94,16 @@ declare %public function blg:download-file(
 declare %public function blg:delete-tmp-files(){
   for $file in file:list($blg:tmp)
     return
-      file:delete(
         fn:trace(
           $file,
           "Deleting tmp file: "
           )
-       )
 };
+
+declare %public function blg:transform-and-write-no-source(
+  $output-path as xs:string, $stylesheet as xs:string){
+  fn:message("Generating file with " || file:name($stylesheet)),
+  file:write($output-path,
+  xslt:transform(<dummy/>, $stylesheet))
+};
+
