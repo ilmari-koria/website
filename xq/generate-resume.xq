@@ -8,7 +8,8 @@ let $generate-resume-tex :=
   file:write($tex-out-path,
   xslt:transform-text(
     $input-xml,
-    $blg:lib || "/xsl/resume.xsl"))
+    $blg:lib || "/xsl/resume.xsl"),
+    { 'method': 'text' })
 return (
   $generate-resume-tex,
   blg:generate-pdf-with-pdflatex(
