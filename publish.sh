@@ -13,3 +13,6 @@ rm $BIBTEX/bibliography.xml $BIBTEX/bibliography.html
 $BASEX -bpublish-path=$PUBLISH_DIR $XQ/publish-static-pages.xq
 $BASEX -bpublish-path=$PUBLISH_DIR $XQ/generate-resume.xq
 rm $PUBLISH_DIR/*.log $PUBLISH_DIR/*.out $PUBLISH_DIR/*.aux
+rsync -avz --delete $PUBLISH_DIR/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
+sitemap-generator -l https://ilmarikoria.xyz
+rsync -avz --delete sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
