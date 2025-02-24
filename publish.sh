@@ -1,6 +1,6 @@
 #!/bin/bash
 BASEX="./basex/bin/basex"
-ORG_FILES="~/my-files/website/org"
+ORG_FILES="/home/ilmari/my-files/website/org"
 PUBLISH_DIR="./publish"
 BIBTEX="./bibtex"
 XQ="./xq"
