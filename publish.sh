@@ -1,4 +1,5 @@
 #!/bin/bash
+# TODO set basex home dir properly
 # TODO convert part of this into a BaseX .bxs command script:
 # --> https://docs.basex.org/main/Commands#command_scripts
 BASEX="./basex/bin/basex"
