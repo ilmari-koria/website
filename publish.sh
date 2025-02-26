@@ -1,4 +1,6 @@
 #!/bin/bash
+# TODO convert part of this into a BaseX .bxs command script:
+# --> https://docs.basex.org/main/Commands#command_scripts
 BASEX="./basex/bin/basex"
 ORG_FILES="/home/ilmari/my-files/website/org"
 PUBLISH_DIR="./publish"
