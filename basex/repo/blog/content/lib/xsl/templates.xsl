@@ -51,7 +51,6 @@
         <li><a href="https://ilmarikoria.xyz/ilmari-koria-resume.pdf">Résumé</a></li>
         <li><a href="https://freesound.org/people/ilmari_freesound/">Freesound</a></li>
         <li><a href="https://github.com/ilmari-koria/website">GitHub</a></li>
-        <li><a href="https://www.meetup.com/london-cantonese-language-meetup/">Cantonese Language Meetup</a></li>
         <li><a href="https://bsky.app/profile/ilmarikoria.xyz">Bluesky</a></li>
       </ul>
     </nav>
