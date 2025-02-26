@@ -2,6 +2,7 @@
 # TODO convert part of this into a BaseX .bxs command script:
 # --> https://docs.basex.org/main/Commands#command_scripts
 BASEX="./basex/bin/basex"
+# TODO this should be a relative path?
 ORG_FILES="/home/ilmari/my-files/website/org"
 PUBLISH_DIR="./publish"
 BIBTEX="./bibtex"
