@@ -1,0 +1,7 @@
+<commands>
+  <run file='./lib/xq/convert-org-files.xq'/>
+  <run file='./lib/xq/update-org-files.xq'/>
+  <run file='./lib/xq/transform-org-files-and-publish.xq'/>
+  <run file='./lib/xq/publish-static-pages.xq'/>
+  <run file='./lib/xq/generate-resume.xq'/>
+</commands>
