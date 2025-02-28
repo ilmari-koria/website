@@ -91,13 +91,14 @@ declare %public function blg:download-file(
     )
 };
 
-declare %public function blg:delete-tmp-files(){
+declare %public function blg:delete-tmp-files() {
   for $file in file:list($blg:tmp)
-    return
-        fn:trace(
-          $file,
-          "Deleting tmp file: "
-          )
+    let $path := $blg:tmp || $file
+    return (
+      fn:message("Deleting tmp: " || $file), 
+      file:delete($path)
+      )
+
 };
 
 

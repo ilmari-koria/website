@@ -15,5 +15,6 @@ return (
   blg:generate-pdf-with-pdflatex(
     $input-xml,
     $publish-path,
-    $tex-out-path)
+    $tex-out-path),
+  blg:delete-tmp-files()
 )
