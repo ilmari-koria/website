@@ -154,6 +154,12 @@
     </a>
   </xsl:template>
 
+  <xsl:template match="org:src-block">
+    <pre>
+      <xsl:value-of select="." />
+    </pre>
+  </xsl:template>
+
   <!-- TODO avoid // if possible -->
   <xsl:template match="//org:footnote-definition" />
 
