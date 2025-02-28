@@ -11,11 +11,89 @@
               indent="no"
               omit-xml-declaration="yes"/>
 
-<!-- this stylesheet should not be auto-indented. -->
+  <!-- this stylesheet should not be auto-indented. -->
 
   <xsl:template match="/">
     
-    \input{~/my-files/website/basex/repo/blog/content/lib/tex/resume-header.tex}
+    \documentclass[a4paper]{article}
+    \title{<xsl:value-of select="resume/header/name"/> Resume}
+    \author{<xsl:value-of select="resume/header/name"/>}
+    \date{}
+
+    \usepackage[british]{babel}
+
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyhf{}
+
+    \usepackage[cm]{fullpage}
+
+    \usepackage{xcolor}
+    \definecolor{navyblue}{RGB}{0,0,128}
+
+    \usepackage{href-ul}
+    \usepackage{hyperref}
+    \hypersetup{
+    colorlinks,
+    breaklinks,
+    allcolors={navyblue},
+    pdfauthor={<xsl:value-of select="resume/header/name"/>},                             
+    pdftitle={<xsl:value-of select="resume/header/name"/> Resume},
+    pdfkeywords={resume},                                       
+    pdfsubject={resume},                                        
+    pdfcreator={},             
+    pdflang={English}                                    
+    }
+
+    \renewcommand{\headrulewidth}{0pt}
+
+    \usepackage{lastpage}
+
+    \usepackage{tabto}
+    \newcommand\mytab{\tab \hspace{-22em}}
+
+    \setlength{\parindent}{0pt}
+
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+
+    \usepackage[T1]{fontenc}
+    \usepackage{lmodern}
+
+    \usepackage{microtype}
+
+    \usepackage{titlesec}
+    \titleformat{\section}{\huge\scshape\centering}{0em}{0em}{}
+    \titleformat{\subsection}{\large\scshape\centering}{0em}{0em}{}[\titlerule]
+    \titleformat{\subsubsection}{\normalsize}{0em}{0em}{}
+
+    \titlespacing*{\section}{0em}{0em}{0em}
+    \titlespacing*{\subsection}{0em}{4.15em}{1em}
+    \titlespacing*{\subsubsection}{0em}{1.5em}{0em}
+
+    \usepackage{enumitem}
+    \renewcommand\labelitemi{}
+    \renewcommand\labelitemii{\hfill$\vcenter{\hbox{\footnotesize{$\bullet$}}}$\hfill}
+    \setlist[itemize,1]{before=\normalsize,itemsep=0em,topsep=0em,leftmargin=*,labelindent=0em,labelsep=0em}
+    \setlist[itemize,2]{before=\normalsize,itemsep=0em,topsep=0em,leftmargin=*,labelindent=0em,labelsep=0.5em}
+
+    \newcommand{\bulletlist}{\renewcommand\labelitemi{\hfill$\vcenter{\hbox{\footnotesize{$\bullet$}}}$\hfill}\setlist[itemize,1]{before=\normalsize,itemsep=0em,topsep=0em,leftmargin=*,labelindent=0em,labelsep=0.5em}}
+    \newcommand{\nobulletlist}{\renewcommand\labelitemi{}\setlist[itemize,1]{before=\normalsize,itemsep=0em,topsep=0em,leftmargin=*,labelindent=0em,labelsep=0em}}
+
+    \usepackage{setspace}
+
+    \usepackage{soul}
+    \setul{1pt}{.4pt}
+
+    \usepackage{CJKutf8}
+    \newcommand{\chquo}[1]{\begin{CJK*}{UTF8}{bkai}#1\end{CJK*}}
+    \newcommand{\chtex}[1]{\begin{CJK*}{UTF8}{bsmi}#1\end{CJK*}}
+
+    \usepackage{ruby}
+    \renewcommand{\rubysize}{0.4}
+    \renewcommand{\rubysep}{0.25ex}
+
+    \usepackage{tabularx}
 
     \begin{document}
     \pagestyle{fancy}
