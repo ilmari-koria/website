@@ -90,9 +90,9 @@
   </xsl:template>
 
   <xsl:template match="org:code">
-    <pre>
-      <xsl:apply-templates />
-    </pre>
+    <code>
+      <xsl:value-of select="@value" />
+    </code>
   </xsl:template>
 
   <xsl:template match="org:em">
