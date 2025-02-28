@@ -5,6 +5,6 @@
   <title>Blog Publish Functions</title>
   <xquery>
     <namespace>http://www.ilmarikoria.xyz</namespace>
-    <file>publish-functions.xqm</file>
+    <file>lib/xq/publish-functions.xqm</file>
   </xquery>
 </package>
