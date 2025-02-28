@@ -42,7 +42,6 @@
         pre {
         background-color: aliceblue;
         padding: 1.5rem;
-        margin: 1rem;
         }
         
         figure {
