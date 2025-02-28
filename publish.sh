@@ -1,7 +1,8 @@
 #!/bin/bash
 BASEX="./basex/bin/basex"
 BASEX_DIR="./basex"
-ORG_FILES="./org"
+# note this needs to be an absolute path
+ORG_FILES="/home/ilmari/my-files/website/org"
 PUBLISH_DIR="./publish"
 BIBTEX="./bibtex"
 
@@ -12,6 +13,6 @@ $BASEX -bpath-to-org-files=$ORG_FILES \
        -c $BASEX_DIR/repo/blog/content/publish.bxs
 rm $BIBTEX/bibliography.xml $BIBTEX/bibliography.html
 rm $PUBLISH_DIR/*.log $PUBLISH_DIR/*.out $PUBLISH_DIR/*.aux
-# rsync -avz --delete $PUBLISH_DIR/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
-# sitemap-generator -l https://ilmarikoria.xyz
-# rsync -avz --delete sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
+rsync -avz --delete $PUBLISH_DIR/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
+sitemap-generator -l https://ilmarikoria.xyz
+rsync -avz --delete sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
