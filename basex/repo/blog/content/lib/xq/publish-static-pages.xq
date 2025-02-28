@@ -4,12 +4,12 @@ declare variable $publish-path external;
 let $posts := collection("posts")//*:document
 let $reading-list := collection("org")//*:document[*:headline[@level="1"][@raw-value = "Reading List"]]
 
-let $archive := $publish-path || "/posts.html"
-let $index := $publish-path || "/index.html"
-let $about := $publish-path || "/about.html"
-let $atom := $publish-path || "/atom.xml"
-let $reading := $publish-path || "/reading-list.html"
-let $atom-path := $blg:tmp || "atom.xml"
+let $archive   := file:resolve-path($publish-path || "/posts.html")
+let $index     := file:resolve-path($publish-path || "/index.html")
+let $about     := file:resolve-path($publish-path || "/about.html")
+let $atom      := file:resolve-path($publish-path || "/atom.xml")
+let $reading   := file:resolve-path($publish-path || "/reading-list.html")
+let $atom-path := file:resolve-path($blg:tmp || "atom.xml")
 
 let $concatenated :=
   <root>
