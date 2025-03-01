@@ -6,10 +6,10 @@
                 exclude-result-prefixes="org">
 
   <xsl:variable name="bibliography"
-                select="document($bibtex-xml)" />
+                select="document('/tmp/bibliography.xml')" />
 
   <xsl:template name="bib">
-    <xsl:if test="//org:link[contains(@raw-link, 'cite:')] != ''">
+    <xsl:if test="//org:link[contains(@raw-link, 'cite:')]">
       <section id="references">
         <h2>References</h2>
         <table>
@@ -22,7 +22,7 @@
             <xsl:variable name="number"
                           select="position()" />
             <tr>
-              <td>[<a id="{$key}" href="#{$key}"><xsl:value-of select="$number" /></a>]</td>
+              <td>[<a id="{$key}" href="#{$key}"><xsl:value-of select="$number"/></a>]</td>
               <td>
                 <xsl:apply-templates select="$bib-entry//*:td[@class = 'bibtexitem']" />
               </td>
@@ -50,5 +50,6 @@
       <xsl:value-of select="normalize-space(.)" />
     </a>
   </xsl:template>
+
 
 </xsl:stylesheet>

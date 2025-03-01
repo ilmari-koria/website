@@ -10,7 +10,6 @@
               encoding="UTF-8"
               omit-xml-declaration="yes" />
 
-  <xsl:param name="bibtex-xml"/>
   <xsl:include href="./templates.xsl" />
   <xsl:include href="./bib.xsl" />
   <xsl:include href="./footnotes.xsl" />
