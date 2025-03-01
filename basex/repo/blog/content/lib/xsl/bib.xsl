@@ -6,7 +6,7 @@
                 exclude-result-prefixes="org">
 
   <xsl:variable name="bibliography"
-                select="document('../../../../../../bibtex/bibliography.xml')" />
+                select="document($bibtex-xml)" />
 
   <xsl:template name="bib">
     <xsl:if test="//org:link[contains(@raw-link, 'cite:')] != ''">

@@ -10,6 +10,7 @@
               encoding="UTF-8"
               omit-xml-declaration="yes" />
 
+  <xsl:param name="bibtex-xml"/>
   <xsl:include href="./templates.xsl" />
   <xsl:include href="./bib.xsl" />
   <xsl:include href="./footnotes.xsl" />
@@ -22,17 +23,21 @@
       <body>
         <xsl:call-template name="header" />
         <main>
-          <article>
-            <xsl:apply-templates select="org:keyword[@key = 'TITLE']"/>
-            <xsl:apply-templates select="org:keyword[@key = 'DATE']"/>
-            <xsl:apply-templates />
-            <xsl:call-template name="footnotes" />
-            <xsl:call-template name="bib" />
-          </article>
+          <xsl:call-template name="article" />
         </main>
         <xsl:call-template name="footer" />
       </body>
     </html>
+  </xsl:template>
+
+  <xsl:template name="article">
+    <article>
+      <xsl:apply-templates select="org:keyword[@key = 'TITLE']"/>
+      <xsl:apply-templates select="org:keyword[@key = 'DATE']"/>
+      <xsl:apply-templates />
+      <xsl:call-template name="footnotes" />
+      <xsl:call-template name="bib" />
+    </article>
   </xsl:template>
 
   <xsl:template match="org:headline/org:title">

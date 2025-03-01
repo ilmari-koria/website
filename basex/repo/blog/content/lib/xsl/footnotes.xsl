@@ -6,8 +6,9 @@
                 exclude-result-prefixes="org">
   
   <!-- convert this into a param -->
+
   <xsl:variable name="bibliography-footnotes"
-                select="document('../../../../../../bibtex/bibliography.xml')" />
+                select="document($bibtex-xml)" />
   <xsl:variable name="footnote-number"
                 select="org:footnote-reference/@label" />
 
