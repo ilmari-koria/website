@@ -11,15 +11,13 @@
   <xsl:param name="org-path"/>
 
   <xsl:template match="/">
-    (require 'package)
-    (package-initialize)
-    (unless (package-installed-p 'dash)
-    (package-refresh-contents)
-    (package-install 'dash))
-    (unless (package-installed-p 's)
-    (package-refresh-contents)
-    (package-install 's))
-    (add-to-list 'load-path ".")
+    (load "/home/ilmari/my-files/blog/website/emacs/el/dash.el")
+    (load "/home/ilmari/my-files/blog/website/emacs/el/s.el")
+    (load "/home/ilmari/my-files/blog/website/emacs/el/org-ml-macs.el")
+    (load "/home/ilmari/my-files/blog/website/emacs/el/org-ml.el")
+    (load "/home/ilmari/my-files/blog/website/emacs/el/om-to-xml.el")
+    (require 'dash)
+    (require 's)
     (require 'org-ml)
     (require 'om-to-xml)
     (defun convert-blog-posts-to-xml ()
