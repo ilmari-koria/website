@@ -20,6 +20,7 @@
     (require 's)
     (require 'org-ml)
     (require 'om-to-xml)
+    (setq org-export-with-sub-superscripts t)
     (defun convert-blog-posts-to-xml ()
     (let ((directory "<xsl:value-of select="$org-path"/>"))
     (when (file-directory-p directory)
