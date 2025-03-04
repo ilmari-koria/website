@@ -26,13 +26,14 @@ declare %public function blg:convert-org(
   blg:generate-el($path-to-org-files),
   fn:message("Converting org files."),
   let $args := (
+    "-Q",
     "--batch",
     "-l", $blg:lib || "/el/convert-blog-posts-to-xml.el",
     "-f", "convert-blog-posts-to-xml"
   )
   return
     proc:system(
-      "emacs",
+      "/home/ilmari/my-files/blog/website/emacs/bin/emacs-27.1",
       $args,
       options := { 'dir' : $blg:lib || "/el" }
     )
