@@ -10,12 +10,13 @@
 
   <xsl:param name="org-path"/>
 
+  <!-- TODO sort out el load path -->
   <xsl:template match="/">
-    (load "/home/ilmari/my-files/blog/website/emacs/el/dash.el")
-    (load "/home/ilmari/my-files/blog/website/emacs/el/s.el")
-    (load "/home/ilmari/my-files/blog/website/emacs/el/org-ml-macs.el")
-    (load "/home/ilmari/my-files/blog/website/emacs/el/org-ml.el")
-    (load "/home/ilmari/my-files/blog/website/emacs/el/om-to-xml.el")
+    (load "/home/ilmari/my-files/blog/website/emacs/emacs/share/emacs/site-lisp/dash.el")
+    (load "/home/ilmari/my-files/blog/website/emacs/emacs/share/emacs/site-lisp/s.el")
+    (load "/home/ilmari/my-files/blog/website/emacs/emacs/share/emacs/site-lisp/org-ml-macs.el")
+    (load "/home/ilmari/my-files/blog/website/emacs/emacs/share/emacs/site-lisp/org-ml.el")
+    (load "/home/ilmari/my-files/blog/website/emacs/emacs/share/emacs/site-lisp/om-to-xml.el")
     (require 'dash)
     (require 's)
     (require 'org-ml)
