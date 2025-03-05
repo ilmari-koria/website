@@ -6,6 +6,7 @@ ORG_FILES="/home/ilmari/my-files/blog/roam/blog-posts"
 PUBLISH_DIR="./publish"
 BIBTEX="./bibtex"
 
+papis export -f bibtex -a -o $BIBTEX/bibliography.bib
 bibtex2html --style "ieeetr" --footer "" --header "" --no-header --nodoc --nobibsource --ignore-errors --sort-as-bibtex --output $BIBTEX/bibliography $BIBTEX/bibliography.bib
 tidy -q --numeric-entities yes -asxhtml -o $BIBTEX/bibliography.xml $BIBTEX/bibliography.html
 
